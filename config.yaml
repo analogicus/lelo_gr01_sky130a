@@ -17,3 +17,8 @@ jnw_tr_sky130a:
 jnw_atr_sky130a:
   remote: git@github.com:analogicus/jnw_atr_sky130A.git
   revision: main
+
+lelo_atr_sky130a:
+  remote: git@github.com:wulffern/lelo_atr_sky130a.git
+  revision: main
+  description: Standard transistors (sky130A)

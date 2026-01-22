@@ -1,0 +1,25 @@
+v {xschem version=3.4.7 file_version=1.2}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -150 -60 -130 -60 {}
+L 4 130 -30 150 -30 {}
+L 4 -150 -20 -130 -20 {}
+L 4 -150 20 -130 20 {}
+B 5 -152.5 -62.5 -147.5 -57.5 {name=VDD_1V8 dir=in}
+B 5 147.5 -32.5 152.5 -27.5 {name=OSC_TEMP_1V8 dir=out}
+B 5 -152.5 -22.5 -147.5 -17.5 {name=PWRUP_1V8 dir=in}
+B 5 -152.5 17.5 -147.5 22.5 {name=VSS dir=in}
+P 4 5 130 -80 -130 -80 -130 30 130 30 130 -80 {}
+T {@symname} -88.5 4 0 0 0.3 0.3 {}
+T {@name} -135 -102 0 0 0.2 0.2 {}
+T {VDD_1V8} -125 -64 0 0 0.2 0.2 {}
+T {OSC_TEMP_1V8} 125 -34 0 1 0.2 0.2 {}
+T {PWRUP_1V8} -125 -24 0 0 0.2 0.2 {}
+T {VSS} -125 16 0 0 0.2 0.2 {}
+T {f_osc=aT + b} -50 -70 0 0 0.4 0.4 {}

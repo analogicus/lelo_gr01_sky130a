@@ -1,0 +1,28 @@
+view:
+  - ac
+
+name: ac
+corner: Gt,Tt
+temperature: [27]
+
+gain_db:
+  src:
+    - gain_db
+  name: DC Gain
+  digits: 2
+  unit: dB
+
+ugf:
+  src:
+    - ugf
+  name: Unity Gain Frequency
+  digits: 3
+  scale: 1e-6
+  unit: MHz
+
+phase_margin:
+  src:
+    - phase_margin
+  name: Phase Margin
+  digits: 1
+  unit: deg

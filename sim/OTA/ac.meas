@@ -1,0 +1,37 @@
+* Measure AC OTA
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+* Get gain in dB at low frequency
+meas ac Adc find vdb(vout) at=10
+let gain_db = Adc
+echo "gain_db={$&gain_db}"
+
+* Get unity gain frequency - only valid if DC gain > 0dB
+* Use CROSS=1 FALL=1 to get the first falling zero crossing
+if (Adc > 0)
+  meas ac UGF when V(vout)=1 FALL=1
+  if ($&UGF > 0)
+    echo "ugf={$&UGF}"
+    * Get phase at unity gain frequency (vp returns radians)
+    meas ac phase_ugf_rad find vp(vout) when vdb(vout)=0 CROSS=1 FALL=1
+    * Convert radians to degrees: degrees = radians * 180 / pi
+    let phase_ugf = phase_ugf_rad * 180 / 3.14159265359
+    echo "phase_ugf={$&phase_ugf}"
+    * Phase margin for inverting amp: PM = 180 + phase_at_UGF
+    let phase_margin = 180 + phase_ugf
+    echo "phase_margin={$&phase_margin}"
+  else
+    echo "ugf=0"
+    echo "phase_margin=0"
+  end
+else
+  echo "ugf=0"
+  echo "phase_margin=0"
+end
+
+echo "MEAS_END"
+.endc

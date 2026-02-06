@@ -1,0 +1,25 @@
+* Measure OTA Transient
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+* Measure output offset (average value)
+meas tran vout_avg avg v(vout) from=1u to=10u
+echo "vout_offset={$&vout_avg}"
+
+* Measure peak-to-peak output voltage
+meas tran vout_max max v(vout) from=1u to=10u
+meas tran vout_min min v(vout) from=1u to=10u
+let vout_pp = vout_max - vout_min
+echo "vout_pp={$&vout_pp}"
+
+* Measure input peak-to-peak for reference
+meas tran vinp_max max v(vinp) from=1u to=10u
+meas tran vinp_min min v(vinp) from=1u to=10u
+let vin_diff_pp = 2*(vinp_max - vinp_min)
+echo "vin_diff_pp={$&vin_diff_pp}"
+
+echo "MEAS_END"
+.endc

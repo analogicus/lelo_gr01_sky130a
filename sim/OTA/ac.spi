@@ -1,0 +1,94 @@
+*TB_OTA_AC
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/OTA_lpe.spi
+#else
+.include ../../../work/xsch/OTA.spice
+#endif
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option TNOM=27 GMIN=1e-15 reltol=1e-3
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param AVDD = {vdda}
+
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0     dc 0
+VDD  VDD_1V8  VSS  dc 1.8
+VPWRUP PWRUP_1V8 VSS dc 1.8
+
+
+* Differential AC stimulus: Apply AC only to non-inverting input
+* Vinp is the non-inverting input based on circuit topology
+VCM  Vcm  VSS  dc 0.9
+VINP Vinp Vcm  dc 0 ac 1
+VINN Vinn Vcm  dc 0 ac 0
+
+* Bias current source
+IBN  VDD_1V8 XDUT.IBN dc 10u
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+XDUT VDD_1V8 PWRUP_1V8 Vout Vinn Vinp VSS OTA
+
+*-----------------------------------------------------------------
+* LOAD
+*-----------------------------------------------------------------
+CL Vout VSS 0.1p
+
+*-----------------------------------------------------------------
+* INITIAL CONDITIONS - help convergence
+*-----------------------------------------------------------------
+.nodeset v(Vout)=1.4
+
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+.save all
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+.control
+set num_threads=8
+set color0=white
+set color1=black
+unset askquit
+
+* Find operating point first
+op
+
+* Print bias voltages for debugging
+echo "=== Operating Point Voltages ==="
+print v(vout) v(xdut.vb1) v(xdut.vb2) v(xdut.net4) v(xdut.net1)
+print all
+echo "=== End Operating Point ==="
+
+* AC analysis from 1Hz to 1GHz
+ac dec 100 1 1e9
+
+* Measure DC gain (at low frequency) - now from non-inverting input
+meas ac Adc find vdb(Vout) at=10
+meas ac Phase_dc find vp(Vout) at=10
+
+* Measure unity gain frequency (0dB crossing) - use FALL=1 to handle low gain gracefully
+meas ac UGF when vdb(Vout)=0 FALL=1
+
+* Measure phase at unity gain frequency (phase margin = 180 + phase)
+meas ac Phase_UGF find vp(Vout) when vdb(Vout)=0 FALL=1
+
+write
+quit
+
+.endc
+
+.end

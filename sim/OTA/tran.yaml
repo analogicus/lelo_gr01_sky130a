@@ -1,0 +1,34 @@
+#<name>:
+#  src:
+#    - <paramters>
+#  typ: <typical spec value>
+#  name: <long name>
+#  min: <minimum spec value>
+#  max: <maximum spec value>
+#  scale: <scale, multiply result by scale>
+#  digits: <significant digits>
+#  unit: Unit
+
+view:
+  - tran
+
+name: tran
+corner: Gt,Tt
+temperature: [27]
+
+vout_offset:
+  src:
+    - vout_offset
+  name: Output offset voltage
+  typ: 0.9
+  digits: 3
+  scale: 1
+  unit: V
+
+vout_pp:
+  src:
+    - vout_pp
+  name: Output peak-to-peak voltage
+  digits: 3
+  scale: 1e3
+  unit: mV

@@ -1,0 +1,142 @@
+
+======================================================================
+OTA OPTIMIZATION SCRIPT
+======================================================================
+Schematic: ../../design/LELO_GR01_SKY130A/OTA.sch
+Targets: Gain≥80.0dB, UGF≥100000kHz, PM≥60.0°
+Max iterations: 1000
+
+======================================================================
+Initial: Gain=69.3dB, UGF=2015.0kHz, PM=115.5°, VB2=0.463V
+Initial Score: 42.19
+======================================================================
+
+[  1/1000] ✓ Gain=62.7dB, UGF=1746.5kHz, VB2=0.468V, Score=39.6
+[  2/1000] ✓ Gain=62.7dB, UGF=1746.5kHz, VB2=0.468V, Score=39.6
+[  3/1000] ✓ Gain=59.2dB, UGF=3054.4kHz, VB2=0.467V, Score=39.0
+[  4/1000] ✓ Gain=62.6dB, UGF=1767.1kHz, VB2=0.466V, Score=39.5
+[  5/1000] ✓ Gain=63.3dB, UGF=1750.7kHz, VB2=0.461V, Score=39.8
+[  6/1000] ✓ Gain=62.4dB, UGF=1163.2kHz, VB2=0.470V, Score=39.1
+[  7/1000] ✓ Gain=62.4dB, UGF=1163.2kHz, VB2=0.470V, Score=39.1
+[  8/1000] ✓ Gain=62.4dB, UGF=1163.2kHz, VB2=0.470V, Score=39.1
+[  9/1000] ✓ Gain=41.4dB, UGF=70.4kHz, VB2=0.472V, Score=30.6
+[ 10/1000] ✓ Gain=41.4dB, UGF=70.4kHz, VB2=0.472V, Score=30.6
+[ 11/1000] ✓ Gain=41.4dB, UGF=70.4kHz, VB2=0.472V, Score=30.6
+[ 12/1000] ✓ Gain=27.7dB, UGF=19.0kHz, VB2=0.472V, Score=25.4
+[ 13/1000] ✓ Gain=23.2dB, UGF=23.8kHz, VB2=0.463V, Score=23.7
+[ 14/1000] ✓ Gain=23.2dB, UGF=20.8kHz, VB2=0.418V, Score=18.4
+[ 15/1000] ✗ Simulation failed: Could not parse simulation results from 
+[ 16/1000] ✗ Simulation failed: Could not parse simulation results from 
+[ 17/1000] ✓ Gain=28.1dB, UGF=39.1kHz, VB2=0.415V, Score=20.2
+[ 18/1000] ✓ Gain=27.0dB, UGF=106.0kHz, VB2=0.412V, Score=19.8
+[ 19/1000] ✓ Gain=27.0dB, UGF=106.0kHz, VB2=0.412V, Score=19.8
+[ 20/1000] ✓ Gain=27.0dB, UGF=106.0kHz, VB2=0.412V, Score=19.8
+[ 21/1000] ✗ Simulation failed: Could not parse simulation results from 
+[ 22/1000] ✗ Simulation failed: Could not parse simulation results from 
+[ 23/1000] ✗ Gain=20.1dB, UGF=973.7kHz, VB2=0.407V, Score=17.6
+[ 24/1000] ✓ Gain=27.3dB, UGF=105.6kHz, VB2=0.408V, Score=19.8
+[ 25/1000] ✓ Gain=27.3dB, UGF=105.6kHz, VB2=0.408V, Score=19.8
+[ 26/1000] ✓ Gain=27.3dB, UGF=105.6kHz, VB2=0.408V, Score=19.8
+[ 27/1000] ✗ Simulation failed: Could not parse simulation results from 
+[ 28/1000] ✗ Simulation failed: Could not parse simulation results from 
+[ 29/1000] ✗ Simulation failed: Could not parse simulation results from 
+[ 30/1000] ✓ Gain=39.4dB, UGF=20698.9kHz, VB2=0.430V, Score=37.0
+[ 31/1000] ✓ Gain=39.3dB, UGF=19880.1kHz, VB2=0.425V, Score=36.4
+[ 32/1000] ✓ Gain=36.1dB, UGF=20463.1kHz, VB2=0.442V, Score=35.7
+[ 33/1000] ✓ Gain=36.1dB, UGF=20463.1kHz, VB2=0.442V, Score=35.7
+[ 34/1000] ✓ Gain=36.1dB, UGF=20463.1kHz, VB2=0.442V, Score=35.7
+[ 35/1000] ✗ Simulation failed: Could not parse simulation results from 
+[ 36/1000] ✓ Gain=36.3dB, UGF=20877.3kHz, VB2=0.447V, Score=36.1
+[ 37/1000] ✓ Gain=36.3dB, UGF=20877.3kHz, VB2=0.447V, Score=36.1
+[ 38/1000] ✗ Simulation failed: Could not parse simulation results from 
+[ 39/1000] ✗ Gain=5.9dB, UGF=18485.5kHz, VB2=0.441V, Score=23.2
+[ 40/1000] ✓ Gain=36.3dB, UGF=20877.3kHz, VB2=0.447V, Score=36.1
+[ 41/1000] ✓ Gain=36.3dB, UGF=20877.3kHz, VB2=0.447V, Score=36.1
+[ 42/1000] ✓ Gain=36.3dB, UGF=20877.3kHz, VB2=0.447V, Score=36.1
+[ 43/1000] ✓ Gain=36.3dB, UGF=20877.3kHz, VB2=0.447V, Score=36.1
+[ 44/1000] ✗ Simulation failed: Could not parse simulation results from 
+[ 45/1000] ✓ Gain=36.6dB, UGF=21308.4kHz, VB2=0.450V, Score=41.5
+[ 46/1000] ✓ Gain=86.7dB, UGF=849.2kHz, VB2=0.505V, Score=45.5 ★
+[ 47/1000] ✓ Gain=84.4dB, UGF=1178.7kHz, VB2=0.498V, Score=45.7 ★
+[ 48/1000] ✓ Gain=82.1dB, UGF=1421.0kHz, VB2=0.482V, Score=45.9 ★
+[ 49/1000] ✓ Gain=82.1dB, UGF=1421.0kHz, VB2=0.482V, Score=45.9 ★
+[ 50/1000] ✓ Gain=81.3dB, UGF=1375.2kHz, VB2=0.478V, Score=45.8
+[ 51/1000] ✓ Gain=80.9dB, UGF=1403.6kHz, VB2=0.475V, Score=45.8
+[ 52/1000] ✓ Gain=80.3dB, UGF=1352.2kHz, VB2=0.469V, Score=45.8
+[ 53/1000] ✓ Gain=80.3dB, UGF=1352.2kHz, VB2=0.469V, Score=45.8
+[ 54/1000] ✗ Gain=75.8dB, UGF=799.7kHz, VB2=0.469V, Score=43.9
+[ 55/1000] ✓ Gain=80.9dB, UGF=1441.6kHz, VB2=0.460V, Score=45.9 ★
+[ 56/1000] ✗ Gain=79.4dB, UGF=1438.6kHz, VB2=0.443V, Score=40.5 ★
+[ 57/1000] ✓ Gain=67.4dB, UGF=1341.8kHz, VB2=0.367V, Score=35.2
+[ 58/1000] ✓ Gain=74.3dB, UGF=750.0kHz, VB2=0.375V, Score=37.5
+[ 59/1000] ✓ Gain=74.3dB, UGF=750.0kHz, VB2=0.375V, Score=37.5
+[ 60/1000] ✓ Gain=74.3dB, UGF=750.0kHz, VB2=0.375V, Score=37.5
+[ 61/1000] ✓ Gain=74.3dB, UGF=750.0kHz, VB2=0.375V, Score=37.5
+[ 62/1000] ✗ Gain=17.2dB, UGF=3.4kHz, VB2=0.375V, Score=15.6
+[ 63/1000] ✓ Gain=74.9dB, UGF=755.3kHz, VB2=0.379V, Score=37.7
+[ 64/1000] ✓ Gain=83.7dB, UGF=827.9kHz, VB2=0.477V, Score=45.5
+[ 65/1000] ✓ Gain=83.7dB, UGF=827.9kHz, VB2=0.477V, Score=45.5
+[ 66/1000] ✓ Gain=83.4dB, UGF=833.3kHz, VB2=0.486V, Score=45.5
+[ 67/1000] ✓ Gain=57.0dB, UGF=65.6kHz, VB2=0.493V, Score=36.4
+[ 68/1000] ✓ Gain=56.7dB, UGF=79.9kHz, VB2=0.495V, Score=36.3
+[ 69/1000] ✓ Gain=54.0dB, UGF=56.5kHz, VB2=0.495V, Score=35.3
+[ 70/1000] ✓ Gain=70.6dB, UGF=296.8kHz, VB2=0.497V, Score=41.6
+[ 71/1000] ✓ Gain=70.4dB, UGF=306.5kHz, VB2=0.511V, Score=41.6
+[ 72/1000] ✓ Gain=86.5dB, UGF=2106.0kHz, VB2=0.494V, Score=46.3 ★
+[ 73/1000] ✓ Gain=86.5dB, UGF=2106.0kHz, VB2=0.494V, Score=46.3 ★
+[ 74/1000] ✗ Gain=3.2dB, UGF=2779.6kHz, VB2=0.391V, Score=12.2 ★
+[ 75/1000] ✓ Gain=78.0dB, UGF=2402.1kHz, VB2=0.476V, Score=45.7
+[ 76/1000] ✓ Gain=76.7dB, UGF=2408.9kHz, VB2=0.469V, Score=45.2
+[ 77/1000] ✗ Gain=76.8dB, UGF=1540.8kHz, VB2=0.482V, Score=44.7
+[ 78/1000] ✗ Gain=68.9dB, UGF=2042.2kHz, VB2=0.458V, Score=42.1
+[ 79/1000] ✓ Gain=76.7dB, UGF=2408.9kHz, VB2=0.469V, Score=45.2
+[ 80/1000] ✗ Gain=68.0dB, UGF=2110.2kHz, VB2=0.453V, Score=41.8
+[ 81/1000] ✓ Gain=74.8dB, UGF=1303.8kHz, VB2=0.482V, Score=43.8
+[ 82/1000] ✓ Gain=61.2dB, UGF=1226.1kHz, VB2=0.466V, Score=38.7
+[ 83/1000] ✓ Gain=60.7dB, UGF=2018.2kHz, VB2=0.455V, Score=39.0
+[ 84/1000] ✓ Gain=61.1dB, UGF=647.3kHz, VB2=0.478V, Score=38.3
+[ 85/1000] ✓ Gain=61.1dB, UGF=647.3kHz, VB2=0.478V, Score=38.3
+[ 86/1000] ✓ Gain=61.1dB, UGF=647.3kHz, VB2=0.478V, Score=38.3
+[ 87/1000] ✓ Gain=61.1dB, UGF=647.3kHz, VB2=0.478V, Score=38.3
+[ 88/1000] ✓ Gain=60.5dB, UGF=675.0kHz, VB2=0.475V, Score=38.1
+[ 89/1000] ✓ Gain=68.7dB, UGF=792.3kHz, VB2=0.486V, Score=41.2
+[ 90/1000] ✓ Gain=68.7dB, UGF=792.3kHz, VB2=0.486V, Score=41.2
+[ 91/1000] ✓ Gain=71.2dB, UGF=2913.8kHz, VB2=0.466V, Score=43.4
+[ 92/1000] ✓ Gain=25.3dB, UGF=26544.8kHz, VB2=0.441V, Score=35.3
+[ 93/1000] ✓ Gain=24.4dB, UGF=26552.9kHz, VB2=0.443V, Score=35.0
+[ 94/1000] ✗ Simulation failed: Could not parse simulation results from 
+[ 95/1000] ✓ Gain=24.4dB, UGF=26552.9kHz, VB2=0.443V, Score=35.0
+[ 96/1000] ✓ Gain=71.8dB, UGF=2818.5kHz, VB2=0.469V, Score=43.6
+[ 97/1000] ✗ Gain=67.6dB, UGF=2865.0kHz, VB2=0.465V, Score=42.1
+[ 98/1000] ✓ Gain=69.6dB, UGF=3161.0kHz, VB2=0.459V, Score=43.0
+[ 99/1000] ✗ Gain=36.2dB, UGF=2860.4kHz, VB2=0.422V, Score=25.0
+[100/1000] ✓ Gain=69.6dB, UGF=3161.0kHz, VB2=0.459V, Score=43.0
+[101/1000] ✓ Gain=69.9dB, UGF=3110.6kHz, VB2=0.460V, Score=43.1
+[102/1000] ✓ Gain=74.3dB, UGF=2803.1kHz, VB2=0.466V, Score=44.5
+[103/1000] ✗ Gain=51.0dB, UGF=3442.2kHz, VB2=0.434V, Score=31.0
+[104/1000] ✓ Gain=94.6dB, UGF=1732.6kHz, VB2=0.424V, Score=40.8
+[105/1000] ✓ Gain=96.5dB, UGF=1301.8kHz, VB2=0.418V, Score=40.4
+[106/1000] ✓ Gain=89.8dB, UGF=1582.7kHz, VB2=0.428V, Score=40.7
+[107/1000] ✓ Gain=90.4dB, UGF=1318.5kHz, VB2=0.434V, Score=40.6
+[108/1000] ✓ Gain=90.2dB, UGF=1336.0kHz, VB2=0.433V, Score=40.6
+[109/1000] ✓ Gain=90.9dB, UGF=1314.8kHz, VB2=0.432V, Score=40.6
+[110/1000] ✓ Gain=90.9dB, UGF=1314.8kHz, VB2=0.432V, Score=40.6
+[111/1000] ✓ Gain=79.5dB, UGF=1780.4kHz, VB2=0.461V, Score=45.9
+[112/1000] ✗ Gain=70.1dB, UGF=1522.4kHz, VB2=0.438V, Score=37.1
+[113/1000] ✓ Gain=75.9dB, UGF=1723.6kHz, VB2=0.448V, Score=39.5
+[114/1000] ✓ Gain=72.2dB, UGF=1450.5kHz, VB2=0.436V, Score=37.8
+[115/1000] ✓ Gain=69.6dB, UGF=569.2kHz, VB2=0.453V, Score=41.5
+[116/1000] ✓ Gain=71.7dB, UGF=521.7kHz, VB2=0.452V, Score=42.2
+[117/1000] ✓ Gain=75.6dB, UGF=623.0kHz, VB2=0.458V, Score=43.7
+[118/1000] ✓ Gain=75.7dB, UGF=565.2kHz, VB2=0.461V, Score=43.7
+[119/1000] ✓ Gain=75.7dB, UGF=565.2kHz, VB2=0.461V, Score=43.7
+[120/1000] ✓ Gain=75.7dB, UGF=565.2kHz, VB2=0.461V, Score=43.7
+[121/1000] ✓ Gain=76.5dB, UGF=545.9kHz, VB2=0.459V, Score=44.0
+[122/1000] ✓ Gain=67.6dB, UGF=212.8kHz, VB2=0.453V, Score=40.5
+[123/1000] ✓ Gain=67.6dB, UGF=212.8kHz, VB2=0.453V, Score=40.5
+[124/1000] ✓ Gain=70.6dB, UGF=361.1kHz, VB2=0.487V, Score=41.7
+[125/1000] ✓ Gain=70.6dB, UGF=361.1kHz, VB2=0.487V, Score=41.7
+[126/1000] ✓ Gain=70.6dB, UGF=361.1kHz, VB2=0.487V, Score=41.7
+[127/1000] ✓ Gain=70.6dB, UGF=361.1kHz, VB2=0.487V, Score=41.7
+[128/1000] ✗ Gain=70.4dB, UGF=353.6kHz, VB2=0.487V, Score=41.6
+[129/1000] ✗ Gain=29.2dB, UGF=7.7kHz, VB2=0.482V, Score=25.9

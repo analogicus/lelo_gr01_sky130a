@@ -1,47 +1,46 @@
-*TB_OTA_TRAN
+*TB_SUN_TR_SKY130NM/TB_NCM
 *----------------------------------------------------------------
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/OTA_lpe.spi
+.include ../../../work/lpe/LELO_GR01_lpe.spi
 #else
-.include ../../../work/xsch/OTA.spice
+.include ../../../work/xsch/LELO_GR01.spice
 #endif
 
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-.option TNOM=27 GMIN=1e-15 reltol=1e-3
+.option GMIN=1e-15 reltol=1e-3
+.option itl1=500 itl2=200 itl4=100
+.option gmindc=1e-12
+.option method=gear
 
 *-----------------------------------------------------------------
 * PARAMETERS
 *-----------------------------------------------------------------
 .param TRF = 10p
+
 .param AVDD = {vdda}
-.param FREQ = 1e6
-.param VCM = 0.6
 
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD  VDD_1V8  VSS  dc 1.8
-VPWRUP PWRUP_1V8 VSS dc 1.8
-
-* Differential input: 10mV amplitude sine at 1MHz around VCM common mode
-VINP Vinp VSS SIN(0.9 0.01 {FREQ} 0 0 0)
-VINN Vinn VSS SIN(0.9 0.01 {FREQ} 0 0 180)
+VDD  VDD_1V8  VSS  pwl 0 0 0.1n 1.8 10u 1.8
+VPWRUP PWRUP_1V8 VSS pwl 0 0 0.1n 1.8 10u 1.8
 
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
-XDUT VDD_1V8 PWRUP_1V8 Vout Vinn Vinp VSS OTA
+.include ../xdut.spi
 
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
 .option savecurrents
 .save all
+
 
 *----------------------------------------------------------------
 * NGSPICE control
@@ -53,12 +52,18 @@ set color1=black
 unset askquit
 
 optran 0 0 0 1n 1u 0
+op
+dc temp -100 125 1
+let v_diff = xdut.vr1 - xdut.vr2
+let v_diff_amp = xdut.vr2 - xdut.vd1
+write {cicname}_temp.raw all v_diff v_diff_amp
 
-* Run for 10 cycles at 1MHz = 10us
-tran 10n 10u 1p
-
-write
+*tran 10n 10u 1p
+*let v_diff = xdut.vr1 - xdut.vr2
+*let v_diff_amp = xdut.vr2 - xdut.vd1
+*write
 quit
+
 
 .endc
 

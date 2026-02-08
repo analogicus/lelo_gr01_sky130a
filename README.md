@@ -4,7 +4,7 @@
 [![DOCS](../../actions/workflows/docs.yaml/badge.svg)](../../actions/workflows/docs.yaml)
 
 # Who
-wulff
+Nicolas, Nikolai and Walter, aka. Group 1
 
 # Why
 

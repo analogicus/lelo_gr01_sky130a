@@ -1,0 +1,58 @@
+** sch_path: /home/bryni/pro/aicex/ip/lelo_gr01_sky130a/design/LELO_GR01_SKY130A/OTA.sch
+**.subckt OTA VDD_1V8 PWRUP_1V8 Vout Vinn Vinp VSS
+*.ipin Vinn
+*.ipin Vinp
+*.ipin VDD_1V8
+*.ipin PWRUP_1V8
+*.opin VSS
+*.opin Vout
+x11<1> net2<1> Vinn net1<1> net1<1> LELOATR_NCH_4C5F0
+x11<0> net2<0> Vinn net1<0> net1<0> LELOATR_NCH_4C5F0
+x12<1> Vout Vinp net1<1> net1<1> LELOATR_NCH_4C5F0
+x12<0> Vout Vinp net1<0> net1<0> LELOATR_NCH_4C5F0
+x13<1> net1<1> IBP VSS VSS LELOATR_NCH_4C5F0
+x13<0> net1<0> IBP VSS VSS LELOATR_NCH_4C5F0
+x14<1> Vout net2<1> VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_4C5F0
+x14<0> Vout net2<0> VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_4C5F0
+x15<1> net2<1> net2<1> VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_4C5F0
+x15<0> net2<0> net2<0> VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_4C5F0
+x16<1> IBP IBP VSS VSS LELOATR_NCH_4C5F0
+x16<0> IBP IBP VSS VSS LELOATR_NCH_4C5F0
+x3 net3 net4 VSS VSS LELOATR_NCH_4C5F0
+x4 IBN net4 VSS VSS LELOATR_NCH_4C5F0
+x7 net5 net3 net4 net4 LELOATR_NCH_4C5F0
+XR2 VSS net4 VSS sky130_fd_pr__res_high_po W=1 L=300 mult=1 m=1
+x8 net5 net5 VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_4C5F0
+x9 IBP net5 VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_4C5F0
+x6 net3 net5 VDD_1V8 VDD_1V8 LELOATR_LVT_PCH_4C5F0
+x1 net6 net6 VSS VSS LELOATR_NCH_4C5F0
+x2 VDD_1V8 net6 net3 net3 LELOATR_NCH_4C5F0
+XR1 net6 VDD_1V8 VSS sky130_fd_pr__res_high_po W=1 L=1000 mult=1 m=1
+**.ends
+
+* expanding   symbol:  LELO_ATR_SKY130A/LELOATR_NCH_4C5F0.sym # of pins=4
+** sym_path: /home/bryni/pro/aicex/ip/lelo_gr01_sky130a/design/LELO_ATR_SKY130A/LELOATR_NCH_4C5F0.sym
+** sch_path: /home/bryni/pro/aicex/ip/lelo_gr01_sky130a/design/LELO_ATR_SKY130A/LELOATR_NCH_4C5F0.sch
+.subckt LELOATR_NCH_4C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__nfet_01v8 L=0.94 W=3.2 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  LELO_ATR_SKY130A/LELOATR_LVT_PCH_4C5F0.sym # of pins=4
+** sym_path: /home/bryni/pro/aicex/ip/lelo_gr01_sky130a/design/LELO_ATR_SKY130A/LELOATR_LVT_PCH_4C5F0.sym
+** sch_path: /home/bryni/pro/aicex/ip/lelo_gr01_sky130a/design/LELO_ATR_SKY130A/LELOATR_LVT_PCH_4C5F0.sch
+.subckt LELOATR_LVT_PCH_4C5F0 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+XM1 D G S B sky130_fd_pr__pfet_01v8_lvt L=0.94 W=3.2 nf=2 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end

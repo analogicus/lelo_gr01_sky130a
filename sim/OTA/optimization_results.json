@@ -1,0 +1,276 @@
+{
+  "timestamp": "2026-02-08T16:19:42.283157",
+  "targets": {
+    "gain_db": 80.0,
+    "ugf": 10000000.0,
+    "phase_margin": 60.0,
+    "vb2_min": 0.45,
+    "vb2_max": 0.65
+  },
+  "best_score": 18.02157716,
+  "best_sizing": {
+    "diff_pair_1": 1,
+    "diff_pair_2": 1,
+    "active_load_1": 6,
+    "active_load_2": 6,
+    "current_source_2": 8,
+    "stage_2_pmos": 4,
+    "class_a_1": 4
+  },
+  "best_result": {
+    "gain_db": 26.0151,
+    "ugf": 3506.79,
+    "phase_margin": 92.3317,
+    "vb1": 0.0,
+    "vb2": 0.0
+  },
+  "history": [
+    {
+      "sizing": {
+        "diff_pair_1": 1,
+        "diff_pair_2": 1,
+        "active_load_1": 6,
+        "active_load_2": 6,
+        "current_source_2": 8,
+        "stage_2_pmos": 4,
+        "class_a_1": 4
+      },
+      "result": {
+        "gain_db": 26.0151,
+        "ugf": 3506.79,
+        "phase_margin": 92.3317,
+        "vb2": 0.0,
+        "score": 18.02157716,
+        "success": true
+      }
+    },
+    {
+      "sizing": {
+        "diff_pair_1": 3,
+        "diff_pair_2": 3,
+        "active_load_1": 6,
+        "active_load_2": 6,
+        "current_source_2": 8,
+        "stage_2_pmos": 4,
+        "class_a_1": 4
+      },
+      "result": {
+        "gain_db": 11.5109,
+        "ugf": 19.9764,
+        "phase_margin": 94.1176,
+        "vb2": 0.0,
+        "score": 10.7555299056,
+        "success": true
+      }
+    },
+    {
+      "sizing": {
+        "diff_pair_1": 3,
+        "diff_pair_2": 3,
+        "active_load_1": 6,
+        "active_load_2": 6,
+        "current_source_2": 8,
+        "stage_2_pmos": 4,
+        "class_a_1": 4
+      },
+      "result": {
+        "gain_db": 11.5109,
+        "ugf": 19.9764,
+        "phase_margin": 94.1176,
+        "vb2": 0.0,
+        "score": 10.7555299056,
+        "success": true
+      }
+    },
+    {
+      "sizing": {
+        "diff_pair_1": 3,
+        "diff_pair_2": 3,
+        "active_load_1": 6,
+        "active_load_2": 6,
+        "current_source_2": 8,
+        "stage_2_pmos": 4,
+        "class_a_1": 4
+      },
+      "result": {
+        "gain_db": 11.5109,
+        "ugf": 19.9764,
+        "phase_margin": 94.1176,
+        "vb2": 0.0,
+        "score": 10.7555299056,
+        "success": true
+      }
+    },
+    {
+      "sizing": {
+        "diff_pair_1": 2,
+        "diff_pair_2": 2,
+        "active_load_1": 6,
+        "active_load_2": 6,
+        "current_source_2": 8,
+        "stage_2_pmos": 4,
+        "class_a_1": 4
+      },
+      "result": {
+        "gain_db": 23.0957,
+        "ugf": 68.8728,
+        "phase_margin": 89.7005,
+        "vb2": 0.0,
+        "score": 16.5481254912,
+        "success": true
+      }
+    },
+    {
+      "sizing": {
+        "diff_pair_1": 2,
+        "diff_pair_2": 2,
+        "active_load_1": 4,
+        "active_load_2": 4,
+        "current_source_2": 8,
+        "stage_2_pmos": 4,
+        "class_a_1": 4
+      },
+      "result": {
+        "gain_db": 22.6836,
+        "ugf": 75.6245,
+        "phase_margin": 90.1605,
+        "vb2": 0.0,
+        "score": 16.342102498,
+        "success": true
+      }
+    },
+    {
+      "sizing": {
+        "diff_pair_1": 2,
+        "diff_pair_2": 2,
+        "active_load_1": 2,
+        "active_load_2": 2,
+        "current_source_2": 8,
+        "stage_2_pmos": 4,
+        "class_a_1": 4
+      },
+      "result": {
+        "gain_db": 20.991,
+        "ugf": 89.932,
+        "phase_margin": 91.4213,
+        "vb2": 0.0,
+        "score": 15.495859728,
+        "success": true
+      }
+    },
+    {
+      "sizing": {
+        "diff_pair_1": 2,
+        "diff_pair_2": 2,
+        "active_load_1": 2,
+        "active_load_2": 2,
+        "current_source_2": 8,
+        "stage_2_pmos": 4,
+        "class_a_1": 4
+      },
+      "result": {
+        "gain_db": 20.991,
+        "ugf": 89.932,
+        "phase_margin": 91.4213,
+        "vb2": 0.0,
+        "score": 15.495859728,
+        "success": true
+      }
+    },
+    {
+      "sizing": {
+        "diff_pair_1": 2,
+        "diff_pair_2": 2,
+        "active_load_1": 2,
+        "active_load_2": 2,
+        "current_source_2": 8,
+        "stage_2_pmos": 4,
+        "class_a_1": 3
+      },
+      "result": {
+        "gain_db": 20.991,
+        "ugf": 89.932,
+        "phase_margin": 91.4213,
+        "vb2": 0.0,
+        "score": 15.495859728,
+        "success": true
+      }
+    },
+    {
+      "sizing": {
+        "diff_pair_1": 2,
+        "diff_pair_2": 2,
+        "active_load_1": 2,
+        "active_load_2": 2,
+        "current_source_2": 8,
+        "stage_2_pmos": 4,
+        "class_a_1": 3
+      },
+      "result": {
+        "gain_db": 20.991,
+        "ugf": 89.932,
+        "phase_margin": 91.4213,
+        "vb2": 0.0,
+        "score": 15.495859728,
+        "success": true
+      }
+    },
+    {
+      "sizing": {
+        "diff_pair_1": 2,
+        "diff_pair_2": 2,
+        "active_load_1": 1,
+        "active_load_2": 1,
+        "current_source_2": 8,
+        "stage_2_pmos": 4,
+        "class_a_1": 3
+      },
+      "result": {
+        "gain_db": 17.8777,
+        "ugf": 110.872,
+        "phase_margin": 93.786,
+        "vb2": 0.0,
+        "score": 13.939293488,
+        "success": true
+      }
+    },
+    {
+      "sizing": {
+        "diff_pair_1": 2,
+        "diff_pair_2": 2,
+        "active_load_1": 2,
+        "active_load_2": 2,
+        "current_source_2": 8,
+        "stage_2_pmos": 4,
+        "class_a_1": 4
+      },
+      "result": {
+        "gain_db": 20.991,
+        "ugf": 89.932,
+        "phase_margin": 91.4213,
+        "vb2": 0.0,
+        "score": 15.495859728,
+        "success": true
+      }
+    },
+    {
+      "sizing": {
+        "diff_pair_1": 1,
+        "diff_pair_2": 1,
+        "active_load_1": 2,
+        "active_load_2": 2,
+        "current_source_2": 8,
+        "stage_2_pmos": 4,
+        "class_a_1": 4
+      },
+      "result": {
+        "gain_db": 22.6707,
+        "ugf": 4809.38,
+        "phase_margin": 93.4372,
+        "vb2": 0.0,
+        "score": 16.354587520000003,
+        "success": true
+      }
+    }
+  ]
+}

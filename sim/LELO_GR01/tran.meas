@@ -1,0 +1,9 @@
+* Measure LELO_GR01
+.control
+
+load {cicname}_temp.raw
+
+echo "MEAS_START"
+
+echo "MEAS_END"
+.endc

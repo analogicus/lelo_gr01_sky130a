@@ -1,18 +1,18 @@
 library: LELO_GR01_SKY130A
-cell: LELO_GR01
+cell: bandgap
 # Your name
-author: Anonymous
+author: Nicolas, Nikolai and Walter
 # Your github username
-github: analogicus
+github: Nicolas-MARCEL, nikolahm, N0elurt
 # Something funny and descriptive
-tagline: The answer is 42
+tagline: The standard is the powerhouse of the cell
 # Your email, if you so wish
 email: anon@anon.com
 # Your github site, usually <github username>.github.io
-url: analogicus.github.io
+url: analogicus.github.io/lelo_gr01_sky130a/
 doc:
   # Make docs
-  #libraries:
-  #   <library>:
-  #       - <cell>
+  libraries:
+     LELO_GR01_SKY130A:
+         - bandgap
   #       - <cell>

@@ -1,0 +1,25 @@
+vref:
+  src:
+    - vref_avg
+  name: Bandgap Reference Voltage
+  typ: 1.227
+  scale: 1
+  digits: 3
+  unit: V
+
+iptat:
+  src:
+    - iptat_typ
+  name: PTAT Mirror Current
+  scale: 1e6
+  digits: 2
+  unit: uA
+
+v_tail:
+  src:
+    - v_tail_typ
+  name: Amp Tail Voltage
+  typ: 0.141
+  scale: 1
+  digits: 3
+  unit: V

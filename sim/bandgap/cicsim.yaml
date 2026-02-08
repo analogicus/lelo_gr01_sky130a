@@ -1,0 +1,9 @@
+options:
+  useTmpDir: False
+  sha: True
+corner:
+  Lay: ''
+  Sch: ''
+ngspice:
+  library: diffamp_1
+  cell: bandgap

@@ -1,0 +1,67 @@
+*TB_BANDGAP_AC
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/bandgap_lpe.spi
+#else
+.include ../../../work/xsch/bandgap.spice
+#endif
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option TNOM=27 GMIN=1e-15 reltol=1e-3
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param AVDD = 1.8
+
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0  dc 0
+VDD_1V8  VDD_1V8  VSS  dc {AVDD}
+
+* AC 1 0 and AC 1 180 creates a 1V differential small-signal input.
+* This means v(vout) in the AC results directly represents the GAIN.
+VIN  VIN  VSS dc 0.9 AC 1 0
+VIP  VIP  VSS dc 0.9 AC 1 180
+IB   VDD_1V8  IB  dc 20u
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+* Ensure the pin order matches your .subckt bandgap VDD_1V8 VIP IB VIN VSS VOUT
+Xxdut VDD_1V8 VIP IB VIN VSS VOUT bandgap
+
+*-----------------------------------------------------------------
+* PROBE
+*-----------------------------------------------------------------
+.save all
+
+*-----------------------------------------------------------------
+* NGSPICE control
+*-----------------------------------------------------------------
+.control
+set num_threads=8
+set color0=white
+set color1=black
+unset askquit
+
+* 1. Run DC Operating point to ensure circuit is biased correctly
+op
+
+* 2. Run AC Analysis (10 points per decade from 1Hz to 10GHz)
+ac dec 10 1 10G
+
+let vout_db = db(v(vout))
+let vout_ph = ph(v(vout))
+
+* 3. Save the results
+write {cicname}.raw
+quit
+.endc
+
+.end

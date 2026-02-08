@@ -1,0 +1,23 @@
+* Measure bandgap
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+*TRAN
+meas tran vout_dc find v(vout) at=20n
+
+meas tran v_tail find v(xdut.x1.TAIL) at=20n
+
+load {cicname}_temp.raw
+meas dc vref_max MAX v(vref) from=0 to=125
+meas dc vref_min MIN v(vref) from=0 to=125
+meas dc vref_avg AVG v(vref) from=0 to=125
+
+meas dc iptat_typ FIND i(@r.xdut.x9.xxa1.xr1_0.rbody[i]) AT=27
+
+meas dc v_tail_typ FIND v(xdut.x1.tail) AT=27
+
+echo "MEAS_END"
+.endc

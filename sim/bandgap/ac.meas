@@ -1,0 +1,32 @@
+* measure bandgap AC
+.control
+load {cicname}.raw
+
+setplot ac1
+
+let vout_db = db(v(vout))
+let vout_ph = ph(v(vout))
+
+echo "MEAS_START"
+
+meas ac gain_db find vout_db at=100
+
+
+let target_3db = gain_db - 3
+meas ac bw when vout_db=target_3db fall=1
+
+meas ac f_unity when vout_db=0
+
+
+meas ac p_at_unity find vout_ph at=f_unity
+
+let phase_shift = 180 - p_at_unity
+
+let pm = p_at_unity
+
+echo "Phase_Shift: $&phase_shift degrees"
+echo "Phase_Margin: $&pm degrees"
+
+echo "MEAS_END"
+quit
+.endc

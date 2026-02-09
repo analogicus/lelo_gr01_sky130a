@@ -133,13 +133,13 @@ T {.control
   write bandgap_gui.raw
 .endc} -690 -20 0 0 0.4 0.4 {}
 N 0 0 0 90 {lab=VOUT}
-N -50 420 -50 630 {lab=VIN}
-N -90 30 -90 420 {lab=VIN}
+N -50 420 -50 630 {lab=VIP}
+N -90 30 -90 420 {lab=VIP}
 N -90 -30 -90 0 {lab=VDD_1V8}
 N 0 -120 0 -100 {lab=VDD_1V8}
 N -90 -50 -90 -30 {lab=VDD_1V8}
 N -40 270 -40 310 {lab=VDD_1V8}
-N -90 420 -20 420 {lab=VIN}
+N -90 420 -20 420 {lab=VIP}
 N -0 270 -0 310 {lab=IB}
 N 0 730 0 760 {lab=VSS}
 N -50 0 50 0 {lab=VOUT}
@@ -151,9 +151,9 @@ N -0 -100 -0 -70 {lab=VDD_1V8}
 N -0 660 -0 730 {lab=VSS}
 N -50 690 -0 690 {lab=VSS}
 N -0 690 50 690 {lab=VSS}
-N 50 420 50 450 {lab=VIP}
-N 20 420 90 420 {lab=VIP}
-N 90 30 90 420 {lab=VIP}
+N 50 420 50 450 {lab=VIN}
+N 20 420 90 420 {lab=VIN}
+N 90 30 90 420 {lab=VIN}
 N 30 490 30 580 {lab=VSS}
 N 50 530 50 540 {lab=#net1}
 N 90 -30 90 -0 {lab=VDD_1V8}
@@ -169,9 +169,7 @@ N -310 310 -250 310 {lab=VDD_1V8}
 N -250 250 -250 280 {lab=#net2}
 N -250 340 -250 360 {lab=VSS}
 N -10 660 10 660 {lab=VSS}
-N -20 330 20 420 {lab=VIP}
 N -20 270 -20 330 {lab=VIP}
-N -20 420 20 330 {lab=VIN}
 N 20 270 20 330 {lab=VIN}
 N 50 620 50 630 {lab=VR}
 N 90 -70 250 -70 {lab=VDD_1V8}
@@ -190,6 +188,8 @@ N 230 160 230 340 {lab=VSS}
 N 250 470 250 630 {lab=#net5}
 N 250 380 250 390 {lab=#net6}
 N 230 340 230 430 {lab=VSS}
+N -20 330 -20 420 {lab=VIP}
+N 20 330 20 420 {lab=VIN}
 C {devices/lab_wire.sym} -40 310 0 0 {name=p2 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 0 310 0 0 {name=p4 sig_type=std_logic lab=IB}
 C {devices/lab_wire.sym} 40 270 3 0 {name=p6 sig_type=std_logic lab=VSS}
@@ -214,8 +214,8 @@ m=1
 spiceprefix=X
 }
 C {LELO_GR01_SKY130A/diffamp_1.sym} 0 120 3 0 {name=x1}
-C {devices/lab_wire.sym} -90 400 2 0 {name=p3 sig_type=std_logic lab=VIN}
-C {devices/lab_wire.sym} 90 390 2 0 {name=p5 sig_type=std_logic lab=VIP
+C {devices/lab_wire.sym} 90 370 2 0 {name=p3 sig_type=std_logic lab=VIN}
+C {devices/lab_wire.sym} -90 370 2 0 {name=p5 sig_type=std_logic lab=VIP
 }
 C {JNW_TR_SKY130A/JNWTR_RPPO8.sym} 50 450 1 0 {name=x2 }
 C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 50 540 1 0 {name=x3 }

@@ -41,6 +41,7 @@ The schematic of this circuit can be found in design/LELO_GR01_SKY130A/bandgap.s
 | IB           | Input     | VDD_1V8 | 10µA reference input current              |
 | VREF         | Output    | VDD_1V8 | 1.22V reference voltage generated         |
 | VR           | Output    | VDD_1V8 | CTAT voltage which decreases with temperature  |
+| IPTAT        | Output    | VDD_1V8 | PTAT current which increases with temperature  |
 
 
 

@@ -188,22 +188,15 @@ N 450 380 450 390 {lab=#net6}
 N 430 340 430 430 {lab=VSS}
 N -20 330 -20 420 {lab=VIP}
 N 20 330 20 420 {lab=VIN}
-N 90 30 90 70 {lab=#net7}
-N 90 70 90 100 {lab=#net7}
-N 130 100 150 100 {lab=VIN}
+N 90 30 90 70 {lab=VIN}
+N 90 70 90 100 {lab=VIN}
 N 90 130 90 370 {lab=VIN}
 N 90 370 90 420 {lab=VIN}
 N 250 -70 440 -70 {lab=VDD_1V8}
-N 220 70 220 100 {lab=VDD_1V8}
-N 220 130 220 190 {lab=IPTAT}
-N 220 190 240 190 {lab=IPTAT}
-N 90 150 150 150 {lab=VIN}
-N 150 100 180 100 {lab=VIN}
-N 150 100 150 150 {lab=VIN}
-N 220 -70 220 70 {lab=VDD_1V8}
 N 250 690 450 690 {lab=VSS}
 N 450 -70 450 -30 {lab=VDD_1V8}
 N 440 -70 450 -70 {lab=VDD_1V8}
+N 90 100 90 130 {lab=VIN}
 C {devices/lab_wire.sym} -40 310 0 0 {name=p2 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 0 310 0 0 {name=p4 sig_type=std_logic lab=IB}
 C {devices/lab_wire.sym} 40 270 3 0 {name=p6 sig_type=std_logic lab=VSS}
@@ -260,6 +253,3 @@ spiceprefix=X
 }
 C {devices/lab_wire.sym} 430 220 0 0 {name=p25 sig_type=std_logic lab=VSS}
 C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} 450 390 1 0 {name=x12 }
-C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sym} 130 100 0 1 {name=x4}
-C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sym} 180 100 0 0 {name=x6}
-C {devices/opin.sym} 240 190 0 0 {name=p26 lab=IPTAT}

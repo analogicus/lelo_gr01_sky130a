@@ -15,4 +15,4 @@ doc:
   libraries:
      LELO_GR01_SKY130A:
          - bandgap
-  #       - <cell>
+         - diffamp_1

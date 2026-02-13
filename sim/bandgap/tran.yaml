@@ -1,86 +1,26 @@
-
-#<name>:
-#  src:
-#    - <paramters>
-#  typ: <typical spec value>
-#  name: <long name>
-#  min: <minimum spec value>
-#  max: <maximum spec value>
-#  scale: <scale, multiply result by scale>
-#  digits: <significant digits>
-#  unit: Unit
-
-
-idd:
+vref:
   src:
-    - idd_25
-  typ: 30
-  min: 5
-  max: 100
-  scale: -1e6
+    - vref_avg
+  name: Bandgap Reference Voltage
+  typ: 1.227
+  scale: 1
   digits: 3
+  unit: V
+
+
+iptat:
+  src:
+    - iptat_typ
+  name: PTAT Mirror Current
+  scale: 1e6
+  digits: 2
   unit: uA
-iddq:
+
+v_tail:
   src:
-    - iddq_25
-  typ: 10
-  min: 0
-  max: 50
-  scale: -1e9
-  digits: 3
-  unit: nA
-ind_1p:
-  src:
-    - ind_1p_max
-    - ind_1p_min
-  typ: 0
-  desc: Industrial 1 point calibration
-  min: -15
-  max: +15
+    - v_tail_typ
+  name: Amp Tail Voltage
+  typ: 0.141
   scale: 1
   digits: 3
-  unit: C
-ind_2p:
-  src:
-    - ind_2p_max
-    - ind_2p_min
-  typ: 0
-  desc: Industrial 2 point calibration
-  min: -10
-  max: +10
-  scale: 1
-  digits: 3
-  unit: C
-com_1p:
-  src:
-    - com_1p_max
-    - com_1p_min
-  typ: 0
-  desc: Commercial 1 point calibration
-  min: -10
-  max: +10
-  scale: 1
-  digits: 3
-  unit: C
-com_2p:
-  src:
-    - com_2p_max
-    - com_2p_min
-  typ: 0
-  desc: Commercial 2 point calibration
-  min: -5
-  max: +5
-  scale: 1
-  digits: 3
-  unit: C
-freq:
-  src:
-    - freq_min
-    - freq_max
-  typ: 3
-  desc: Frequency
-  min: 1.5
-  max: 4.8
-  scale: 1e-6
-  digits: 3
-  unit: MHz
+  unit: V

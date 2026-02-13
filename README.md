@@ -60,19 +60,19 @@ Look at the bottom of this readme for waveforms.
 
 ## Some important waveforms
 
-![](bandgap/I_PTAT.png)
+![](sim/bandgap/I_PTAT.png)
 
 <sub> Figure 1: Current simulated with a sweeping temperature between -40 and 125 degrees C, also known as IPTAT. </sub>
 
-![](bandgap/V_PTAT.png)
+![](sim/bandgap/V_PTAT.png)
 
 <sub> Figure 2: Voltage simulated with a sweeping temperature between -40 and 125 degrees C, also known as VPTAT. </sub>
 
-![](bandgap/I_CTAT.png)
+![](sim/bandgap/I_CTAT.png)
 
 <sub> Figure 3: Current simulated with a sweeping temperature between -40 and 125 degrees C, also known as ICTAT. </sub>
 
-![](bandgap/V_CTAT.png)
+![](sim/bandgap/V_CTAT.png)
 
 <sub> Figure 4: Voltage simulated with a sweeping temperature between -40 and 125 degrees C, also known as VCTAT. </sub>
 

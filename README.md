@@ -19,6 +19,8 @@ The bandgap works since the voltage across our "diodes" (two diode-connected PNP
 
 The schematic of this circuit can be found in design/LELO_GR01_SKY130A/bandgap.sch
 
+Look at the bottom of this readme for waveforms.
+
 ## What
 
 

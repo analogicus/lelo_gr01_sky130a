@@ -5,6 +5,7 @@ V {}
 S {}
 E {}
 P 4 1 20 30 {}
+P 4 1 -120 -290 {}
 N 480 -570 560 -570 {lab=#net1}
 N 440 -540 440 -460 {lab=#net1}
 N 600 -540 600 -460 {lab=VOUT}
@@ -21,28 +22,26 @@ N 440 -380 600 -380 {lab=TAIL}
 N 600 -400 600 -380 {lab=TAIL}
 N 600 -430 600 -400 {lab=TAIL}
 N 440 -430 440 -400 {lab=TAIL}
-N 520 -380 520 -340 {lab=TAIL}
 N 600 -500 750 -500 {lab=VOUT}
 N 220 -430 400 -430 {lab=VIN}
 N 220 -370 640 -370 {lab=VIP}
 N 640 -430 640 -370 {lab=VIP}
-N 520 -280 520 -260 {lab=VSS}
-N 520 -310 520 -280 {lab=VSS}
-N 220 -220 520 -220 {lab=VSS}
-N 520 -260 520 -220 {lab=VSS}
-N 220 -340 310 -340 {lab=IB}
-N 310 -340 400 -340 {lab=IB}
-N 400 -340 400 -310 {lab=IB}
-N 400 -310 480 -310 {lab=IB}
-N 350 -310 400 -310 {lab=IB}
-N 310 -310 310 -220 {lab=VSS}
-N 140 -340 220 -340 {lab=IB}
+N 520 -380 520 -280 {lab=TAIL}
+N 390 -280 390 -250 {lab=#net2}
+N 320 -250 390 -250 {lab=#net2}
+N 390 -250 480 -250 {lab=#net2}
+N 280 -250 280 -220 {lab=VSS}
+N 280 -220 520 -220 {lab=VSS}
+N 520 -250 520 -220 {lab=VSS}
+N 390 -220 390 -190 {lab=VSS}
+N 240 -290 280 -290 {lab=#net2}
+N 280 -290 280 -280 {lab=#net2}
+N 280 -290 390 -290 {lab=#net2}
+N 390 -290 390 -280 {lab=#net2}
 C {cborder/border_xs.sym} 0 0 0 0 {
 user="nikolai"
 company="wulff"}
-C {devices/ipin.sym} 220 -220 0 0 {name=p2 lab=VSS}
 C {devices/ipin.sym} 220 -620 0 0 {name=p1 lab=VDD_1V8}
-C {devices/ipin.sym} 140 -340 0 0 {name=p3 lab=IB}
 C {devices/ipin.sym} 220 -430 0 0 {name=p4 lab=VIN}
 C {devices/ipin.sym} 220 -370 0 0 {name=p5 lab=VIP}
 C {devices/opin.sym} 750 -500 0 0 {name=p6 lab=VOUT}
@@ -50,6 +49,10 @@ C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 400 -430 0 0 {name=x1 }
 C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sym} 480 -570 0 1 {name=x2 }
 C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sym} 560 -570 0 0 {name=x4 }
 C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 640 -430 0 1 {name=x3 }
-C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 480 -310 0 0 {name=x5 }
-C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 350 -310 0 1 {name=x6 }
 C {devices/lab_pin.sym} 520 -380 0 0 {name=p8 sig_type=std_logic lab=TAIL}
+C {devices/lab_wire.sym} 60 -310 0 0 {name=p3 sig_type=std_logic lab=VDD_1V8}
+C {LELO_GR01_SKY130A/GM_cell.sym} 210 -300 0 0 {name=x5}
+C {devices/ipin.sym} 390 -190 0 0 {name=p2 lab=VSS}
+C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 480 -250 0 0 {name=x6 }
+C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 320 -250 0 1 {name=x7 }
+C {devices/lab_wire.sym} 60 -270 0 0 {name=p7 sig_type=std_logic lab=VSS}

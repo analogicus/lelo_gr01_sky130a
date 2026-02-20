@@ -1,0 +1,105 @@
+*TB_SUN_TR_SKY130NM/TB_NCM
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/oscillator_tb_lpe.spi
+#else
+.include ../../../work/xsch/oscillator_tb.spice
+#endif
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option TNOM=27 GMIN=1e-15 reltol=1e-3
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param TRF = 10p
+.param vdda = 1.8
+.param AVDD = {vdda}
+
+
+.param TAMB = 27
+.temp {TAMB}
+
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0     dc 0
+VDD_1V8  VDD_1V8  VSS  dc 1.8
+
+IB_OSC   VDD_1V8  IB_OSC  dc 10u
+IB_BG   VDD_1V8  IB_BG  dc 10u
+
+*VREF  VREF  VSS  dc 1.22
+
+*VBG  VBG  VSS  dc 0.7
+
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+.include ../xdut.spi
+
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+.options savecurrents
+.save all
+
+
+
+
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+.control
+load {cicname}.raw
+set num_threads=4
+set color0=white
+set color1=black
+unset askquit
+
+.option savecurrents
+
+*optran 0 0 0 1n 1u 0
+*dc temp -40 125 1
+*write {cicname}_temp.raw
+
+*op
+*write {cicname}_op.raw
+
+echo 'Temp ; Freq' > oscillator.csv
+
+let tcur = -20
+while tcur le 100
+	alterparam TAMB = $&tcur
+	reset
+
+        tran 0.1n 1u 1p
+
+	meas tran Tperiod  TRIG v(VOUT_OSC) VAL=0.9 RISE=1  TARG v(VOUT_OSC) VAL=0.9 RISE=2
+	let Freq = 1/Tperiod
+	echo Temp = $&tcur V  freq = $&freq Hz 
+	echo '$&tcur ; $&freq' >> oscillator.csv
+
+
+	let tcur = tcur + 50
+
+end
+
+
+*tran 0.1n 1u 1p
+*write
+
+
+
+quit
+
+
+.endc
+
+.end

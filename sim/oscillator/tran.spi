@@ -1,0 +1,102 @@
+*TB_SUN_TR_SKY130NM/TB_NCM
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/oscillator_lpe.spi
+#else
+.include ../../../work/xsch/oscillator.spice
+#endif
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option TNOM=27 GMIN=1e-15 reltol=1e-3
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param TRF = 10p
+.param vdda = 1.8
+.param AVDD = {vdda}
+
+
+.param TAMB = 27
+.temp {TAMB}
+
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0     dc 0
+VDD_1V8  VDD_1V8  VSS  dc 1.8
+
+IB  VDD_1V8  IB  dc 10u
+
+VOUT_BG  VOUT_BG  VSS  dc 0.8
+VREF_BG  VREF_BG  VSS  dc 1.22
+
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+.include ../xdut.spi
+
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+.options savecurrents
+.save all
+
+
+
+
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+.control
+load {cicname}.raw
+set num_threads=4
+set color0=white
+set color1=black
+unset askquit
+
+.option savecurrents
+
+
+
+
+op
+tran 0.1n 1u 1p
+write
+
+
+*echo 'Temp ; Freq' > oscillator.csv
+
+*let tcur = -20
+*while tcur le 100
+*	alterparam TAMB = $&tcur
+*	reset
+*
+*        tran 0.1n 1u 1p
+*
+*	meas tran Tperiod  TRIG v(VOUTD) VAL=0.9 RISE=1  TARG v(VOUTD) VAL=0.9 RISE=2
+*	let Freq = 1/Tperiod
+*	echo Temp = $&tcur V  freq = $&freq Hz 
+*	echo '$&tcur ; $&freq' >> oscillator.csv
+*
+*
+*	let tcur = tcur + 10
+*
+*end
+
+
+
+
+
+quit
+
+
+.endc
+
+.end

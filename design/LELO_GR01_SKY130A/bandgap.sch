@@ -201,9 +201,9 @@ C {devices/lab_wire.sym} -40 310 0 0 {name=p2 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 0 310 0 0 {name=p4 sig_type=std_logic lab=IB}
 C {devices/lab_wire.sym} 40 270 3 0 {name=p6 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} -460 400 0 0 {name=p7 lab=VDD_1V8}
-C {devices/ipin.sym} -460 440 0 0 {name=p8 lab=VIP}
+C {devices/opin.sym} -460 440 0 0 {name=p8 lab=VIP}
 C {devices/ipin.sym} -460 480 0 0 {name=p9 lab=IB}
-C {devices/ipin.sym} -460 520 0 0 {name=p10 lab=VIN}
+C {devices/opin.sym} -460 520 0 0 {name=p10 lab=VIN}
 C {devices/ipin.sym} -460 560 0 0 {name=p11 lab=VSS}
 C {devices/lab_wire.sym} 0 -120 0 0 {name=p1 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 0 760 0 0 {name=p12 sig_type=std_logic lab=VSS}

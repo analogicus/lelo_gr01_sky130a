@@ -4,12 +4,12 @@ K {}
 V {}
 S {}
 E {}
-N -120 20 130 20 {lab=#net1}
-N -80 -10 -80 20 {lab=#net1}
-N 90 -10 90 20 {lab=#net1}
+N -120 20 130 20 {lab=Vc}
+N -80 -10 -80 20 {lab=Vc}
+N 90 -10 90 20 {lab=Vc}
 N -120 -80 -120 -40 {lab=Ve1}
 N 130 -80 130 -40 {lab=Ve8}
-N -0 20 0 60 {lab=#net1}
+N -0 20 0 60 {lab=Vc}
 C {sky130_fd_pr/pnp_05v5.sym} 110 -10 0 0 {name=Q1
 model=pnp_05v5_W3p40L3p40
 m=8

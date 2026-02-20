@@ -14,7 +14,7 @@ T {.control
   ac dec 10 1 10G
   write bandgap_gui.raw
 .endc} -690 -20 0 0 0.4 0.4 {}
-N 0 0 0 90 {lab=VBIAS}
+N 0 0 0 90 {lab=VOUT}
 N -90 420 -90 630 {lab=VIP}
 N -90 30 -90 420 {lab=VIP}
 N -90 -30 -90 0 {lab=VDD_1V8}
@@ -23,7 +23,7 @@ N -90 -50 -90 -30 {lab=VDD_1V8}
 N -40 270 -40 310 {lab=VDD_1V8}
 N -90 420 -20 420 {lab=VIP}
 N 0 730 0 760 {lab=VSS}
-N -50 0 50 0 {lab=VBIAS}
+N -50 0 50 0 {lab=VOUT}
 N 90 -50 90 -30 {lab=VDD_1V8}
 N -90 -70 90 -70 {lab=VDD_1V8}
 N 90 -70 90 -50 {lab=VDD_1V8}
@@ -37,16 +37,16 @@ N 20 420 90 420 {lab=VIN}
 N 70 490 70 580 {lab=VSS}
 N 90 530 90 540 {lab=#net1}
 N 90 -30 90 -0 {lab=VDD_1V8}
-N -250 70 -250 110 {lab=VBIAS}
-N -250 70 0 70 {lab=VBIAS}
+N -250 70 -250 110 {lab=VOUT}
+N -250 70 0 70 {lab=VOUT}
 N -250 140 -200 140 {lab=VSS}
 N -250 220 -200 220 {lab=VSS}
-N -250 170 -250 190 {lab=#net2}
-N -290 190 -250 190 {lab=#net2}
-N -290 190 -290 220 {lab=#net2}
+N -250 170 -250 190 {lab=VS1}
+N -290 190 -250 190 {lab=VS1}
+N -290 190 -290 220 {lab=VS1}
 N -210 310 -170 310 {lab=VIP}
 N -310 310 -250 310 {lab=VDD_1V8}
-N -250 250 -250 280 {lab=#net3}
+N -250 250 -250 280 {lab=#net2}
 N -250 340 -250 360 {lab=VSS}
 N -50 660 -30 660 {lab=VSS}
 N -20 270 -20 330 {lab=VIP}
@@ -54,18 +54,18 @@ N 20 270 20 330 {lab=VIN}
 N 90 620 90 630 {lab=VR}
 N 90 -70 250 -70 {lab=VDD_1V8}
 N 450 -30 450 0 {lab=VDD_1V8}
-N 380 0 410 0 {lab=VBIAS}
+N 380 0 410 0 {lab=VOUT}
 N 450 30 450 60 {lab=VREF}
 N 450 60 490 60 {lab=VREF}
 N 90 620 200 620 {lab=VR}
 N 450 60 450 120 {lab=VREF}
-N 450 200 450 210 {lab=#net4}
-N 450 290 450 300 {lab=#net5}
+N 450 200 450 210 {lab=#net3}
+N 450 290 450 300 {lab=#net4}
 N 50 690 250 690 {lab=VSS}
 N 410 660 410 690 {lab=VSS}
 N 430 160 430 340 {lab=VSS}
-N 450 470 450 630 {lab=#net6}
-N 450 380 450 390 {lab=#net7}
+N 450 470 450 630 {lab=#net5}
+N 450 380 450 390 {lab=#net6}
 N 430 340 430 430 {lab=VSS}
 N -20 330 -20 420 {lab=VIP}
 N 20 330 20 420 {lab=VIN}
@@ -83,10 +83,10 @@ N -30 660 -0 660 {lab=VSS}
 N 0 660 50 660 {lab=VSS}
 C {devices/lab_wire.sym} -40 310 0 0 {name=p2 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 40 270 3 0 {name=p6 sig_type=std_logic lab=VSS}
-C {devices/ipin.sym} -460 400 0 0 {name=p7 lab=VDD_1V8}
-C {devices/ipin.sym} -460 440 0 0 {name=p8 lab=VIP}
-C {devices/ipin.sym} -460 480 0 0 {name=p10 lab=VIN}
-C {devices/ipin.sym} -460 520 0 0 {name=p11 lab=VSS}
+C {devices/ipin.sym} -460 390 0 0 {name=p7 lab=VDD_1V8}
+C {devices/opin.sym} -480 450 0 0 {name=p8 lab=VIP}
+C {devices/opin.sym} -480 480 0 0 {name=p10 lab=VIN}
+C {devices/ipin.sym} -460 420 0 0 {name=p11 lab=VSS}
 C {devices/lab_wire.sym} 0 -120 0 0 {name=p1 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 0 760 0 0 {name=p12 sig_type=std_logic lab=VSS}
 C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sym} 50 0 0 0 {name=x5}
@@ -119,10 +119,10 @@ C {devices/lab_wire.sym} -170 310 0 0 {name=p19 sig_type=std_logic lab=VIP
 C {devices/lab_wire.sym} -310 310 0 0 {name=p20 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} -250 360 0 0 {name=p21 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} -460 330 0 0 {name=p22 lab=VS1}
-C {devices/opin.sym} -480 560 0 0 {name=p23 lab=VBIAS}
+C {devices/opin.sym} -480 510 0 0 {name=p23 lab=VOUT}
 C {devices/opin.sym} 200 620 0 0 {name=p13 lab=VR}
 C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sym} 410 0 0 0 {name=x8}
-C {devices/lab_wire.sym} 380 0 0 0 {name=p16 sig_type=std_logic lab=VBIAS}
+C {devices/lab_wire.sym} 380 0 0 0 {name=p16 sig_type=std_logic lab=VOUT}
 C {devices/opin.sym} 490 60 0 0 {name=p24 lab=VREF}
 C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} 450 120 1 0 {name=x9}
 C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} 450 210 1 0 {name=x10 }
@@ -135,6 +135,5 @@ spiceprefix=X
 C {devices/lab_wire.sym} 430 220 0 0 {name=p25 sig_type=std_logic lab=VSS}
 C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} 450 390 1 0 {name=x12 }
 C {LELO_GR01_SKY130A/diffamp_1.sym} 0 120 3 0 {name=x1}
-C {devices/lab_wire.sym} -290 140 0 0 {name=p4 sig_type=std_logic lab=PWRUP_1V8}
-C {devices/lab_wire.sym} 0 50 0 0 {name=p9 sig_type=std_logic lab=VBIAS}
+C {devices/lab_wire.sym} 0 50 0 0 {name=p9 sig_type=std_logic lab=VOUT}
 C {devices/lab_wire.sym} -290 190 0 0 {name=p26 sig_type=std_logic lab=VS1}

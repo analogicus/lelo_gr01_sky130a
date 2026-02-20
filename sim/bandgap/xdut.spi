@@ -1,2 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut bandgap
-XDUT VDD_1V8 VIP IB VIN VSS PWRUP_1V8 VS1 VOUT VR VREF IPTAT  bandgap
+XDUT VOUT VREF VS1 PWRUP_1V8 VDD_1V8 VIP VIN VSS VR  bandgap

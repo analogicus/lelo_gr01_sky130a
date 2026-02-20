@@ -28,8 +28,8 @@ VSS  VSS  0     dc 0
 VDD_1V8  VDD_1V8  VSS  dc 1.8
 
 
-*Place a load on IPTAT
-Rload IPTAT 0 1000
+*Place a load on IBP
+Rload IBP VSS 1000
 
 *-----------------------------------------------------------------
 * DUT

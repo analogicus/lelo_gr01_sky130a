@@ -16,3 +16,4 @@ doc:
      LELO_GR01_SKY130A:
          - bandgap
          - diffamp_1
+         - GM_cell

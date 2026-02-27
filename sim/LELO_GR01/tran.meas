@@ -1,0 +1,11 @@
+* Measure LELO_GR01
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+.meas tran Iavg AVG I(VDD_1V8) 
+
+echo "MEAS_END"
+.endc

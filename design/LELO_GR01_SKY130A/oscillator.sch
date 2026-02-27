@@ -4,7 +4,6 @@ K {}
 V {}
 S {}
 E {}
-N 1090 -330 1170 -330 {lab=IB}
 N 1090 -290 1170 -290 {lab=VSS}
 N 1090 -370 1170 -370 {lab=VDD_1V8}
 N 1490 -330 1540 -330 {lab=#net1}
@@ -53,8 +52,6 @@ N 600 -430 720 -430 {lab=VOUT_BG}
 C {devices/ipin.sym} 350 -280 0 0 {name=p11 lab=VSS}
 C {devices/ipin.sym} 350 -330 0 0 {name=p7 lab=VDD_1V8}
 C {LELO_GR01_SKY130A/diffamp_1.sym} 1320 -330 0 0 {name=x1}
-C {devices/ipin.sym} 350 -230 0 0 {name=p9 lab=IB}
-C {devices/lab_wire.sym} 1090 -330 0 0 {name=p4 sig_type=std_logic lab=IB}
 C {devices/lab_wire.sym} 1090 -290 0 0 {name=p6 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 1090 -370 0 0 {name=p2 sig_type=std_logic lab=VDD_1V8}
 C {LELO_GR01_SKY130A/not_gate.sym} 1420 -330 0 0 {name=x2}

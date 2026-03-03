@@ -68,12 +68,16 @@ Look at the bottom of this readme for waveforms.
 
 ## Simulation Graphs
 
+![](sim/oscillator_tb/results_03.03.2026/montecarlo_freq.png)
+
+<sub> Figure 1: Results of Montecarlo simulations of the bandgap and osciallator setup at different temperatures. </sub>
+
 ![](sim/bandgap/I_PTAT.png)
 
-<sub> Figure 1: IPTAT simulated with a sweeping temperature between -40 and 125 degrees C. A 1k </sub>
+<sub> Figure 2: IPTAT simulated with a sweeping temperature between -40 and 125 degrees C. A 1k </sub>
 
 ![](sim/bandgap/VREF.png)
 
-<sub> Figure 4: VREF simulated with a sweeping temperature between -40 and 125 degrees C. It is fairly constant, only varying with a delta of about 4mV.</sub>
+<sub> Figure 3: VREF simulated with a sweeping temperature between -40 and 125 degrees C. It is fairly constant, only varying with a delta of about 4mV.</sub>
 
 

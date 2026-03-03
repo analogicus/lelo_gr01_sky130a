@@ -51,19 +51,18 @@ N -250 340 -250 360 {lab=VSS}
 N -50 660 -30 660 {lab=VSS}
 N -20 270 -20 330 {lab=VIP}
 N 20 270 20 330 {lab=VIN}
-N 90 620 90 630 {lab=VR}
+N 90 620 90 630 {lab=#net3}
 N 90 -70 250 -70 {lab=VDD_1V8}
 N 450 -30 450 0 {lab=VDD_1V8}
 N 380 0 410 0 {lab=VOUT}
 N 450 30 450 60 {lab=VREF}
 N 450 60 490 60 {lab=VREF}
-N 90 620 200 620 {lab=VR}
-N 450 150 450 160 {lab=#net3}
-N 450 240 450 250 {lab=#net4}
+N 450 150 450 160 {lab=#net4}
+N 450 240 450 250 {lab=#net5}
 N 50 690 250 690 {lab=VSS}
 N 410 660 410 690 {lab=VSS}
 N 430 110 430 290 {lab=VSS}
-N 450 330 450 340 {lab=#net5}
+N 450 330 450 340 {lab=#net6}
 N 430 290 430 380 {lab=VSS}
 N -20 330 -20 420 {lab=VIP}
 N 20 330 20 420 {lab=VIN}
@@ -79,20 +78,18 @@ N 90 100 90 130 {lab=VIN}
 N -90 690 -50 690 {lab=VSS}
 N -30 660 -0 660 {lab=VSS}
 N 0 660 50 660 {lab=VSS}
-N 450 420 450 430 {lab=#net6}
+N 450 420 450 430 {lab=#net7}
 N 430 380 430 470 {lab=VSS}
-N 450 600 450 630 {lab=#net7}
-N 450 510 450 520 {lab=#net8}
+N 450 600 450 630 {lab=#net8}
+N 450 510 450 520 {lab=#net9}
 N 430 470 430 560 {lab=VSS}
 N 450 60 450 70 {lab=VREF}
-N 390 520 450 520 {lab=#net8}
-N 390 600 450 600 {lab=#net7}
+N 390 520 450 520 {lab=#net9}
+N 390 600 450 600 {lab=#net8}
 N 360 560 370 560 {lab=VSS}
 C {devices/lab_wire.sym} -40 310 0 0 {name=p2 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 40 270 3 0 {name=p6 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} -460 390 0 0 {name=p7 lab=VDD_1V8}
-C {devices/opin.sym} -480 450 0 0 {name=p8 lab=VIP}
-C {devices/opin.sym} -480 480 0 0 {name=p10 lab=VIN}
 C {devices/ipin.sym} -460 420 0 0 {name=p11 lab=VSS}
 C {devices/lab_wire.sym} 0 -120 0 0 {name=p1 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 0 760 0 0 {name=p12 sig_type=std_logic lab=VSS}
@@ -125,9 +122,7 @@ C {devices/lab_wire.sym} -170 310 0 0 {name=p19 sig_type=std_logic lab=VIP
 }
 C {devices/lab_wire.sym} -310 310 0 0 {name=p20 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} -250 360 0 0 {name=p21 sig_type=std_logic lab=VSS}
-C {devices/ipin.sym} -460 330 0 0 {name=p22 lab=VS1}
-C {devices/opin.sym} -480 510 0 0 {name=p23 lab=VOUT}
-C {devices/opin.sym} 200 620 0 0 {name=p13 lab=VR}
+C {devices/opin.sym} -480 450 0 0 {name=p23 lab=VOUT}
 C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sym} 410 0 0 0 {name=x8}
 C {devices/lab_wire.sym} 380 0 0 0 {name=p16 sig_type=std_logic lab=VOUT}
 C {devices/opin.sym} 490 60 0 0 {name=p24 lab=VREF}

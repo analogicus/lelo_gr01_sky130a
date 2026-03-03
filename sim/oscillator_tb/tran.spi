@@ -58,44 +58,36 @@ IB_BG   VDD_1V8  IB_BG  dc 10u
 *----------------------------------------------------------------
 .control
 load {cicname}.raw
-set num_threads=4
+set num_threads=16
 set color0=white
 set color1=black
 unset askquit
 
 .option savecurrents
 
-*optran 0 0 0 1n 1u 0
-*dc temp -40 125 1
-*write {cicname}_temp.raw
+op
+tran 0.5n 2.5u 1p
+write
 
-*op
-*write {cicname}_op.raw
+echo 'Temp ; Freq' > {cicname}_oscillator.csv
 
-echo 'Temp ; Freq' > oscillator.csv
-
-let tcur = -20
-while tcur le 100
-	alterparam TAMB = $&tcur
+set temp_stop = 125
+set temp_step = 15
+set temp_val = -40
+while $temp_val le $temp_stop
+	alterparam TAMB = $temp_val
 	reset
 
-        tran 0.1n 1u 1p
+	tran 0.25n 4u 1p
 
-	meas tran Tperiod  TRIG v(VOUT_OSC) VAL=0.9 RISE=1  TARG v(VOUT_OSC) VAL=0.9 RISE=2
+	meas tran Tperiod  TRIG v(vout_osc) VAL=0.9 RISE=2  TARG v(vout_osc) VAL=0.9 RISE=3
 	let Freq = 1/Tperiod
-	echo Temp = $&tcur V  freq = $&freq Hz 
-	echo '$&tcur ; $&freq' >> oscillator.csv
+	echo Temp = $temp_val C  freq = $&freq Hz
+	echo '$temp_val ; $&freq' >> {cicname}_oscillator.csv
 
-
-	let tcur = tcur + 50
-
+	let temp_next = $temp_val + $temp_step
+	set temp_val = "$&temp_next"
 end
-
-
-*tran 0.1n 1u 1p
-*write
-
-
 
 quit
 

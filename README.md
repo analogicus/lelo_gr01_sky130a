@@ -72,12 +72,16 @@ Look at the bottom of this readme for waveforms.
 
 <sub> Figure 1: Results of Montecarlo simulations of the bandgap and osciallator setup at different temperatures. </sub>
 
+![](sim/LELO_GR01/temp_meas_estimated_error.png)
+
+<sub> Figure 2: Estimated error in the temperature measurements with two points calibration for Montecarlo simualations. The results seem good if we not take in account the gray and yellow curves that deviate a lot. The operating point for these two curves has probably not been established correctly during the simulations. </sub>
+
 ![](sim/bandgap/I_PTAT.png)
 
-<sub> Figure 2: IPTAT simulated with a sweeping temperature between -40 and 125 degrees C. A 1k resistor has been placed between IPTAT node and ground to measure this. </sub>
+<sub> Figure 3: IPTAT simulated with a sweeping temperature between -40 and 125 degrees C. A 1k resistor has been placed between IPTAT node and ground to measure this. </sub>
 
 ![](sim/bandgap/VREF.png)
 
-<sub> Figure 3: VREF simulated with a sweeping temperature between -40 and 125 degrees C. It is fairly constant, only varying with a delta of about 4mV.</sub>
+<sub> Figure 4: VREF simulated with a sweeping temperature between -40 and 125 degrees C. It is fairly constant, only varying with a delta of about 4mV.</sub>
 
 

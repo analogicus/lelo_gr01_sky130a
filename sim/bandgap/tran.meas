@@ -6,7 +6,6 @@ load {cicname}.raw
 echo "MEAS_START"
 
 *TRAN
-meas tran vbias_dc find v(vout) at=20n
 
 meas tran v_tail find v(xdut.x1.TAIL) at=20n
 

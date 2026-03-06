@@ -49,23 +49,44 @@ Waveforms are shown below
 
 ![](sim/bandgap/I_PTAT.png)
 
-<sub> Figure 3: IPTAT simulated with a sweeping temperature between -40 and 125 degrees C. A 1k resistor has been placed between IPTAT node and ground to measure this. </sub>
+<sub> Figure 1: IPTAT simulated with a sweeping temperature between -40 and 125 degrees C. A 1k resistor has been placed between IPTAT node and ground to measure this. </sub>
 
 ![](sim/bandgap/VREF.png)
 
-<sub> Figure 4: VREF simulated with a sweeping temperature between -40 and 125 degrees C. It is fairly constant, only varying with a delta of about 4mV.</sub>
+<sub> Figure 2: VREF simulated with a sweeping temperature between -40 and 125 degrees C. It is fairly constant, only varying with a delta of about 4mV.</sub>
 
 ### Oscillator: typical
+
+![](sim/LELO_GR01/images/osc_out_40C.png)
+
+<sub> Figure 3: tran simulation of the oscillator for a temperature of 40°C. 
+
+
+![](sim/LELO_GR01/images/freq_meas_typical.png)
+
+<sub> Figure 4: Plot of the oscillator frequency for various temperature between -20°C and 120°C. 
+
+
+![](sim/LELO_GR01/images/temp_error_typical.png)
+
+<sub> Figure 5: Plot of the linearity error of the oscillator translated in temperature measurement error.
+
+
+
+
+
+
+
 
 ### Oscillator: Montecarlo simulations
 
 ![](sim/oscillator_tb/results_03.03.2026/montecarlo_freq.png)
 
-<sub> Figure 1: Results of Montecarlo simulations of the bandgap and osciallator setup at different temperatures. </sub>
+<sub> Figure 6: Results of Montecarlo simulations of the bandgap and osciallator setup at different temperatures. </sub>
 
 ![](sim/LELO_GR01/temp_meas_estimated_error.png)
 
-<sub> Figure 2: Estimated error in the temperature measurements with two points calibration for Montecarlo simualations. The results seem good if we not take in account the gray and yellow curves that deviate a lot. The operating point for these two curves has probably not been established correctly during the simulations. </sub>
+<sub> Figure 7: Estimated error in the temperature measurements with two points calibration for Montecarlo simulations. The results seem good if we not take in account the gray and yellow curves that deviate a lot. The operating point for these two curves has probably not been established correctly during the simulations. </sub>
 
 ## What
 

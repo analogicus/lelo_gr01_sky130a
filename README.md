@@ -83,6 +83,7 @@ Waveforms are shown below
 ## Signal interface
 
 ### Top level
+
 | Signal       | Direction | Domain  | Description                               |
 | :---         | :---:     | :---:   | :---                                      |
 | VDD_1V8      | Input     | VDD_1V8 | 1.8V Main supply                          |
@@ -91,6 +92,7 @@ Waveforms are shown below
 | OSC_TEMP_1V8 | Output    | VDD_1V8 | Temperature dependent frequency           |
 
 ### Bandgap
+
 | Signal       | Direction | Domain  | Description                                    |
 | :---         | :---:     | :---:   | :---                                           |
 | VDD_1V8      | Input     | VDD_1V8 | 1.8V Main supply                               |
@@ -100,6 +102,7 @@ Waveforms are shown below
 | IPTAT        | Output    | VDD_1V8 | PTAT current which increases with temperature  |
 
 ### Oscillator
+
 | Signal       | Direction | Domain  | Description                               |
 | :---         | :---:     | :---:   | :---                                      |
 | VDD_1V8      | Input     | VDD_1V8 | 1.8V Main supply                          |
@@ -109,6 +112,7 @@ Waveforms are shown below
 | OSC_TEMP_1V8 | Output    | VDD_1V8 | Temperature dependent frequency           |
 
 ### Diffamp
+
 | Signal       | Direction | Domain  | Description                               |
 | :---         | :---:     | :---:   | :---                                      |
 | VDD_1V8      | Input     | VDD_1V8 | 1.8V Main supply                          |
@@ -118,6 +122,7 @@ Waveforms are shown below
 | VOUT         | Output    | VDD_1V8 | Output voltage                            |
 
 ### GM Cell
+
 | Signal       | Direction | Domain  | Description                               |
 | :---         | :---:     | :---:   | :---                                      |
 | VDD_1V8      | Input     | VDD_1V8 | 1.8V Main supply                          |

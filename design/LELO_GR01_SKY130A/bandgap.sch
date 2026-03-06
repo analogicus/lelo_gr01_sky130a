@@ -2,7 +2,7 @@ v {xschem version=3.4.7 file_version=1.2}
 G {}
 K {}
 V {}
-S {VR1}
+S {}
 E {}
 L 4 20 440 160 440 {}
 L 4 160 440 160 620 {}

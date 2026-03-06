@@ -25,6 +25,7 @@
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
 VDD_1V8  VDD_1V8  VSS  dc 1.8
+VPWR  PWRUP_1V8  VSS  pwl 0 0 2u 0 {2u + 10p} {AVDD}
 
 R_IPTAT_MEAS IPTAT 0 1k
 

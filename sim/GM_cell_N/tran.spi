@@ -28,7 +28,7 @@ VDD_1V8  VDD_1V8  VSS  dc 1.8
 
 
 *Place a load on IBP
-Rload IBN VSS 1000
+Rload VDD_1V8 IBN 1000
 
 *-----------------------------------------------------------------
 * DUT

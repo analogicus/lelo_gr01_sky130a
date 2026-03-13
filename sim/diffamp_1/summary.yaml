@@ -1,0 +1,27 @@
+description: Diffamp_1 Op-Amp Characterization
+simulations:
+   tran:
+    name: Transient analysis
+    description: |
+      Unity-gain step response: slew rate, rise/fall time, power
+    data:
+      - name: Sch_typ
+        src: results/tran_Sch_typical
+        method: typical
+      - name: Sch_etc
+        src: results/tran_Sch_etc
+        method: minmax
+      - name: Sch_3std
+        src: results/tran_Sch_mc
+        method: 3std
+   ac:
+    name: AC analysis
+    description: |
+      Open-loop gain, bandwidth, phase margin, gain margin
+    data:
+      - name: Sch_typ
+        src: results/ac_Sch_ac_typical
+        method: typical
+      - name: Sch_etc
+        src: results/ac_Sch_ac_etc
+        method: minmax

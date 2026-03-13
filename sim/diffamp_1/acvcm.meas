@@ -1,0 +1,4 @@
+* Measurements done inline in ac_vcm.spi control block
+.control
+quit
+.endc

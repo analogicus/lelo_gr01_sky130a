@@ -1,0 +1,63 @@
+pwr_static:
+  src:
+    - pwr_static
+  name: Static Power Consumption
+  scale: 1e6
+  digits: 2
+  unit: uW
+
+idd_static:
+  src:
+    - idd_static
+  name: Static Supply Current
+  scale: 1e6
+  digits: 2
+  unit: uA
+
+sr_pos:
+  src:
+    - sr_pos
+  name: Positive Slew Rate
+  scale: 1e-6
+  digits: 2
+  unit: V/us
+
+sr_neg:
+  src:
+    - sr_neg
+  name: Negative Slew Rate
+  scale: 1e-6
+  digits: 2
+  unit: V/us
+
+rise_time:
+  src:
+    - rise_time
+  name: Rise Time (10-90%)
+  scale: 1e9
+  digits: 2
+  unit: ns
+
+fall_time:
+  src:
+    - fall_time
+  name: Fall Time (90-10%)
+  scale: 1e9
+  digits: 2
+  unit: ns
+
+vout_low:
+  src:
+    - vout_low
+  name: Output Low (steady state)
+  scale: 1
+  digits: 3
+  unit: V
+
+vout_high:
+  src:
+    - vout_high
+  name: Output High (steady state)
+  scale: 1
+  digits: 3
+  unit: V

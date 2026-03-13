@@ -1,0 +1,16 @@
+* Measure GM_cell_N
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+load {cicname}_temp.raw
+meas dc IBN_avg AVG i(@rload[i]) from=0 to=125
+meas dc IBN_min MIN i(@rload[i]) from=0 to=125
+meas dc IBN_max MAX i(@rload[i]) from=0 to=125
+
+meas dc IBN_neutral FIND i(@rload[i]) AT=27
+
+echo "MEAS_END"
+.endc

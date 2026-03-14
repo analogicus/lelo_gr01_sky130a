@@ -4,17 +4,28 @@
 module testbench;
 
 reg clk = 0;
-always #5 clk = ~clk;
+always #30518 clk = ~clk; //Main clock with frequency of 32768Hz
+
+reg oscillator_clk = 0;
+always #500 oscillator_clk = ~oscillator_clk;  //Oscillator clock
+
 
 reg rst = 1'b0;
 
+logic request = 1'b0;
+logic pwr;
+logic done;
 
-wire [7:0] temp; //Output digital temperature
+logic [7:0] out; //Output digital temperature
 
 LELO_TEMP lelo (
     .clk(clk),
     .rst(rst),
-    .temp(temp)
+    .request(request),
+    .oscillator_clk(oscillator_clk),
+    .pwr(pwr),
+    .done(done),
+    .out(out)
 );
 
 
@@ -32,7 +43,25 @@ initial begin
     rst = 1'b0;
 
 
-    #200 $finish;
+    //Starting a measurement
+    repeat(3) @(posedge clk);
+    request = 1'b1;
+    @(posedge clk);
+    request = 1'b0;
+
+
+    //Wait a bit and start a new measurement
+    repeat(10) @(posedge clk);
+    request = 1'b1;
+    @(posedge clk);
+    request = 1'b0;
+
+
+
+
+
+    repeat(20) @(posedge clk);
+    $finish;
 
 
 end

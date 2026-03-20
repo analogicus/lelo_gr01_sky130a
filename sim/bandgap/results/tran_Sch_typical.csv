@@ -1,2 +1,2 @@
-,vref_avg,iptat_typ,v_tail_typ,name,type,time,OK
-0,1.225725,1.0932790000000001,0.1455683,tran_SchGtKttTtVt,Sch,Fri Feb 20 11:40:35 2026,True
+,vref_avg,iptat_typ,name,type,time,OK
+0,1.265112,1.090536,tran_SchGtKttTtVt,Sch,Fri Mar 13 14:19:08 2026,False

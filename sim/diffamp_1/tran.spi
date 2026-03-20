@@ -28,6 +28,7 @@ VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
 
 VIP  VIP  VSS  sin({VCM} 0.01 1Meg {t_start})
 VIN  VIN  VSS  dc {VCM}
+
 VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}-1n} {AVDD}
 VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {t_start} {AVDD} {{t_start}-1n} {0}
 

@@ -66,5 +66,5 @@ C {devices/ipin.sym} 10 -230 0 0 {name=p3 lab=VDD_1V8}
 C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} -340 -130 1 0 {name=x11 }
 C {devices/lab_wire.sym} -360 -90 0 0 {name=p4 sig_type=std_logic lab=VSS}
 C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} 90 170 1 0 {name=x4 }
-C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_4C5F0.sym} 220 -20 0 0 {name=x7[3:0]}
+C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_4C5F0.sym} 220 -20 0 0 {name=x7[1:0]}
 C {devices/opin.sym} 260 40 0 0 {name=p6 lab=IBP}

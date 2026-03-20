@@ -10,18 +10,19 @@ let pwr_vec = -i(vdd) * v(vdd_1v8)
 meas tran pwr_static avg pwr_vec from=100n to=195n
 
 *--- Supply current ---
-meas tran idd_static avg i(vdd) from=100n to=195n
+meas tran idd_static avg i(vdd) from={t_start}+100n to={t_end}
 
 *--- Output voltage levels (steady state before/after rising step) ---
-meas tran vout_low find v(vout) at={195n}
-meas tran vout_high find v(vout) at=795n
+let vout_vec = v(vout)
+meas tran vout_low MIN vout_vec from={t_start}+100n to={t_end}
+meas tran vout_high MAX vout_vec from={t_start}+100n to={t_end}
 
 *--- Positive slew rate (max dV/dt during rising edge) ---
 let dv_dt = deriv(v(vout))
-meas tran sr_pos MAX dv_dt from=200.05n to=800n
+meas tran sr_pos MAX dv_dt from={t_start}+100n to={t_end}
 
 *--- Negative slew rate (min dV/dt during falling edge, reported negative) ---
-meas tran sr_neg MIN dv_dt from=1000.05n to=1800n
+meas tran sr_neg MIN dv_dt from={t_start}+100n to={t_end}
 
 *--- Rise/Fall time estimated from slew rate ---
 let vswing = vout_high - vout_low

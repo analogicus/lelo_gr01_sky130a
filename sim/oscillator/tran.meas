@@ -5,5 +5,9 @@ load {cicname}.raw
 
 echo "MEAS_START"
 
+meas tran Tperiod TRIG v(vout_osc) VAL=0.9 RISE=1 TARG v(vout_osc) VAL=0.9 RISE=2
+let Freq = 1/Tperiod
+print Freq
+
 echo "MEAS_END"
 .endc

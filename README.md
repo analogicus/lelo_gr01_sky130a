@@ -80,7 +80,7 @@ Waveforms are shown below
 
 ### Oscillator: Montecarlo simulations
 
-![](sim/oscillator_tb/results_03.03.2026/montecarlo_freq.png)
+![](sim/oscillator_tb/results_12.03.2026/montecarlo_freq.png)
 
 <sub> Figure 6: Results of Montecarlo simulations of the bandgap and osciallator setup at different temperatures. </sub>
 

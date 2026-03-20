@@ -77,6 +77,7 @@ initial begin
 
 
     repeat(20) @(posedge clk);
+    $display("Final out value = %0d", out);
     $finish;
 
 

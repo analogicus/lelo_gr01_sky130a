@@ -1,0 +1,19 @@
+* Measure diffamp_2
+.control
+
+load {cicname}.raw
+
+echo "MEAS_START"
+
+*TRAN
+meas tran vout_avg avg v(vout) from=12n to=20n
+
+meas tran idd_avg avg i(vss) from=12n to=20n
+
+meas tran v_ib_final find v(ib) at=20n
+
+let power = 1.8 * abs(idd_avg)
+echo "Estimated Power Consumption: $&power Watts"
+
+echo "MEAS_END"
+.endc

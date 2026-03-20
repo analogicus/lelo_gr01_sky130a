@@ -1,12 +1,11 @@
-
 *TB_SUN_TR_SKY130NM/TB_NCM
 *----------------------------------------------------------------
 * Include
 *----------------------------------------------------------------
 #ifdef Lay
-.include ../../../work/lpe/GM_cell.spi
+.include ../../../work/lpe/GM_cell_N_lpe.spi
 #else
-.include ../../../work/xsch/GM_cell.spice
+.include ../../../work/xsch/GM_cell_N.spice
 #endif
 
 *-----------------------------------------------------------------
@@ -29,7 +28,7 @@ VDD_1V8  VDD_1V8  VSS  dc 1.8
 
 
 *Place a load on IBP
-Rload VSS IBP 1000
+Rload VDD_1V8 IBN 1000
 
 *-----------------------------------------------------------------
 * DUT
@@ -53,7 +52,7 @@ set color1=black
 unset askquit
 
 .option savecurrents
-.save v(vref) @m.xdut.x8.msky130_fd_pr__pfet_01v8_lvt[id]
+.save v(vref) @m.xdut.x5.msky130_fd_pr__nfet_01v8_lvt[id]
 
 optran 0 0 0 1n 1u 0
 dc temp -40 125 1

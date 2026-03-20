@@ -9,7 +9,7 @@ module LELO_TEMP(input clk, input rst, input request, input oscillator_clk, outp
 
 
    
-    enum {IDLE, MEASURE, STORE} current_state, next_state;
+    enum {IDLE, MEASURE, STORE, PULSE} current_state, next_state;
 
 
 
@@ -32,7 +32,8 @@ module LELO_TEMP(input clk, input rst, input request, input oscillator_clk, outp
             
             MEASURE:         next_state = STORE;
 
-            STORE:           next_state = IDLE;
+            STORE:           next_state = PULSE;
+            PULSE:           next_state = IDLE;
         endcase
     end;
 
@@ -58,7 +59,7 @@ module LELO_TEMP(input clk, input rst, input request, input oscillator_clk, outp
 
     //Updating the intern and extern signals
     assign           pwr = (current_state == MEASURE);
-    assign          done = (current_state == STORE);
+    assign          done = (current_state == PULSE);
     assign reset_counter = (current_state == IDLE);
 
 

@@ -102,21 +102,15 @@ To reduce the quantization noise it is possible to reduce the reference clock fr
 <sub> Figure 5: Plot of the linearity error of the oscillator translated in temperature measurement error.
 
 
-
-
-
-
-
-
 ### Oscillator: Montecarlo simulations
 
-![](sim/oscillator_tb/results_03.03.2026/montecarlo_freq.png)
+![](sim/oscillator_tb/MC_freq_21_03_26.png)
 
 <sub> Figure 6: Results of Montecarlo simulations of the bandgap and osciallator setup at different temperatures. </sub>
 
-![](sim/LELO_GR01/temp_meas_estimated_error.png)
+![](sim/oscillator_tb/plot_error_mc_21_03_26.png)
 
-<sub> Figure 7: Estimated error in the temperature measurements with two points calibration for Montecarlo simulations. The results seem good if we not take in account the gray and yellow curves that deviate a lot. The operating point for these two curves has probably not been established correctly during the simulations. </sub>
+<sub> Figure 7: Estimated error in the temperature measurements with two points calibration for extreme test conditions Montecarlo simulations. The results are well within spec, as the plot shows around +-2.5 C. </sub>
 
 ## What
 

@@ -110,7 +110,7 @@ To reduce the quantization noise it is possible to reduce the reference clock fr
 
 ![](sim/oscillator_tb/plot_error_mc_21_03_26.png)
 
-<sub> Figure 7: Estimated error in the temperature measurements with two points calibration for extreme test conditions Montecarlo simulations. The results are well within spec, as the plot shows around +-2.5 C. </sub>
+<sub> Figure 7: Estimated error in the temperature measurements with two points calibration for extreme test conditions Montecarlo simulations. The results are well within spec, as the plot shows around +-2.5 C peak within the 0-70 C range. </sub>
 
 ## What
 

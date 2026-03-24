@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 
 RESULTS_DIR = "results_12.03.2026"
 
-
 def read_csv(path):
     """Read a semicolon-delimited CSV and return (temps, freqs_MHz)."""
     temps, freqs = [], []
+    if not os.path.exists(path): return np.array([]), np.array([])
     with open(path) as f:
         reader = csv.reader(f, delimiter=";")
         next(reader)  # skip header
@@ -20,79 +20,58 @@ def read_csv(path):
             freqs.append(float(row[1].strip()) / 1e6)
     return np.array(temps), np.array(freqs)
 
-
 def is_outlier(temps, freqs):
-    """Detect outlier runs by checking if any point deviates too far from
-    a simple linear fit of that run's own data."""
-    if len(temps) < 3:
-        return True
+    if len(temps) < 3: return True
     coeffs = np.polyfit(temps, freqs, 1)
     fit = np.polyval(coeffs, temps)
     residuals = np.abs(freqs - fit)
-    # Flag as outlier if max residual > 30% of the frequency range
     freq_range = freqs.max() - freqs.min()
-    if freq_range < 0.01:
-        return True
+    if freq_range < 0.01: return True
     return np.max(residuals) > 0.3 * freq_range
 
+# ---- 1. Gather ALL files (MC and Corners) ----
+all_csv_files = sorted(glob.glob(os.path.join(RESULTS_DIR, "**", "*_oscillator.csv"), recursive=True))
 
-# --- Load all MC runs, filter outliers ---
-mc_files = sorted(glob.glob(os.path.join(RESULTS_DIR, "mc", "*_oscillator.csv")))
 runs = []
 outlier_runs = []
-for path in mc_files:
+for path in all_csv_files:
     t, f = read_csv(path)
-    if len(t) == 0:
-        continue
+    if len(t) == 0: continue
+    name = os.path.basename(path).replace("_oscillator.csv", "")
     if is_outlier(t, f):
-        outlier_runs.append((t, f, os.path.basename(path)))
+        outlier_runs.append((t, f, name))
     else:
-        runs.append((t, f, os.path.basename(path)))
+        runs.append((t, f, name))
 
-print(f"Loaded {len(runs)} good MC runs, rejected {len(outlier_runs)} outliers")
-for _, _, name in outlier_runs:
-    print(f"  outlier: {name}")
+print(f"Loaded {len(runs)} good runs, rejected {len(outlier_runs)} outliers")
 
-# --- Print average frequency at min, mid, max temperature ---
-all_temps = runs[0][0]
-t_min, t_max = all_temps[0], all_temps[-1]
-t_mid_idx = np.argmin(np.abs(all_temps - 25))
-t_mid = all_temps[t_mid_idx]
+# Setup Figure - making it slightly taller to accommodate the legend gutter
+fig, axes = plt.subplots(1, 3, figsize=(18, 8)) 
 
-for t_target, label in [(t_min, "min"), (t_mid, "mid"), (t_max, "max")]:
-    vals = []
-    for t, f, _ in runs:
-        idx = np.argmin(np.abs(t - t_target))
-        vals.append(f[idx])
-    avg = np.mean(vals)
-    std = np.std(vals)
-    print(f"  T={t_target:+.0f}°C ({label}):  avg = {avg:.4f} MHz,  std = {std:.4f} MHz")
-
-fig, axes = plt.subplots(1, 3, figsize=(16, 5))
+t_common = runs[0][0]
 
 # --- Subplot 1: Raw values ---
 ax = axes[0]
-for t, f, _ in runs:
-    ax.plot(t, f, "-", alpha=0.5, linewidth=0.8, color="C0")
+colors = plt.cm.tab20(np.linspace(0, 1, len(runs)))
+for i, (t, f, name) in enumerate(runs):
+    lw = 2.0 if "Ktt" in name else 0.7
+    alpha = 1.0 if "Ktt" in name else 0.6
+    ax.plot(t, f, "-", alpha=alpha, linewidth=lw, color=colors[i], label=name)
+
 ax.set_title(f"Raw Frequency ({len(runs)} runs)")
 ax.set_xlabel("Temperature [°C]")
 ax.set_ylabel("Frequency [MHz]")
-ax.grid(True)
+ax.grid(True, linestyle=':', alpha=0.6)
 
-# --- Subplot 2: Offset removed (check linearity) ---
+# --- Subplot 2: Offset removed ---
 ax = axes[1]
 shifted_all = np.array([f - f[0] for t, f, _ in runs])
 shifted_mean = np.mean(shifted_all, axis=0)
-shifted_min = np.min(shifted_all, axis=0)
-shifted_max = np.max(shifted_all, axis=0)
-t_common = runs[0][0]
-ax.fill_between(t_common, shifted_min, shifted_max, alpha=0.25, color="C2", label="Min–Max range")
-ax.plot(t_common, shifted_mean, "-", color="C2", linewidth=1.5, label="Mean")
-ax.set_title("Offset Removed (linearity check)")
+ax.fill_between(t_common, np.min(shifted_all, axis=0), np.max(shifted_all, axis=0), alpha=0.2, color="C2")
+ax.plot(t_common, shifted_mean, "-", color="C2", linewidth=1.5)
+ax.set_title("Offset Removed")
 ax.set_xlabel("Temperature [°C]")
-ax.set_ylabel("Δ Frequency [MHz]")
-ax.legend(fontsize=7)
-ax.grid(True)
+ax.grid(True, linestyle=':', alpha=0.6)
 
 # --- Subplot 3: Deviation from linear fit ---
 ax = axes[2]
@@ -100,21 +79,37 @@ dev_all = []
 for t, f, _ in runs:
     coeffs = np.polyfit(t, f, 1)
     fit = np.polyval(coeffs, t)
-    dev_all.append((f - fit) * 1e3)  # kHz
+    dev_all.append((f - fit) * 1e3) 
 dev_all = np.array(dev_all)
-dev_mean = np.mean(dev_all, axis=0)
-dev_min = np.min(dev_all, axis=0)
-dev_max = np.max(dev_all, axis=0)
-ax.fill_between(t_common, dev_min, dev_max, alpha=0.25, color="C3", label="Min–Max range")
-ax.plot(t_common, dev_mean, "-", color="C3", linewidth=1.5, label="Mean")
+ax.fill_between(t_common, np.min(dev_all, axis=0), np.max(dev_all, axis=0), alpha=0.2, color="C3")
+ax.plot(t_common, np.mean(dev_all, axis=0), "-", color="C3", linewidth=1.5)
 ax.set_title("Deviation from Linear Fit")
 ax.set_xlabel("Temperature [°C]")
-ax.set_ylabel("Deviation [kHz]")
-ax.axhline(0, color="black", linewidth=0.5, linestyle="--")
-ax.legend(fontsize=7)
-ax.grid(True)
+ax.set_ylabel("Error [kHz]")
+ax.grid(True, linestyle=':', alpha=0.6)
 
-fig.suptitle("Oscillator Monte Carlo Analysis", fontsize=14)
-plt.tight_layout()
-plt.savefig(os.path.join(RESULTS_DIR, "montecarlo_freq.png"), dpi=150)
+# ---- THE GLOBAL HORIZONTAL LEGEND ----
+# Gather handles and labels from axes[0] which contains all corner names
+handles, labels = axes[0].get_legend_handles_labels()
+
+# Create a figure-level legend to avoid subplot overlap
+fig.legend(
+    handles, 
+    labels, 
+    loc='lower center', 
+    ncol=12,                    # Distribute across 12 columns
+    mode="expand",              # Stretch horizontally
+    fontsize='xx-small', 
+    frameon=True,
+    borderaxespad=0.5,
+    bbox_to_anchor=(0.05, 0.02, 0.9, 0.1) # Position at the very bottom
+)
+
+fig.suptitle("Oscillator Analysis: All Corners & Monte Carlo", fontsize=14, fontweight='bold')
+
+# Manually adjust subplots to leave room at the bottom for the legend
+# top=0.9: room for title | bottom=0.25: room for legend
+plt.subplots_adjust(bottom=0.25, top=0.90, wspace=0.3, left=0.06, right=0.96)
+
+plt.savefig(os.path.join(RESULTS_DIR, "full_analysis_plot.png"), dpi=200)
 plt.show()

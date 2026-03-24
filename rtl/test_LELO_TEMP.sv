@@ -3,11 +3,27 @@
 
 module testbench;
 
+parameter real CLK_FREQ = 32768.0;
+parameter real OSC_FREQ = 2000000.0;
+
+real clk_half_period;
+real osc_half_period;
+
+// Computing clocks period
+initial begin
+    clk_half_period = 1e9 / (2.0 * CLK_FREQ);
+    osc_half_period = 1e9 / (2.0 * OSC_FREQ);
+
+    $display("Main clock frequency = %f Hz", CLK_FREQ);
+    $display("Oscillator frequency = %f Hz", OSC_FREQ);
+end
+
+
 reg clk = 0;
-always #30518 clk = ~clk; //Main clock with frequency of 32768Hz
+always #(clk_half_period) clk = ~clk; //Main clock with frequency of 32768Hz
 
 reg oscillator_clk = 0;
-always #500 oscillator_clk = ~oscillator_clk;  //Oscillator clock
+always #(osc_half_period) oscillator_clk = ~oscillator_clk;  //Oscillator clock
 
 
 reg rst = 1'b0;
@@ -61,6 +77,7 @@ initial begin
 
 
     repeat(20) @(posedge clk);
+    $display("Final out value = %0d", out);
     $finish;
 
 

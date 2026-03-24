@@ -35,6 +35,9 @@ linear_fit = np.polyval(coeffs, temps)
 error = freqs_mhz - linear_fit
 error_pct = error / (linear_fit.max() - linear_fit.min()) * 100
 
+temp_span = temps.max() - temps.min()
+error_temp = error_pct / temp_span * 100  # Error as % of temperature span
+
 fig, axes = plt.subplots(2, 1, figsize=(8, 7), sharex=True)
 
 # --- Frequency vs Temperature with linear fit ---
@@ -48,11 +51,11 @@ ax.grid(True)
 
 # --- Linearity error ---
 ax = axes[1]
-ax.bar(temps, error_pct, width=8, color="C1", edgecolor="black", linewidth=0.5)
+ax.bar(temps, error_temp, width=8, color="C1", edgecolor="black", linewidth=0.5)
 ax.axhline(0, color="black", linewidth=0.5)
 ax.set_xlabel("Temperature [°C]")
-ax.set_ylabel("Linearity Error [% of span]")
-ax.set_title(f"Linearity Error (max {np.max(np.abs(error_pct)):.2f}%)")
+ax.set_ylabel("Linearity Error [°C]")
+ax.set_title(f"Linearity Error (max {np.max(np.abs(error_temp)):.2f}°C)")
 ax.grid(True, axis="y")
 
 plt.tight_layout()

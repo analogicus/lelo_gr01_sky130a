@@ -33,13 +33,6 @@ VDD_1V8  VDD_1V8  VSS  dc 1.8
 VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}-1n} {AVDD}
 VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {t_start} {AVDD} {{t_start}-1n} {0}
 
-IB_OSC   VDD_1V8  IB_OSC  dc 10u
-IB_BG   VDD_1V8  IB_BG  dc 10u
-
-*VREF  VREF  VSS  dc 1.22
-
-*VBG  VBG  VSS  dc 0.7
-
 
 *-----------------------------------------------------------------
 * DUT
@@ -69,9 +62,9 @@ unset askquit
 .option savecurrents
 
 op
-optran 0 0 0 0.5n 2u 0
-*tran 0.5n 2.5u 1p
-*write
+optran 0 0 0 0.1n 1u 0
+tran 0.5n 2.5u 1p
+write
 
 echo 'Temp ; Freq' > {cicname}_oscillator.csv
 

@@ -8,16 +8,51 @@ module osc_sim(
     output reg osc_out_pulse
 );
 
-    real freq_mhz;
-    real period_ns;
+    reg [256*8:1] csv_file;
+    initial csv_file = "Typical_csvs/tran_SchGtKttTtVt_oscillator.csv"; // Default CSV, can be overridden by testbench for use with different CSVs
 
-    initial osc_out_pulse = 0;
+    // Read CSV and return frequency (MHz) for the given temperature
+    function real get_freq(input real temp);
+        integer fd, n;
+        reg [256*8:1] line;
+        real t_val, f_val;
+        integer found;
+        begin
+            fd = $fopen(csv_file, "r");
+            if (fd == 0) begin $display("ERROR: cannot open %0s", csv_file); $finish; end
+            void'($fgets(line, fd)); // skip first line
+
+            get_freq = 0.0;
+            found = 0;
+
+            while (!$feof(fd) && !found) begin // Scan through the file until we find our temperature
+                n = $fscanf(fd, " %f ; %f", t_val, f_val);
+                if (n == 2 && t_val == temp) begin
+                    get_freq = f_val / 1.0e6;
+                    found = 1;
+                end
+            end
+            $fclose(fd);
+            if (!found)
+                $display("WARNING: temp %0.1f not found in %0s", temp, csv_file);
+        end
+    endfunction
+
+    real freq_mhz, period_ns;
+    real last_temp;
+
+    initial begin // Initial setup, make sure it starts
+        osc_out_pulse = 0;
+        freq_mhz = 0.0;
+        last_temp = -999.0;
+    end
 
     always begin
-        // Recompute frequency each iteration so temperature changes take effect
-        freq_mhz = -1.532093e-10*temperature**4 -2.817110e-08*temperature**3 +1.108474e-05*temperature**2 +8.094844e-03*temperature +1.842090e+00;
-        if (freq_mhz < 0.001)
-            freq_mhz = 0.001; // Avoid getting zero frequency, will give infinite sims
+        if (temperature != last_temp) begin // Only recheck freq if temp changed, otherwise sim is slow
+            freq_mhz = get_freq(temperature);
+            last_temp = temperature;
+        end
+        if (freq_mhz < 0.001) freq_mhz = 0.001;
         period_ns = 1000.0 / freq_mhz;
 
         if (enable) begin

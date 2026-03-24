@@ -48,7 +48,7 @@ module LELO_TEMP_tb;
     integer timeout;
 
     initial begin
-        csv_file = $fopen("results.csv", "w");
+        csv_file = $fopen("Typical_results/results.csv", "w");
         $fwrite(csv_file, "temperature_C,count,freq_MHz\n");
 
         // Reset before we begin to ensure stable state
@@ -59,8 +59,8 @@ module LELO_TEMP_tb;
         rst = 0;
         repeat (5) @(posedge clk);
 
-        // Sweep temperature from -40 to 125 in steps of 1
-        for (temp = -40.0; temp <= 125.0; temp = temp + 1.0) begin
+        // Sweep temperature from -40 to 125 in steps of 15 (matching CSV points)
+        for (temp = -40.0; temp <= 125.0; temp = temp + 15.0) begin
             temperature = temp;
             repeat (2) @(posedge clk);
 
@@ -89,7 +89,7 @@ module LELO_TEMP_tb;
         end
 
         $fclose(csv_file);
-        $display("Results written to results.csv");
+        $display("Results written to Typical_results/results.csv");
         $finish;
     end
 

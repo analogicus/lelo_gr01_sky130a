@@ -1,12 +1,16 @@
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
 temps = []
 counts = []
 freqs = []
 
-with open("results.csv") as f:
+current_dir = os.path.dirname(os.path.abspath(__file__))
+csv_path = os.path.join(current_dir, "results.csv")
+
+with open(csv_path) as f:
     reader = csv.DictReader(f)
     for row in reader:
         temps.append(float(row["temperature_C"]))
@@ -68,5 +72,5 @@ ax.set_title(f"Relative Error compared to measured frequency (max {np.max(np.abs
 ax.grid(True, axis="y")
 
 plt.tight_layout()
-plt.savefig("results.png", dpi=150)
+plt.savefig(os.path.join(current_dir, "results.png"), dpi=150)
 plt.show()

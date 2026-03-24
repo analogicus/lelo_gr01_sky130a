@@ -27,7 +27,33 @@ else:
 temps, freqs = read_csv(csv_path)
 freqs_mhz = freqs / 1e6
 
-# Linear fit
+# Print polynomial regressions from 1st to 6th order
+print("Polynomial Regressions (freq_MHz as function of temperature):")
+print("=" * 70)
+for order in range(1, 7):
+    coeffs_n = np.polyfit(temps, freqs_mhz, order)
+    fit_n = np.polyval(coeffs_n, temps)
+    residual = freqs_mhz - fit_n
+    max_err = np.max(np.abs(residual))
+    rms_err = np.sqrt(np.mean(residual**2))
+
+    terms = []
+    for i, c in enumerate(coeffs_n):
+        power = order - i
+        if power == 0:
+            terms.append(f"{c:+.6e}")
+        elif power == 1:
+            terms.append(f"{c:+.6e}*T")
+        else:
+            terms.append(f"{c:+.6e}*T^{power}")
+    poly_str = " ".join(terms)
+
+    print(f"\nOrder {order}:")
+    print(f"  f(T) = {poly_str}")
+    print(f"  Max error: {max_err:.6f} MHz,  RMS error: {rms_err:.6f} MHz")
+print("=" * 70)
+
+# Linear fit (for plotting)
 coeffs = np.polyfit(temps, freqs_mhz, 1)
 linear_fit = np.polyval(coeffs, temps)
 

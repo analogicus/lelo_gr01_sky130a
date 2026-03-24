@@ -1,7 +1,14 @@
 
 
 
-module LELO_TEMP(input clk, input rst, input request, input oscillator_clk, output pwr, output done, output logic[7:0] out);
+module LELO_TEMP(
+    input clk, 
+    input rst, 
+    input request, 
+    input oscillator_clk, 
+    output pwr, 
+    output done, 
+    output logic[7:0] out);
 
 
     reg [7:0] counter;

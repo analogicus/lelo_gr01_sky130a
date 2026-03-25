@@ -112,6 +112,18 @@ To reduce the quantization noise it is possible to reduce the reference clock fr
 
 <sub> Figure 7: Estimated error in the temperature measurements with two points calibration for extreme test conditions Montecarlo simulations. The results are well within spec, as the plot shows around +-2.5 C peak within the 0-70 C range. </sub>
 
+## Full system: Typical runs
+
+![](rtl/typical_result_25_03_2026.png)
+
+<sub> Figure 8: Several plots showing different aspects of the full system. Top left: The oscillator frequency compared to a linear approximation. Top left: our "count" compared to a perfect theoretical float count. Bottom left: Total error of all parts (digital and analog) per measurement in percent compared to a theoretical perfectly linear system. Bottom right: The digital error, analog error removed </sub>
+
+### Full system: Montecarlo simulations
+
+![](rtl/MC_results_plot_25_03_2026.png)
+
+<sub> Figure 9: Results of Montecarlo simulations fed through the digital system. </sub>
+
 ## What
 
 

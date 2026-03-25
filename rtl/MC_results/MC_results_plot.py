@@ -32,7 +32,7 @@ all_counts = np.array([c for _, c, _, _ in runs])
 all_freqs = np.array([f for _, _, f, _ in runs])
 
 fig, axes = plt.subplots(1, 3, figsize=(18, 6))
-fig.suptitle(f"LELO_TEMP Monte Carlo Analysis ({len(runs)} runs)", fontsize=14, fontweight='bold')
+fig.suptitle(f"LELO_TEMP Monte Carlo Analysis Full System ({len(runs)} runs)", fontsize=14, fontweight='bold')
 
 # --- Subplot 1: Raw count values ---
 ax = axes[0]

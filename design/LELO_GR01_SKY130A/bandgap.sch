@@ -141,7 +141,7 @@ spiceprefix=X
 }
 C {devices/lab_wire.sym} 430 170 0 0 {name=p25 sig_type=std_logic lab=VSS}
 C {JNW_TR_SKY130A/JNWTR_RPPO16.sym} 450 340 1 0 {name=x12 }
-C {LELO_GR01_SKY130A/diffamp_1.sym} 0 120 3 0 {name=x1}
+C {LELO_GR01_SKY130A/diffamp_2.sym} 0 120 3 0 {name=x1}
 C {devices/lab_wire.sym} 0 50 0 0 {name=p9 sig_type=std_logic lab=VOUT}
 C {devices/lab_wire.sym} -290 190 0 0 {name=p26 sig_type=std_logic lab=VS1}
 C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 450 430 1 0 {name=x4 }

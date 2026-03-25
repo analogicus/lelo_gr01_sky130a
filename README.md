@@ -33,12 +33,6 @@ The oscillator works by using these two signals as inputs. The IPTAT current cha
 
 Waveforms are shown below.
 
-### Digital module
-
-The digital module simply counts the number of pulses it gets from the oscillator within the time frame of a single 32.768KHz period.
-
-For testing the digital module, we made an oscillator simulator, which reads from .csv files we got out from our simulator runs for the analog. This oscillator simulator then chooses a frequency from the chosen csv based on a temperature it gets in as a parameter. This means that we can pretty accurately get simulation results for the entire system without having to simulate them together.
-
 ### Counter module
 
 In order to get a digital value for the temperature, we used a counter that counts the number of pulses from the oscillator during a period of a reference clock at 32768Hz. This counter has been designed in System Verilog according to this FSM:
@@ -67,7 +61,7 @@ We can plot the output of the counter in function of the oscillator frequency, a
 As expected, the linear regression tells us that the number of pulses is equal to the oscillator frequency divided by the reference clock frequency. 
 To reduce the quantization noise it is possible to reduce the reference clock frequency so the FSM can count more pulses in one period.
 
-
+For testing the digital module, we made an oscillator simulator, which reads from .csv files we got out from our simulator runs for the analog. This oscillator simulator then chooses a frequency from the chosen csv based on a temperature it gets in as a parameter. This means that we can pretty accurately get simulation results for the entire system without having to simulate them together.
 
 ## Key parameters
 

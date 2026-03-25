@@ -150,7 +150,9 @@ C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 390 520 1 0 {name=x14}
 C {devices/lab_wire.sym} 360 560 0 0 {name=p4 sig_type=std_logic lab=VSS}
 C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sym} 670 10 0 0 {name=x13}
 C {devices/lab_wire.sym} 640 10 0 0 {name=p8 sig_type=std_logic lab=VOUT}
-C {devices/ipin.sym} -500 160 0 0 {name=p1 lab=PWRUP_1V8}
+C {devices/ipin.sym} -320 140 0 0 {name=p1 lab=PWRUP_1V8}
 C {devices/lab_wire.sym} 410 520 0 0 {name=p10 sig_type=std_logic lab=NET9}
 C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 290 520 1 0 {name=x15}
 C {devices/lab_wire.sym} 260 560 0 0 {name=p12 sig_type=std_logic lab=VSS}
+C {devices/ipin.sym} 70 180 2 0 {name=p13 lab=PWRUP_N_1V8}
+C {devices/lab_wire.sym} 70 160 0 1 {name=p15 sig_type=std_logic lab=PWRUP_1V8}

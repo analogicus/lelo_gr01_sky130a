@@ -17,12 +17,12 @@ N 790 -120 940 -120 {lab=VSS}
 N 790 -70 790 -40 {lab=VSS}
 N 1730 -330 1730 -200 {lab=#net2}
 N 940 -200 940 -170 {lab=VSS}
-N 790 -280 940 -280 {lab=IBP}
-N 940 -280 940 -230 {lab=IBP}
-N 790 -400 790 -240 {lab=IBP}
-N 1090 -310 1170 -310 {lab=IBP}
+N 790 -280 940 -280 {lab=IBP_BG}
+N 940 -280 940 -230 {lab=IBP_BG}
+N 790 -400 790 -240 {lab=IBP_BG}
+N 1090 -310 1170 -310 {lab=IBP_BG}
 N 1090 -350 1170 -350 {lab=VREF_BG}
-N 790 -310 1090 -310 {lab=IBP}
+N 790 -310 1090 -310 {lab=IBP_BG}
 N 1800 -560 1800 -530 {lab=VDD_1V8}
 N 1800 -410 1800 -370 {lab=VSS}
 N 1840 -440 1890 -440 {lab=VOUT_OSC}
@@ -44,6 +44,10 @@ N 1320 -200 1440 -200 {lab=#net2}
 N 1730 -440 1730 -330 {lab=#net2}
 N 1660 -330 1680 -330 {lab=#net2}
 N 1680 -330 1730 -330 {lab=#net2}
+N 550 -200 550 -120 {lab=VSS}
+N 550 -120 790 -120 {lab=VSS}
+N 550 -280 550 -230 {lab=IBP_BG}
+N 550 -280 790 -280 {lab=IBP_BG}
 C {devices/ipin.sym} 350 -280 0 0 {name=p11 lab=VSS}
 C {devices/ipin.sym} 350 -330 0 0 {name=p7 lab=VDD_1V8}
 C {LELO_GR01_SKY130A/diffamp_1.sym} 1320 -330 0 0 {name=x1}
@@ -65,7 +69,8 @@ C {devices/lab_wire.sym} 1800 -560 0 1 {name=p13 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 1800 -370 2 0 {name=p21 sig_type=std_logic lab=VSS}
 C {devices/opin.sym} 2010 -440 0 0 {name=p22 lab=VOUT_OSC}
 C {devices/lab_wire.sym} 1770 -340 2 0 {name=p24 sig_type=std_logic lab=VDD_1V8}
-C {devices/ipin.sym} 350 -140 0 0 {name=p16 lab=VREF_BG}
-C {devices/ipin.sym} 350 -180 0 0 {name=p14 lab=IBP_BG}
+C {devices/ipin.sym} 350 -190 0 0 {name=p16 lab=VREF_BG}
+C {devices/ipin.sym} 350 -230 0 0 {name=p14 lab=IBP_BG}
 C {devices/lab_wire.sym} 790 -400 0 0 {name=p4 sig_type=std_logic lab=IBP_BG
 }
+C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 510 -200 0 0 {name=x6}

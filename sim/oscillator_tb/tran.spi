@@ -11,7 +11,7 @@
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-.option TNOM=27 GMIN=1e-15 reltol=1e-3
+.option TNOM=27 GMIN=1e-15 reltol=5e-3 trtol=10
 
 *-----------------------------------------------------------------
 * PARAMETERS
@@ -30,8 +30,8 @@
 VSS  VSS  0     dc 0
 VDD_1V8  VDD_1V8  VSS  dc 1.8
 
-VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}-1n} {AVDD}
-VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {t_start} {AVDD} {{t_start}-1n} {0}
+VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}+10p} {AVDD}
+VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {t_start} {AVDD} {{t_start}+10p} {0}
 
 
 *-----------------------------------------------------------------
@@ -53,7 +53,7 @@ VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {t_start} {AVDD} {{t_start}-1n} {0}
 * NGSPICE control
 *----------------------------------------------------------------
 .control
-load {cicname}.raw
+*load {cicname}.raw
 set num_threads=16
 set color0=white
 set color1=black
@@ -61,9 +61,9 @@ unset askquit
 
 .option savecurrents
 
-op
-optran 0 0 0 0.1n 1u 0
-tran 0.5n 2.5u 1p
+*op
+optran 0 0 0 1n 1u 0
+tran 1n 5u 0 0.5n
 write
 
 echo 'Temp ; Freq' > {cicname}_oscillator.csv
@@ -72,10 +72,12 @@ set temp_stop = 125
 set temp_step = 15
 set temp_val = -40
 while $temp_val le $temp_stop
-	alterparam TAMB = $temp_val
-	reset
+*	alterparam TAMB = $temp_val
+*	reset
 
-	tran 0.1n 6u
+  set temp = $temp_val
+
+	tran 1n 5u 0 0.5n
 	*write {cicname}_temp_{$temp_val}.raw
 
 	meas tran Tperiod  TRIG v(vout_osc) VAL=0.9 RISE=2  TARG v(vout_osc) VAL=0.9 RISE=3

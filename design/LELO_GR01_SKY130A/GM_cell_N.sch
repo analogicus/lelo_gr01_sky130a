@@ -33,7 +33,6 @@ N 650 -480 760 -480 {lab=#net4}
 N 540 -460 540 -430 {lab=VDD_1V8}
 N 540 -680 540 -460 {lab=VDD_1V8}
 N 540 -680 740 -680 {lab=VDD_1V8}
-N 380 -360 380 -330 {lab=#net2}
 N 380 -280 380 -100 {lab=VSS}
 N 380 -100 540 -100 {lab=VSS}
 N 290 -330 340 -330 {lab=#net5}
@@ -52,12 +51,19 @@ N 640 -770 650 -770 {lab=VDD_1V8}
 N 650 -770 650 -680 {lab=VDD_1V8}
 N 950 -410 950 -290 {lab=IBN}
 N 950 -240 950 -210 {lab=VSS}
-N 760 -460 760 -430 {lab=#net4}
 N 720 -430 720 -380 {lab=#net2}
 N 540 -380 720 -380 {lab=#net2}
 N 650 -50 660 -50 {lab=VSS}
 N 650 -100 650 -50 {lab=VSS}
 N 380 -360 540 -360 {lab=#net2}
+N 650 -240 650 -200 {lab=#net1}
+N 650 -170 650 -100 {lab=VSS}
+N 690 -170 700 -170 {lab=PWRUP_N_1V8}
+N 590 -580 610 -580 {lab=PWRUP_1V8}
+N 650 -680 650 -580 {lab=VDD_1V8}
+N 650 -550 650 -480 {lab=#net4}
+N 380 -330 400 -330 {lab=VDD_1V8}
+N 760 -430 780 -430 {lab=VDD_1V8}
 C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_4C5F0.sym} 580 -240 0 1 {name=x1}
 C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_4C5F0.sym} 720 -240 0 0 {name=x2}
 C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_4C5F0.sym} 720 -430 0 0 {name=x4}
@@ -74,3 +80,9 @@ C {devices/lab_wire.sym} 230 -250 0 0 {name=p5 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} 640 -770 0 0 {name=p2 lab=VDD_1V8}
 C {devices/ipin.sym} 950 -410 0 0 {name=p3 lab=IBN}
 C {devices/opin.sym} 660 -50 0 0 {name=p4 lab=VSS}
+C {devices/ipin.sym} 700 -170 0 1 {name=p6 lab=PWRUP_N_1V8}
+C {devices/ipin.sym} 590 -580 0 0 {name=p9 lab=PWRUP_1V8}
+C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_4C5F0.sym} 690 -170 0 1 {name=x5}
+C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_4C5F0.sym} 610 -580 0 0 {name=x12}
+C {devices/lab_wire.sym} 400 -330 0 1 {name=p7 sig_type=std_logic lab=VDD_1V8}
+C {devices/lab_wire.sym} 780 -430 0 1 {name=p8 sig_type=std_logic lab=VDD_1V8}

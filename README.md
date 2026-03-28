@@ -83,7 +83,7 @@ For testing the digital module, we made an oscillator simulator, which reads fro
 
 ![](sim/bandgap/VREF.png)
 
-<sub> Figure 2: VREF simulated with a sweeping temperature between -40 and 125 degrees C. It is fairly constant, only varying with a delta of about 4mV.</sub>
+<sub> Figure 2: VREF simulated with a sweeping temperature between -40 and 125 degrees C. It is quite constant, with a tiny delta between the startpoint and endpoint, and nearly centered peak.</sub>
 
 ### Oscillator: typical
 

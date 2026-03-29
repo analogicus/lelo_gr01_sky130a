@@ -44,7 +44,6 @@ VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {t_start} {AVDD} {{t_start}+10p} {0}
 *----------------------------------------------------------------
 .options savecurrents
 .save all
-
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
@@ -53,8 +52,6 @@ set num_threads=16
 set color0=white
 set color1=black
 unset askquit
-
-.option savecurrents
 
 *op
 optran 0 0 0 1n 1u 0

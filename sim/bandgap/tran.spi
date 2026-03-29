@@ -45,6 +45,7 @@ R_IPTAT_MEAS IPTAT 0 1k
 .options savecurrents
 .save all
 
+.save i(@R_IPTAT_MEAS[i]) i(VDD_1V8) v(xdut.x1.tail) v(vref)
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
@@ -61,7 +62,6 @@ ic v(VOUT)=1.2 v(VIP)=0.85 v(VIN)=0.85
 set itl1=1000
 set itl2=1000
 
-.save i(@R_IPTAT_MEAS[i]) i(VDD_1V8) v(xdut.x1.tail) v(vref)
 
 *op uic
 

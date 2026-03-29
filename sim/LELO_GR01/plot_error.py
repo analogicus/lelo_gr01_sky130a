@@ -30,15 +30,15 @@ def parse_data(filename):
 
 #remove
 
-data_files = ['oscillator_typical_reduce',
+data_files = ['oscillator_typical',
     # 'etc/tran_SchGtKssTlVh_oscillator', 'etc/tran_SchGtKsfTlVh_oscillator', 'etc/tran_SchGtKfsTlVh_oscillator', 'etc/tran_SchGtKfsThVh_oscillator', 'etc/tran_SchGtKssTlVl_oscillator', 'etc/tran_SchGtKssThVh_oscillator', 'etc/tran_SchGtKsfThVh_oscillator', 'etc/tran_SchGtKfsThVl_oscillator', 'etc/tran_SchGtKffTlVl_oscillator', 'etc/tran_SchGtKffThVh_oscillator', 'etc/tran_SchGtKffTlVh_oscillator', 'etc/tran_SchGtKsfTlVl_oscillator', 'etc/tran_SchGtKsfThVl_oscillator', 'etc/tran_SchGtKssThVl_oscillator', 'etc/tran_SchGtKfsTlVl_oscillator',
-'mc/tran_SchGtKttmmTtVt_oscillator', 'mc/tran_SchGtKttmmTtVt_1_oscillator', 'mc/tran_SchGtKttmmTtVt_16_oscillator', 'mc/tran_SchGtKttmmTtVt_19_oscillator', 'mc/tran_SchGtKttmmTtVt_9_oscillator', 'mc/tran_SchGtKttmmTtVt_3_oscillator', 'mc/tran_SchGtKttmmTtVt_11_oscillator', 'mc/tran_SchGtKttmmTtVt_13_oscillator', 'mc/tran_SchGtKttmmTtVt_15_oscillator', 'mc/tran_SchGtKttmmTtVt_25_oscillator', 'mc/tran_SchGtKttmmTtVt_8_oscillator', 'mc/tran_SchGtKttmmTtVt_18_oscillator', 'mc/tran_SchGtKttmmTtVt_28_oscillator', 'mc/tran_SchGtKttmmTtVt_6_oscillator', 'mc/tran_SchGtKttmmTtVt_21_oscillator', 'mc/tran_SchGtKttmmTtVt_2_oscillator', 'mc/tran_SchGtKttmmTtVt_4_oscillator', 'mc/tran_SchGtKttmmTtVt_17_oscillator', 'mc/tran_SchGtKttmmTtVt_14_oscillator', 'mc/tran_SchGtKttmmTtVt_23_oscillator', 'mc/tran_SchGtKttmmTtVt_22_oscillator', 'mc/tran_SchGtKttmmTtVt_29_oscillator', 'mc/tran_SchGtKttmmTtVt_7_oscillator', 'mc/tran_SchGtKttmmTtVt_24_oscillator', 'mc/tran_SchGtKttmmTtVt_27_oscillator', 'mc/tran_SchGtKttmmTtVt_5_oscillator', 'mc/tran_SchGtKttmmTtVt_26_oscillator', 'mc/tran_SchGtKttmmTtVt_10_oscillator', 'mc/tran_SchGtKttmmTtVt_20_oscillator'
+#'mc/tran_SchGtKttmmTtVt_oscillator', 'mc/tran_SchGtKttmmTtVt_1_oscillator', 'mc/tran_SchGtKttmmTtVt_16_oscillator', 'mc/tran_SchGtKttmmTtVt_19_oscillator', 'mc/tran_SchGtKttmmTtVt_9_oscillator', 'mc/tran_SchGtKttmmTtVt_3_oscillator', 'mc/tran_SchGtKttmmTtVt_11_oscillator', 'mc/tran_SchGtKttmmTtVt_13_oscillator', 'mc/tran_SchGtKttmmTtVt_15_oscillator', 'mc/tran_SchGtKttmmTtVt_25_oscillator', 'mc/tran_SchGtKttmmTtVt_8_oscillator', 'mc/tran_SchGtKttmmTtVt_18_oscillator', 'mc/tran_SchGtKttmmTtVt_28_oscillator', 'mc/tran_SchGtKttmmTtVt_6_oscillator', 'mc/tran_SchGtKttmmTtVt_21_oscillator', 'mc/tran_SchGtKttmmTtVt_2_oscillator', 'mc/tran_SchGtKttmmTtVt_4_oscillator', 'mc/tran_SchGtKttmmTtVt_17_oscillator', 'mc/tran_SchGtKttmmTtVt_14_oscillator', 'mc/tran_SchGtKttmmTtVt_23_oscillator', 'mc/tran_SchGtKttmmTtVt_22_oscillator', 'mc/tran_SchGtKttmmTtVt_29_oscillator', 'mc/tran_SchGtKttmmTtVt_7_oscillator', 'mc/tran_SchGtKttmmTtVt_24_oscillator', 'mc/tran_SchGtKttmmTtVt_27_oscillator', 'mc/tran_SchGtKttmmTtVt_5_oscillator', 'mc/tran_SchGtKttmmTtVt_26_oscillator', 'mc/tran_SchGtKttmmTtVt_10_oscillator', 'mc/tran_SchGtKttmmTtVt_20_oscillator'
 ]
 
 
 measurements_list = []
 for file in data_files:
-    measurements_list.append(parse_data("results_03.03.2026/"+file+".csv"))
+    measurements_list.append(parse_data("../oscillator_tb/results_mc_pwrup_29.03.26/"+file+".csv"))
 
 
 

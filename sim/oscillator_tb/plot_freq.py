@@ -3,7 +3,7 @@ import glob
 import os
 import matplotlib.pyplot as plt
 
-RESULTS_DIR = "results_03.03.2026"
+RESULTS_DIR = "results_mc_pwrup_27.03.26"
 
 
 def read_csv(path):

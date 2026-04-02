@@ -27,6 +27,9 @@ VSS  VSS  0     dc 0
 VDD_1V8  VDD_1V8  VSS  dc 1.8
 
 
+VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}+10p} {AVDD}
+VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {t_start} {AVDD} {{t_start}+10p} {0}
+
 *Place a load on IBP
 Rload VDD_1V8 IBN 1000
 

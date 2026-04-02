@@ -4,7 +4,10 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 
-RESULTS_DIR = "results_12.03.2026"
+# --- Configuration ---
+RESULTS_DIR = "output_tran"
+# Specify the filename (including extension) you want to ignore
+file_to_omit = "tran_SchGtKssThVl_oscillator.csv" 
 
 def read_csv(path):
     """Read a semicolon-delimited CSV and return (temps, freqs_MHz)."""
@@ -32,6 +35,13 @@ def is_outlier(temps, freqs):
 # ---- 1. Gather ALL files (MC and Corners) ----
 all_csv_files = sorted(glob.glob(os.path.join(RESULTS_DIR, "**", "*_oscillator.csv"), recursive=True))
 
+# --- NEW: Filter out the specific file ---
+if file_to_omit:
+    original_count = len(all_csv_files)
+    all_csv_files = [f for f in all_csv_files if os.path.basename(f) != file_to_omit]
+    if len(all_csv_files) < original_count:
+        print(f"Successfully omitted: {file_to_omit}")
+
 runs = []
 outlier_runs = []
 for path in all_csv_files:
@@ -45,7 +55,11 @@ for path in all_csv_files:
 
 print(f"Loaded {len(runs)} good runs, rejected {len(outlier_runs)} outliers")
 
-# Setup Figure - making it slightly taller to accommodate the legend gutter
+if not runs:
+    print("No valid data runs to plot. Check your data directory or skip settings.")
+    exit()
+
+# Setup Figure
 fig, axes = plt.subplots(1, 3, figsize=(18, 8)) 
 
 t_common = runs[0][0]
@@ -89,26 +103,21 @@ ax.set_ylabel("Error [kHz]")
 ax.grid(True, linestyle=':', alpha=0.6)
 
 # ---- THE GLOBAL HORIZONTAL LEGEND ----
-# Gather handles and labels from axes[0] which contains all corner names
 handles, labels = axes[0].get_legend_handles_labels()
 
-# Create a figure-level legend to avoid subplot overlap
 fig.legend(
     handles, 
     labels, 
     loc='lower center', 
-    ncol=12,                    # Distribute across 12 columns
-    mode="expand",              # Stretch horizontally
+    ncol=12, 
+    mode="expand", 
     fontsize='xx-small', 
     frameon=True,
     borderaxespad=0.5,
-    bbox_to_anchor=(0.05, 0.02, 0.9, 0.1) # Position at the very bottom
+    bbox_to_anchor=(0.05, 0.02, 0.9, 0.1)
 )
 
 fig.suptitle("Oscillator Analysis: All Corners & Monte Carlo", fontsize=14, fontweight='bold')
-
-# Manually adjust subplots to leave room at the bottom for the legend
-# top=0.9: room for title | bottom=0.25: room for legend
 plt.subplots_adjust(bottom=0.25, top=0.90, wspace=0.3, left=0.06, right=0.96)
 
 plt.savefig(os.path.join(RESULTS_DIR, "full_analysis_plot.png"), dpi=200)

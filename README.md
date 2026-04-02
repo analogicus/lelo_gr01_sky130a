@@ -86,7 +86,7 @@ For testing the digital module, we made an oscillator simulator, which reads fro
 
 ![](sim/bandgap/VREF.png)
 
-<sub> Figure 2: VREF simulated with a sweeping temperature between -40 and 125 degrees C. It is fairly constant, only varying with a delta of about 4mV.</sub>
+<sub> Figure 2: VREF simulated with a sweeping temperature between -40 and 125 degrees C. It is quite constant, with a tiny delta between the startpoint and endpoint, and nearly centered peak.</sub>
 
 ### Oscillator: typical
 
@@ -107,13 +107,13 @@ For testing the digital module, we made an oscillator simulator, which reads fro
 
 ### Oscillator: Montecarlo simulations
 
-![](sim/oscillator_tb/MC_freq_21_03_26.png)
+![](sim/oscillator_tb/results_mc_pwrup_29.03.26/MC_freq_29_03_26.png)
 
 <sub> Figure 6: Results of Montecarlo simulations of the bandgap and osciallator setup at different temperatures. </sub>
 
-![](sim/oscillator_tb/plot_error_mc_21_03_26.png)
+![](sim/oscillator_tb/results_mc_pwrup_29.03.26/plot_error_mc_29_03_26.png)
 
-<sub> Figure 7: Estimated error in the temperature measurements with two points calibration for extreme test conditions Montecarlo simulations. The results are well within spec, as the plot shows around +-2.5 C peak within the 0-70 C range. </sub>
+<sub> Figure 7: Estimated error in the temperature measurements with two points calibration for extreme test conditions Montecarlo simulations. The results are well within spec, as the plot shows around +2.0 C error peak within the 0-70 C range. Though it must be noted that these measurements are BEFORE being fed through the digital part, so quantization is not visible here. </sub>
 
 ### Full system: Typical runs
 

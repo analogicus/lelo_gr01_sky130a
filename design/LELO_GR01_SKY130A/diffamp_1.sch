@@ -12,9 +12,7 @@ N 600 -540 600 -460 {lab=VOUT}
 N 440 -500 520 -500 {lab=#net1}
 N 520 -570 520 -500 {lab=#net1}
 N 440 -620 440 -600 {lab=VDD_1V8}
-N 440 -620 600 -620 {lab=VDD_1V8}
 N 600 -620 600 -600 {lab=VDD_1V8}
-N 220 -620 440 -620 {lab=VDD_1V8}
 N 440 -600 440 -570 {lab=VDD_1V8}
 N 600 -600 600 -570 {lab=VDD_1V8}
 N 440 -400 440 -380 {lab=TAIL}
@@ -38,10 +36,22 @@ N 240 -290 280 -290 {lab=#net2}
 N 280 -290 280 -280 {lab=#net2}
 N 280 -290 390 -290 {lab=#net2}
 N 390 -290 390 -280 {lab=#net2}
+N 520 -650 520 -620 {lab=VDD_1V8}
+N 440 -620 520 -620 {lab=VDD_1V8}
+N 520 -620 600 -620 {lab=VDD_1V8}
+N 220 -680 520 -680 {lab=VDD_1V8}
+N 520 -680 520 -650 {lab=VDD_1V8}
+N 10 -680 220 -680 {lab=VDD_1V8}
+N 520 -320 690 -320 {lab=TAIL}
+N 690 -320 760 -320 {lab=TAIL}
+N 760 -320 760 -280 {lab=TAIL}
+N 760 -250 760 -220 {lab=VSS}
+N 520 -220 760 -220 {lab=VSS}
+N 800 -250 820 -250 {lab=PWRUP_N_1V8}
 C {cborder/border_xs.sym} 0 0 0 0 {
 user="nikolai"
 company="wulff"}
-C {devices/ipin.sym} 220 -620 0 0 {name=p1 lab=VDD_1V8}
+C {devices/ipin.sym} 10 -680 0 0 {name=p1 lab=VDD_1V8}
 C {devices/ipin.sym} 220 -430 0 0 {name=p4 lab=VIN}
 C {devices/ipin.sym} 220 -370 0 0 {name=p5 lab=VIP}
 C {devices/opin.sym} 750 -500 0 0 {name=p6 lab=VOUT}
@@ -56,3 +66,7 @@ C {devices/ipin.sym} 390 -190 0 0 {name=p2 lab=VSS}
 C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 480 -250 0 0 {name=x6 }
 C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 320 -250 0 1 {name=x7 }
 C {devices/lab_wire.sym} 60 -270 0 0 {name=p7 sig_type=std_logic lab=VSS}
+C {devices/ipin.sym} 10 -530 0 0 {name=p9 lab=PWRUP_1V8}
+C {devices/ipin.sym} 10 -500 0 0 {name=p10 lab=PWRUP_N_1V8}
+C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 800 -250 0 1 {name=x8 }
+C {devices/lab_pin.sym} 820 -250 0 1 {name=p11 sig_type=std_logic lab=PWRUP_N_1V8}

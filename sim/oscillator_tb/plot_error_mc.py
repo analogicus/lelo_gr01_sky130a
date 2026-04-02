@@ -4,9 +4,12 @@ import glob
 import os
 
 # --- Configuration ---
-# This looks in your current directory and subdirectories for the oscillator csvs
 data_dir = "output_tran/" 
 file_pattern = "*_oscillator.csv"
+
+# SET THE FILE NAME YOU WANT TO OMIT HERE (e.g., "KssTsVs_oscillator.csv")
+# Set to None if you don't want to skip anything.
+file_to_skip = "tran_SchGtKssThVl_oscillator.csv" 
 
 def parse_data(filename):
     measurements = []
@@ -24,8 +27,12 @@ def parse_data(filename):
     return np.array(measurements)
 
 # ---- 1. Gather All Files ----
-# This grabs every oscillator CSV in the folder
 all_files = sorted(glob.glob(os.path.join(data_dir, file_pattern)))
+
+# --- NEW: Filter out the excluded file ---
+if file_to_skip:
+    all_files = [f for f in all_files if os.path.basename(f) != file_to_skip]
+    print(f"Omitted: {file_to_skip}")
 
 if not all_files:
     print(f"No files found in {data_dir} matching {file_pattern}")
@@ -56,14 +63,11 @@ for i, file_path in enumerate(all_files):
     error_data_for_spread.append(error)
     
     # Determine if this is the "Typical" run to make it stand out
-    # Typical usually has 'KttTtVt' in the name
     corner_name = os.path.basename(file_path).replace("_oscillator.csv", "")
     
     if "KttTtVt" in corner_name and "mm" not in corner_name:
-        # Plot Typical: Thick, Solid Red
         plt.plot(x, error, color='red', linewidth=3, label=f"TYPICAL ({corner_name})", zorder=100)
     else:
-        # Plot Corners/MC: Thin, Dotted, Unique Color
         plt.plot(x, error, color=colors[i], linestyle=':', linewidth=1.2, label=corner_name, alpha=0.8)
 
 # ---- 3. Compute and Plot the Min/Max Spread Area ----
@@ -79,7 +83,6 @@ plt.ylabel("Temperature Measurement Error (°C)", fontsize=12)
 plt.title("Temperature Sensor Error: All Corners & Monte Carlo", fontsize=14, fontweight='bold')
 plt.grid(True, which='both', linestyle='--', alpha=0.4)
 
-# Place legend below the plot in 3 columns to fit all corner names
 plt.legend(loc='upper center', bbox_to_anchor=(0.5, -0.15), ncol=8, fontsize='x-small', frameon=True)
 
 plt.tight_layout()

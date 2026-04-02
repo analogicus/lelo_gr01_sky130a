@@ -18,6 +18,9 @@ In order to measure temperature with an electrical circuit, we need to make some
 
 To avoid having to make an ADC, the current that scales linearly with temperature can be converted into a frequency. If we can do this, then it will be less accurate than with a good ADC, but also way less complex, because frequency can be read without an ADC.
 
+### Digital module (counter)
+
+In order to convert the frequency from the oscillator into a digital value we need to quantify it somehow. There are several ways to do this, measuring the period, the time between rise and fall or the number of pulses in a time frame are some options.
 
 ## How
 
@@ -134,6 +137,7 @@ For testing the digital module, we made an oscillator simulator, which reads fro
 | Schematic Bandgap    | design/LELO_GR01_SKY130A/bandgap.sch   |
 | Schematic Diff Amp   | design/LELO_GR01_SKY130A/diffamp_1.sch |
 | Schematic GM Cell    | design/LELO_GR01_SKY130A/GM_cell.sch   |
+| RTL digital module   | rtl/LELO_TEMP.sv                       | 
 
 
 
@@ -147,6 +151,11 @@ For testing the digital module, we made an oscillator simulator, which reads fro
 | VSS          | Input     | Ground  |                                           |
 | PWRUP_1V8    | Input     | VDD_1V8 | Power up the circuit                      |
 | OSC_TEMP_1V8 | Output    | VDD_1V8 | Temperature dependent frequency           |
+| :---         | :---:     | :---:   | :---                                      |
+| CLK          | Input     | VDD_1V8 | 32.768kHz clock for digital               |
+| Request      | Input     | VDD_1V8 | Input signal to request measurement       |
+| Done         | Output    | VDD_1V8 | Signal to indicate that value is ready    |
+| Out          | Output    | VDD_1V8 | Output value in counts (8 bits)           |
 
 ### Bandgap
 
@@ -185,3 +194,15 @@ For testing the digital module, we made an oscillator simulator, which reads fro
 | VDD_1V8      | Input     | VDD_1V8 | 1.8V Main supply                          |
 | VSS          | Input     | Ground  |                                           |
 | IBP          | Output    | VDD_1V8 | Output current, approx 10uA at 27C        |
+
+### Digital Counter
+
+| Signal          | Direction | Domain  | Description                               |
+| :---            | :---:     | :---:   | :---                                      |
+| clk             | Input     | VDD_1V8 | 32.768kHz reference clock                 |
+| rst             | Input     | VDD_1V8 | Active high reset                         |
+| request         | Input     | VDD_1V8 | Start a temperature measurement           |
+| oscillator_clk  | Input     | VDD_1V8 | Oscillator signal to count                |
+| pwr             | Output    | VDD_1V8 | Powers up the analog circuits             |
+| done            | Output    | VDD_1V8 | Pulses when measurement is complete       |
+| out             | Output    | VDD_1V8 | 8-bit pulse count result                  |

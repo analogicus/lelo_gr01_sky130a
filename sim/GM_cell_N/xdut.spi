@@ -1,2 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut GM_cell_N
-XDUT VDD_1V8 IBN VSS PWRUP_N_1V8  GM_cell_N
+XDUT VDD_1V8 IBN VSS PWRUP_N_1V8 PWRUP_1V8  GM_cell_N

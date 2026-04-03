@@ -66,10 +66,10 @@ C {devices/ipin.sym} 950 -410 0 0 {name=p3 lab=IBN}
 C {devices/opin.sym} 670 -30 0 0 {name=p4 lab=VSS}
 C {devices/ipin.sym} 600 -180 0 0 {name=p9 lab=PWRUP_N_1V8}
 C {JNW_ATR_SKY130A/JNWATR_NCH_2C1F2.sym} 590 -340 0 0 {name=x5}
-C {JNW_ATR_SKY130A/JNWATR_NCH_12C5F0.sym} 630 -180 0 0 {name=x8}
+C {JNW_ATR_SKY130A/JNWATR_NCH_2C1F2.sym} 630 -180 0 0 {name=x8}
 C {devices/lab_pin.sym} 520 -240 0 0 {name=p1 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 780 -240 0 1 {name=p5 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 960 -240 0 1 {name=p6 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} 590 -760 0 0 {name=p7 lab=PWRUP_N_1V8}
-C {JNW_ATR_SKY130A/JNWATR_PCH_12C5F0.sym} 620 -760 0 0 {name=x9}
+C {JNW_ATR_SKY130A/JNWATR_PCH_2C1F2.sym} 620 -760 0 0 {name=x9}
 C {devices/lab_pin.sym} 710 -530 0 0 {name=p10 sig_type=std_logic lab=VSS}

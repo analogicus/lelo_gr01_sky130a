@@ -1,4 +1,4 @@
-*TB_SUN_TR_SKY130NM/TB_NCM
+*TB_DIFFAMP_1_TRAN - Unity-Gain Step Response
 *----------------------------------------------------------------
 * Include
 *----------------------------------------------------------------
@@ -17,18 +17,23 @@
 * PARAMETERS
 *-----------------------------------------------------------------
 .param TRF = 10p
-
 .param AVDD = {vdda}
+.param VCM = 0.6
 
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD_1V8  VDD_1V8  VSS  pwl 0 0 10n 1.8
+VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
 
+VIP  VIP  VSS  sin({VCM} 0.01 1Meg {t_start})
+VIN  VIN  VSS  dc {VCM}
+VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}-1n} {AVDD}
+VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {t_start} {AVDD} {{t_start}-1n} {0}
 
-VIN  VIN  VSS SIN(0.9 0.01 1e6 0 0 180) AC 1 180
-VIP  VIP  VSS SIN(0.9 0.01 1e6 0 0 0)   AC 1 0
+* Output load capacitor
+CL   VOUT  VSS  0.25f
+
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
@@ -37,25 +42,27 @@ VIP  VIP  VSS SIN(0.9 0.01 1e6 0 0 0)   AC 1 0
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
+.options savecurrents
 .save all
-
 
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
 .control
-set num_threads=8
+set num_threads=16
 set color0=white
 set color1=black
 unset askquit
+.options savecurrents
+.save all
+
+op
 
 optran 0 0 0 1n 1u 0
 
-
-tran 1n 10n 1p
+tran 0.1n {t_end}
 write
 quit
-
 
 .endc
 

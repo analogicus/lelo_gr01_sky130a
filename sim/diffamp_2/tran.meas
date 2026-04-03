@@ -1,19 +1,35 @@
-* Measure diffamp_2
+* Measure diffamp_1 transient parameters (unity-gain step response)
 .control
 
 load {cicname}.raw
 
 echo "MEAS_START"
 
-*TRAN
-meas tran vout_avg avg v(vout) from=12n to=20n
+*--- Static power consumption (average before step, steady state) ---
+let pwr_vec = -i(vdd) * v(vdd_1v8)
+meas tran pwr_static avg pwr_vec from=100n to=195n
 
-meas tran idd_avg avg i(vss) from=12n to=20n
+*--- Supply current ---
+meas tran idd_static avg i(vdd) from=100n to=195n
 
-meas tran v_ib_final find v(ib) at=20n
+*--- Output voltage levels (steady state before/after rising step) ---
+meas tran vout_low find v(vout) at={195n}
+meas tran vout_high find v(vout) at=795n
 
-let power = 1.8 * abs(idd_avg)
-echo "Estimated Power Consumption: $&power Watts"
+*--- Positive slew rate (max dV/dt during rising edge) ---
+let dv_dt = deriv(v(vout))
+meas tran sr_pos MAX dv_dt from=200.05n to=800n
+
+*--- Negative slew rate (min dV/dt during falling edge, reported negative) ---
+meas tran sr_neg MIN dv_dt from=1000.05n to=1800n
+
+*--- Rise/Fall time estimated from slew rate ---
+let vswing = vout_high - vout_low
+let rise_time = 0.8 * vswing / sr_pos
+let fall_time = 0.8 * vswing / abs(sr_neg)
+echo "rise_time = $&rise_time"
+echo "fall_time = $&fall_time"
 
 echo "MEAS_END"
+quit
 .endc

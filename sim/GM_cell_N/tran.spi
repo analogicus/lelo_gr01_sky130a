@@ -27,11 +27,14 @@ VSS  VSS  0     dc 0
 VDD_1V8  VDD_1V8  VSS  dc 1.8
 
 
-VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}+10p} {AVDD}
-VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {t_start} {AVDD} {{t_start}+10p} {0}
+* Slow startup and shutdown after 2us
+VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}+0.5u} 0 {{t_start}+0.6u} {AVDD} {{t_start}+3u} {AVDD} {{t_start}+3.1u} 0
+VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {{t_start}+0.5u} {AVDD} {{t_start}+0.6u} {0} {{t_start}+3u} {0} {{t_start}+3.1u} {AVDD}
 
-*Place a load on IBP
+*Place a load on IBN
 Rload VDD_1V8 IBN 1000
+* Stabilize the self-biasing loop: small cap on PMOS gate node (net2)
+*Ccomp xdut.net2 VSS 200f * This has been added to the schematic itself instead
 
 *-----------------------------------------------------------------
 * DUT
@@ -65,7 +68,7 @@ op
 write {cicname}_op.raw
 
 
-tran 10n 10u 1p
+tran 1n 4u 1p
 write
 quit
 

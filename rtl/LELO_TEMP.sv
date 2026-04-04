@@ -8,10 +8,10 @@ module LELO_TEMP(
     input oscillator_clk, 
     output pwr, 
     output done, 
-    output logic[7:0] out);
+    output logic[11:0] out);
 
 
-    reg [7:0] counter;
+    reg [11:0] counter;
     logic reset_counter;
 
 

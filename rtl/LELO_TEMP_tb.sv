@@ -19,7 +19,7 @@ module LELO_TEMP_tb;
 
     wire pwr;
     wire done;
-    wire [7:0] out;
+    wire [11:0] out;
     wire oscillator_clk;
 
     // Setup devices

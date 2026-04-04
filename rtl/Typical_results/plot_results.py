@@ -22,8 +22,9 @@ counts = np.array(counts)
 freqs = np.array(freqs)
 
 # Theoretical: count = CLK_FREQ / freq_osc
-# freq_osc_theory is based off a linear approximation from the same one as the oscillator sim
-freq_osc_theory = +8.602795e-03*temps +1.850301e+00
+# freq_osc_theory is a linear fit of the measured frequencies
+coeffs = np.polyfit(temps, freqs, 1)
+freq_osc_theory = np.polyval(coeffs, temps)
 counts_theory = freq_osc_theory / 0.032768
 pct_error_vs_perfect_linear = (counts - counts_theory) / counts_theory * 100
 

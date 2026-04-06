@@ -17,5 +17,5 @@ doc:
          - LELO_GR01
          - oscillator
          - bandgap
-         - diffamp_1
-         - GM_cell
+         - diffamp_2
+         - GM_cell_N

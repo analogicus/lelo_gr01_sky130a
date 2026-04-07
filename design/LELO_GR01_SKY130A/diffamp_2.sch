@@ -38,10 +38,10 @@ C {devices/ipin.sym} -170 -260 0 0 {name=p1 lab=VDD_1V8}
 C {devices/ipin.sym} -40 20 0 0 {name=p4 lab=VIN}
 C {devices/ipin.sym} 280 20 0 1 {name=p5 lab=VIP}
 C {devices/opin.sym} 360 -50 0 0 {name=p6 lab=VOUT}
-C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 10 20 0 0 {name=x1 }
+C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 10 20 0 0 {name=x1}
 C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sym} 90 -120 0 1 {name=x2 }
 C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sym} 170 -120 0 0 {name=x4 }
-C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 250 20 0 1 {name=x3 }
+C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 250 20 0 1 {name=x3}
 C {devices/lab_pin.sym} 130 70 0 0 {name=p8 sig_type=std_logic lab=TAIL}
 C {devices/lab_wire.sym} 290 150 2 0 {name=p3 sig_type=std_logic lab=VDD_1V8}
 C {LELO_GR01_SKY130A/GM_cell_N.sym} 250 300 1 0 {name=x5}

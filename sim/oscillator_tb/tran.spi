@@ -35,12 +35,12 @@ VDD_1V8  VDD_1V8  VSS  dc 1.8
 *-----------------------------------------------------------------
 
 * Slow startup and shutdown after 2us (for power consumption testing)
-VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}+0.5u} 0 {{t_start}+0.6u} {AVDD} {{t_start}+3u} {AVDD} {{t_start}+3.1u} 0
-VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {{t_start}+0.5u} {AVDD} {{t_start}+0.6u} {0} {{t_start}+3u} {0} {{t_start}+3.1u} {AVDD}
+*VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}+0.5u} 0 {{t_start}+0.6u} {AVDD} {{t_start}+3u} {AVDD} {{t_start}+3.1u} 0
+*VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {{t_start}+0.5u} {AVDD} {{t_start}+0.6u} {0} {{t_start}+3u} {0} {{t_start}+3.1u} {AVDD}
 
 * Normal operation
-*VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}+10p} {AVDD}
-*VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {t_start} {AVDD} {{t_start}+10p} {0}
+VPWR  PWRUP_1V8  VSS  pwl 0 0 {t_start} 0 {{t_start}+10p} {AVDD}
+VPWRN  PWRUP_N_1V8  VSS  pwl 0 {AVDD} {t_start} {AVDD} {{t_start}+10p} {0}
 
 
 *-----------------------------------------------------------------
@@ -64,7 +64,7 @@ unset askquit
 
 *op
 optran 0 0 0 1n 1u 0
-tran 0.5n 10u 1p
+tran 0.5n 9u 1p
 write
 
 echo 'Temp ; Freq' > {cicname}_oscillator.csv
@@ -76,38 +76,43 @@ set temp_val = -40
 while $temp_val le $temp_stop
   set temp = $temp_val
 
-	tran 0.1n 10u
+	tran 0.1n 7u
 	*write {cicname}_temp_{$temp_val}.raw
 
-	* Average frequency over all complete periods (skip first for startup)
-	meas tran t_first WHEN v(vout_osc)=0.9 RISE=2
-	let t_last = t_first
-	let nperiods = 0
-	set nsweep = 0
-	while $nsweep le 1000
-	  let td_val = t_last + 1e-12
-	  let t_check = -1
-	  meas tran t_check WHEN v(vout_osc)=0.9 RISE=1 TD=$&td_val
-	  if $&t_check > $&t_last
-	    let t_last = t_check
-	    let nperiods = nperiods + 1
-	    let ns_next = $nsweep + 1
-	    set nsweep = "$&ns_next"
-	  else
-	    set nsweep = 1001
-	  end
-	end
+  meas tran Tperiod  TRIG v(vout_osc) VAL=0.9 RISE=2  TARG v(vout_osc) VAL=0.9 RISE=3
 
-
-	if $&nperiods > 0
-	  let Freq = nperiods / (t_last - t_first)
-	else
-	  let Freq = 0
-	end
-	echo Temp = $temp_val C  freq = $&Freq Hz  (averaged over $&nperiods periods)
-	echo '$temp_val ; $&Freq' >> {cicname}_oscillator.csv
-
-	destroy all
+	let Freq = 1/Tperiod
+	echo Temp = $temp_val C  freq = $&freq Hz
+	echo '$temp_val ; $&freq' >> {cicname}_oscillator.csv
+*	* Average frequency over all complete periods (skip first for startup)
+*	meas tran t_first WHEN v(vout_osc)=0.9 RISE=2
+*	let t_last = t_first
+*	let nperiods = 0
+*	set nsweep = 0
+*	while $nsweep le 1000
+*	  let td_val = t_last + 1e-12
+*	  let t_check = -1
+*	  meas tran t_check WHEN v(vout_osc)=0.9 RISE=1 TD=$&td_val
+*	  if $&t_check > $&t_last
+*	    let t_last = t_check
+*	    let nperiods = nperiods + 1
+*	    let ns_next = $nsweep + 1
+*	    set nsweep = "$&ns_next"
+*	  else
+*	    set nsweep = 1001
+*	  end
+*	end
+*
+*
+*	if $&nperiods > 0
+*	  let Freq = nperiods / (t_last - t_first)
+*	else
+*	  let Freq = 0
+*	end
+*	echo Temp = $temp_val C  freq = $&Freq Hz  (averaged over $&nperiods periods)
+*	echo '$temp_val ; $&Freq' >> {cicname}_oscillator.csv
+*
+*	destroy all
 	let temp_next = $temp_val + $temp_step
 	set temp_val = "$&temp_next"
 end

@@ -205,8 +205,6 @@ C {devices/lab_wire.sym} -480 -50 2 1 {name=p28 sig_type=std_logic lab=PWRUP_N_1
 C {devices/lab_wire.sym} -430 -480 0 0 {name=p29 sig_type=std_logic lab=VDD_1V8}
 C {JNW_TR_SKY130A/JNWTR_RPPO8.sym} 450 380 1 0 {name=x26}
 C {JNW_TR_SKY130A/JNWTR_RPPO8.sym} 450 470 1 0 {name=x27}
-C {devices/opin.sym} 90 300 0 0 {name=p41 lab=VIN}
-C {devices/opin.sym} -90 340 0 0 {name=p42 lab=VIP}
 C {JNW_TR_SKY130A/JNWTR_RPPO2.sym} 520 470 1 0 {name=x4}
 C {devices/lab_wire.sym} -420 230 0 1 {name=p4 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} -420 160 0 1 {name=p10 sig_type=std_logic lab=VDD_1V8}

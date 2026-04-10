@@ -17,8 +17,6 @@ N 920 -260 930 -260 {lab=OSC_TEMP_1V8}
 N 120 -200 150 -200 {lab=PWRUP_N_1V8}
 N 790 -350 790 -300 {lab=PWRUP_N_1V8}
 N 740 -350 740 -300 {lab=PWRUP_1V8}
-N 280 -140 280 -130 {lab=VIP}
-N 250 -140 250 -130 {lab=VIN}
 C {cborder/border_xs.sym} 0 10 0 0 {
 user="wulff"
 company="wulff"}
@@ -33,5 +31,3 @@ C {devices/opin.sym} 930 -260 0 0 {name=p7 lab=OSC_TEMP_1V8}
 C {devices/ipin.sym} 120 -200 0 0 {name=p6 lab=PWRUP_N_1V8}
 C {devices/lab_wire.sym} 740 -350 0 0 {name=p8 sig_type=std_logic lab=PWRUP_1V8}
 C {devices/lab_wire.sym} 790 -350 2 0 {name=p9 sig_type=std_logic lab=PWRUP_N_1V8}
-C {devices/opin.sym} 250 -130 1 0 {name=p10 lab=VIN}
-C {devices/opin.sym} 280 -130 1 0 {name=p11 lab=VIP}

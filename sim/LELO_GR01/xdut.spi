@@ -1,2 +1,2 @@
 *Automatic generated instance fron ../../tech/scripts/genxdut LELO_GR01
-XDUT VDD_1V8 OSC_TEMP_1V8 PWRUP_1V8 VSS  LELO_GR01
+XDUT VDD_1V8 OSC_TEMP_1V8 PWRUP_1V8 VSS PWRUP_N_1V8  LELO_GR01

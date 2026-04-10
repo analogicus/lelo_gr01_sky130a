@@ -1,0 +1,40 @@
+magic
+tech sky130A
+timestamp 1775816954
+<< locali >>
+rect -48 930 560 1026
+rect -48 908 48 930
+rect -48 868 155 908
+rect -48 844 48 868
+rect 464 842 560 930
+rect 35 340 149 380
+rect -48 -24 48 76
+rect 464 -24 560 29
+rect -48 -120 560 -24
+<< metal1 >>
+rect 144 828 240 868
+rect 80 347 112 580
+rect 144 300 240 340
+rect 272 321 368 644
+rect 80 180 112 220
+rect 272 20 368 60
+use LELOATR_LVT_NCH_2C5F0  x1 ../LELO_ATR_SKY130A
+timestamp 1767481200
+transform 1 0 0 0 1 0
+box -92 -64 604 464
+use LELOATR_LVT_PCH_2C5F0  x2 ../LELO_ATR_SKY130A
+timestamp 1767481200
+transform 1 0 0 0 1 528
+box -92 -64 604 464
+<< labels >>
+flabel metal1 s 144 300 240 340 0 FreeSans 200 0 0 0 VSS
+port 1 nsew ground bidirectional
+flabel metal1 s 144 828 240 868 0 FreeSans 200 0 0 0 VDD
+port 2 nsew power bidirectional
+flabel metal1 s 80 180 112 220 0 FreeSans 200 0 0 0 VIN
+port 3 nsew signal bidirectional
+flabel metal1 s 272 20 368 60 0 FreeSans 200 0 0 0 VOUT
+port 4 nsew signal bidirectional
+<< properties >>
+string FIXED_BBOX 0 0 696 1056
+<< end >>

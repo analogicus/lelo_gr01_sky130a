@@ -36,7 +36,6 @@ N 600 -180 630 -180 {lab=PWRUP_N_1V8}
 N 540 -580 540 -550 {lab=#net2}
 N 660 -730 660 -680 {lab=#net2}
 N 590 -380 590 -340 {lab=#net4}
-N 630 -340 630 -310 {lab=#net1}
 N 760 -240 780 -240 {lab=VSS}
 N 950 -240 970 -240 {lab=VSS}
 N 520 -240 540 -240 {lab=VSS}
@@ -62,6 +61,7 @@ N 670 -150 670 -100 {lab=VSS}
 N 540 -110 540 -100 {lab=VSS}
 N 540 -210 540 -190 {lab=VSS}
 N 540 -190 540 -110 {lab=VSS}
+N 630 -340 650 -340 {lab=#net5}
 C {JNW_TR_SKY130A/JNWTR_RPPO4.sym} 760 -570 1 0 {name=x6 }
 C {devices/ipin.sym} 660 -820 0 0 {name=p2 lab=VDD_1V8}
 C {devices/ipin.sym} 950 -410 0 0 {name=p3 lab=IBN}
@@ -71,7 +71,6 @@ C {devices/lab_pin.sym} 780 -240 0 1 {name=p5 sig_type=std_logic lab=VSS}
 C {devices/lab_pin.sym} 960 -240 0 1 {name=p6 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} 590 -760 0 0 {name=p7 lab=PWRUP_N_1V8}
 C {devices/lab_pin.sym} 710 -530 0 0 {name=p10 sig_type=std_logic lab=VSS}
-C {devices/ipin.sym} 280 -520 0 0 {name=p8 lab=PWRUP_1V8}
 C {devices/lab_pin.sym} 600 -180 0 0 {name=p9 sig_type=std_logic lab=PWRUP_N_1V8}
 C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 910 -240 0 0 {name=x9}
 C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 720 -240 0 0 {name=x5}
@@ -81,3 +80,4 @@ C {LELO_ATR_SKY130A/LELOATR_LVT_NCH_2C5F0.sym} 590 -340 0 0 {name=x7}
 C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sym} 580 -430 0 1 {name=x8}
 C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sym} 720 -430 0 0 {name=x3}
 C {LELO_ATR_SKY130A/LELOATR_LVT_PCH_2C5F0.sym} 620 -760 0 0 {name=x4}
+C {devices/lab_pin.sym} 650 -340 0 1 {name=p8 sig_type=std_logic lab=VSS}

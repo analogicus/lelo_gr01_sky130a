@@ -4,15 +4,15 @@ K {}
 V {}
 S {}
 E {}
-N -120 20 130 20 {lab=Vc}
-N -80 -10 -80 20 {lab=Vc}
-N 90 -10 90 20 {lab=Vc}
-N -120 -80 -120 -40 {lab=Ve1}
-N 130 -80 130 -40 {lab=Ve8}
-N -0 20 0 60 {lab=Vc}
-C {sky130_fd_pr/pnp_05v5.sym} 110 -10 0 0 {name=Q1
+N -120 20 130 20 {lab=VSS}
+N -80 -10 -80 20 {lab=VSS}
+N 90 -10 90 20 {lab=VSS}
+N -120 -80 -120 -40 {lab=#net1}
+N 130 -80 130 -40 {lab=#net2}
+N -0 20 0 60 {lab=VSS}
+C {sky130_fd_pr/pnp_05v5.sym} 110 -10 0 0 {name=Q1[7:0]
 model=pnp_05v5_W3p40L3p40
-m=8
+m=1
 spiceprefix=X
 }
 C {sky130_fd_pr/pnp_05v5.sym} -100 -10 0 1 {name=Q2
@@ -20,6 +20,6 @@ model=pnp_05v5_W3p40L3p40
 m=1
 spiceprefix=X
 }
-C {devices/ipin.sym} -120 -80 0 0 {name=p1 lab=Ve1}
-C {devices/ipin.sym} 130 -80 0 0 {name=p2 lab=Ve8}
-C {devices/ipin.sym} 0 60 0 0 {name=p3 lab=Vc}
+C {devices/opin.sym} 0 60 0 0 {name=p3 lab=VSS}
+C {devices/ipin.sym} -120 -80 0 0 {name=p1 lab=I2}
+C {devices/ipin.sym} 130 -80 0 0 {name=p2 lab=I1}

@@ -1,0 +1,52 @@
+dc_gain:
+  src:
+    - dc_gain
+  name: DC Open-Loop Gain
+  typ: 40
+  min: 30
+  scale: 1
+  digits: 1
+  unit: dB
+
+f3db:
+  src:
+    - f3db
+  name: 3dB Bandwidth
+  scale: 1e-3
+  digits: 1
+  unit: kHz
+
+ugbw:
+  src:
+    - ugbw
+  name: Unity-Gain Bandwidth
+  scale: 1e-6
+  digits: 2
+  unit: MHz
+
+phase_margin:
+  src:
+    - phase_margin
+  name: Phase Margin
+  typ: 60
+  min: 45
+  scale: 1
+  digits: 1
+  unit: deg
+
+gain_margin:
+  src:
+    - gain_margin
+  name: Gain Margin
+  min: 10
+  scale: 1
+  digits: 1
+  unit: dB
+
+current:
+  src:
+    - idd_dc
+  name: DC Supply Current
+  scale: 1e6
+  digits: 2
+  unit: uA

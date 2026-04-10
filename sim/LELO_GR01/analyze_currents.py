@@ -78,8 +78,8 @@ def main():
     print(f"\nTime range: {time[0]*1e6:.4f} us to {time[-1]*1e6:.4f} us")
 
     # Trim first 10ns (simulator startup instabilities) and last 10ns before PWRUP at 0.5us
-    t_start = 10e-9
-    t_stop = 0.49e-6
+    t_start = 3.5e-6 #10e-9
+    t_stop = 4.0e-6 #0.49e-6
     mask = (time >= t_start) & (time <= t_stop)
     if not np.any(mask):
         print(f"No data points in {t_start*1e9:.0f}ns - {t_stop*1e6:.2f}us window!")

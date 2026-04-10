@@ -38,7 +38,7 @@ data_files = ['oscillator_typical',
 
 measurements_list = []
 for file in data_files:
-    measurements_list.append(parse_data("../oscillator_tb/results_mc_pwrup_29.03.26/"+file+".csv"))
+    measurements_list.append(parse_data("results_mc_pwrup_08.04.26/"+file+".csv"))
 
 
 
@@ -46,7 +46,7 @@ for file in data_files:
 a_list = []
 b_list = []
 for i in range(len(measurements_list)):
-    a, b = np.polyfit(measurements_list[i][:, 0], measurements_list[i][:, 1], 1)
+    a, b = np.polyfit(measurements_list[i][3:8, 0], measurements_list[i][3:8, 1], 1)
     a_list.append(a)
     b_list.append(b)
 
@@ -60,11 +60,12 @@ for i in range(len(measurements_list)):
     y_line = a_list[i] * x_line + b_list[i]
     plt.scatter(measurements_list[i][:, 0], measurements_list[i][:, 1])
     plt.plot(x_line, y_line)
+    
 
 plt.xlabel("Temperature (°C)")
 plt.ylabel("Frequency (Hz)")
 plt.title("Frequency measurements")
-plt.legend()
+#plt.legend()
 plt.grid(True)
 
 
@@ -100,7 +101,7 @@ for i in range(len(measurements_list[0][:, 0])):
 #---- Plotting the measured temperature error ----#
 PLOT_ONLY_TYPICAL=False #Assuming that typical is the the data_files list
 plt.figure()
-plt.fill_between(measurements_list[0][:, 0], y_max, y_min, alpha=0.3, label="Area where all the measurements fit in")
+#plt.fill_between(measurements_list[0][:, 0], y_max, y_min, alpha=0.3, label="Area where all the measurements fit in")
 
 if PLOT_ONLY_TYPICAL:
     plt.plot(measurements_list[0][:, 0], measured_temperature_error_list[i], label=data_files[i], marker='o')
@@ -108,11 +109,11 @@ else:
     for i in range(len(measurements_list)):
         plt.plot(measurements_list[i][:, 0], measured_temperature_error_list[i], marker='o')
 
-
+plt.axhline(y=0, color='black')
 plt.xlabel("Temperature (°C)")
 plt.ylabel("Temperature measurements error (°C)")
 plt.title("Temperature measurements error")
-plt.legend()
+#plt.legend()
 plt.grid(True)
 
 

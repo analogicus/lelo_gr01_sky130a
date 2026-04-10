@@ -1,0 +1,74 @@
+*TB_DIFFAMP_1_AC - Open-Loop AC Analysis
+*----------------------------------------------------------------
+* Include
+*----------------------------------------------------------------
+#ifdef Lay
+.include ../../../work/lpe/diffamp_2_lpe.spi
+#else
+.include ../../../work/xsch/diffamp_2.spice
+#endif
+
+*-----------------------------------------------------------------
+* OPTIONS
+*-----------------------------------------------------------------
+.option TNOM=27 GMIN=1e-15 reltol=1e-3
+
+*-----------------------------------------------------------------
+* PARAMETERS
+*-----------------------------------------------------------------
+.param AVDD = {vdda}
+.param VCM = 0.6
+
+*-----------------------------------------------------------------
+* FORCE
+*-----------------------------------------------------------------
+VSS  VSS  0     dc 0
+VDD  VDD_1V8  VSS  dc {AVDD}
+
+VIP  VIP  VSS  dc {VCM}
+VIN  VIN  VSS  dc {VCM} AC 1
+
+VPWR  PWRUP_1V8  VSS  dc {AVDD}
+VPWRN  PWRUP_N_1V8  VSS  dc 0
+
+* Output load capacitor
+CL   VOUT  VSS  0.25f
+
+*-----------------------------------------------------------------
+* DUT
+*-----------------------------------------------------------------
+.include ../xdut.spi
+
+*----------------------------------------------------------------
+* PROBE
+*----------------------------------------------------------------
+.save all
+
+*----------------------------------------------------------------
+* NGSPICE control
+*----------------------------------------------------------------
+.control
+set num_threads=16
+set color0=white
+set color1=black
+unset askquit
+
+optran 0 0 0 1n 1u 0
+op
+ac dec 50 1 10G
+
+let vout_db   = db(v(vout))
+let vout_phase = 180/pi * cph(v(vout))
+let vout_voltage = v(vout)
+
+meas ac dc_gain      find vout_db    at=10
+meas ac my_ugbw      when vout_voltage=1 fall=1
+meas ac ph_at_ugbw   find vout_phase at=my_ugbw
+let my_pm = 180 + ph_at_ugbw
+
+write {cicname}.raw
+quit
+
+.endc
+
+.end

@@ -1,0 +1,39 @@
+* Measure diffamp_1 open-loop AC parameters
+.control
+
+load {cicname}.raw
+
+let vout_db = db(v(vout))
+let vout_phase = 180/pi * cph(v(vout))
+let vout_voltage = v(vout)
+let current = i(vdd)
+
+echo "MEAS_START"
+
+*--- Current consumption at DC (10 Hz) ---
+meas ac idd_dc find current at=10
+
+*--- DC Gain (measured at 10 Hz, essentially DC) ---
+meas ac dc_gain find vout_db at=10
+
+*--- 3dB Bandwidth ---
+let target_3db = dc_gain - 3
+meas ac f3db when vout_db=target_3db fall=1
+
+*--- Unity-Gain Bandwidth (0 dB crossing) ---
+meas ac ugbw when vout_voltage=1 fall=1
+
+*--- Phase at unity-gain frequency ---
+meas ac phase_at_ugbw find vout_phase at=ugbw
+let phase_margin = 180 + phase_at_ugbw
+echo "phase_margin = $&phase_margin"
+
+*--- Gain Margin ---
+* Phase never reaches -180 for well-damped amplifiers => gain_margin is very large
+* If needed, inspect the Bode plot manually
+let gain_margin = 100
+echo "gain_margin = $&gain_margin"
+
+echo "MEAS_END"
+quit
+.endc

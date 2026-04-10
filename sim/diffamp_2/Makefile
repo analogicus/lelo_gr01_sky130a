@@ -3,8 +3,8 @@
 all: typical etc mc summary
 
 
-
 TB=tran
+AC_TB=ac
 VIEW=Sch
 #VIEW=Lay
 CELL=diffamp_2
@@ -36,6 +36,9 @@ mc: netlist
 
 ntc: netlist
 	cicsim run --replace replace.yaml --name ${VIEW}_ntc ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt" Vt
+
+ac: netlist
+	cicsim run --replace replace.yaml --name ${VIEW}_ac ${AC_TB} ${OPT} ${VIEW} Gt Ktt Tt Vt
 
 temp: netlist
 	cicsim run --replace replace.yaml --name ${VIEW}_temp ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tt,Th,Tl" Vt

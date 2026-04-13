@@ -71,7 +71,6 @@ N 70 190 120 190 {lab=PWRUP_1V8}
 N 70 170 120 170 {lab=PWRUP_N_1V8}
 N -250 -70 -90 -70 {lab=VDD_1V8}
 N -490 310 -470 310 {lab=VOUT}
-N -430 310 -430 340 {lab=VSS}
 N -430 340 -430 360 {lab=VSS}
 N -430 360 -250 360 {lab=VSS}
 N -430 260 -430 280 {lab=START_G}
@@ -131,6 +130,7 @@ N 250 770 440 770 {lab=VSS}
 N -50 630 -50 670 {lab=VIP}
 N 40 630 40 670 {lab=#net19}
 N 440 770 450 770 {lab=VSS}
+N -430 310 -420 310 {lab=#net20}
 C {devices/lab_wire.sym} -40 310 0 0 {name=p2 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} 40 270 3 0 {name=p6 sig_type=std_logic lab=VSS}
 C {devices/ipin.sym} 0 -130 0 0 {name=p7 lab=VDD_1V8}
@@ -205,3 +205,4 @@ C {devices/lab_wire.sym} -450 -430 0 0 {name=p36 sig_type=std_logic lab=VSS}
 C {JNW_TR_SKY130A/JNWTR_RPPO2.sym} 590 470 1 0 {name=x29}
 C {LELO_GR01_SKY130A/Diodes.sym} -60 720 0 0 {name=x15}
 C {LELO_GR01_SKY130A/pnp_fix.sym} 340 750 0 0 {name=x28}
+C {devices/lab_wire.sym} -420 310 0 1 {name=p37 sig_type=std_logic lab=VSS}

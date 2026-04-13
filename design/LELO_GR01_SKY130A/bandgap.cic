@@ -1,0 +1,3865 @@
+{
+    "cells": [
+        {
+            "class": "LayoutCell",
+            "x1": -336900.0,
+            "y1": -3.6893488147416457e+19,
+            "x2": 277600.0,
+            "y2": 1599200.0,
+            "layer": "",
+            "net": "",
+            "name": "bandgap",
+            "has_pr": false,
+            "ckt": {
+                "class": "",
+                "name": "bandgap",
+                "nodes": [
+                    "IPTAT",
+                    "VREF",
+                    "PWRUP_1V8",
+                    "VDD_1V8",
+                    "VSS",
+                    "PWRUP_N_1V8"
+                ],
+                "properties": {},
+                "devices": [],
+                "instances": [
+                    {
+                        "class": "",
+                        "name": "x5",
+                        "nodes": [
+                            "VIN",
+                            "VOUT",
+                            "VDD_1V8",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "5"
+                    },
+                    {
+                        "class": "",
+                        "name": "x3<7>",
+                        "nodes": [
+                            "VIP",
+                            "VOUT",
+                            "VDD_1V8",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "3<7>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x3<6>",
+                        "nodes": [
+                            "VIP",
+                            "VOUT",
+                            "VDD_1V8",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "3<6>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x3<5>",
+                        "nodes": [
+                            "VIP",
+                            "VOUT",
+                            "VDD_1V8",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "3<5>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x3<4>",
+                        "nodes": [
+                            "VIP",
+                            "VOUT",
+                            "VDD_1V8",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "3<4>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x3<3>",
+                        "nodes": [
+                            "VIP",
+                            "VOUT",
+                            "VDD_1V8",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "3<3>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x3<2>",
+                        "nodes": [
+                            "VIP",
+                            "VOUT",
+                            "VDD_1V8",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "3<2>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x3<1>",
+                        "nodes": [
+                            "VIP",
+                            "VOUT",
+                            "VDD_1V8",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "3<1>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x3<0>",
+                        "nodes": [
+                            "VIP",
+                            "VOUT",
+                            "VDD_1V8",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "3<0>"
+                    },
+                    {
+                        "class": "",
+                        "name": "xd1<4>",
+                        "nodes": [
+                            "VOUT",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_CAPX1",
+                        "groupName": "xd",
+                        "deviceName": "subckt",
+                        "groupTag": "1<4>"
+                    },
+                    {
+                        "class": "",
+                        "name": "xd1<3>",
+                        "nodes": [
+                            "VOUT",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_CAPX1",
+                        "groupName": "xd",
+                        "deviceName": "subckt",
+                        "groupTag": "1<3>"
+                    },
+                    {
+                        "class": "",
+                        "name": "xd1<2>",
+                        "nodes": [
+                            "VOUT",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_CAPX1",
+                        "groupName": "xd",
+                        "deviceName": "subckt",
+                        "groupTag": "1<2>"
+                    },
+                    {
+                        "class": "",
+                        "name": "xd1<1>",
+                        "nodes": [
+                            "VOUT",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_CAPX1",
+                        "groupName": "xd",
+                        "deviceName": "subckt",
+                        "groupTag": "1<1>"
+                    },
+                    {
+                        "class": "",
+                        "name": "xd1<0>",
+                        "nodes": [
+                            "VOUT",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_CAPX1",
+                        "groupName": "xd",
+                        "deviceName": "subckt",
+                        "groupTag": "1<0>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x2",
+                        "nodes": [
+                            "net1",
+                            "VIN",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_RPPO8",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "2"
+                    },
+                    {
+                        "class": "",
+                        "name": "x3",
+                        "nodes": [
+                            "net19",
+                            "net1",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_RPPO4",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "3"
+                    },
+                    {
+                        "class": "",
+                        "name": "x4<3>",
+                        "nodes": [
+                            "VOUT",
+                            "START_G",
+                            "VS1",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_NCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "4<3>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x4<2>",
+                        "nodes": [
+                            "VOUT",
+                            "START_G",
+                            "VS1",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_NCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "4<2>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x4<1>",
+                        "nodes": [
+                            "VOUT",
+                            "START_G",
+                            "VS1",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_NCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "4<1>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x4<0>",
+                        "nodes": [
+                            "VOUT",
+                            "START_G",
+                            "VS1",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_NCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "4<0>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x6<3>",
+                        "nodes": [
+                            "VS1",
+                            "VS1",
+                            "net2",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_NCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "6<3>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x6<2>",
+                        "nodes": [
+                            "VS1",
+                            "VS1",
+                            "net2",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_NCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "6<2>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x6<1>",
+                        "nodes": [
+                            "VS1",
+                            "VS1",
+                            "net2",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_NCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "6<1>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x6<0>",
+                        "nodes": [
+                            "VS1",
+                            "VS1",
+                            "net2",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_NCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "6<0>"
+                    },
+                    {
+                        "class": "",
+                        "name": "x7",
+                        "nodes": [
+                            "VSS",
+                            "VIN",
+                            "net2",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "7"
+                    },
+                    {
+                        "class": "",
+                        "name": "x8",
+                        "nodes": [
+                            "VREF",
+                            "VOUT",
+                            "VDD_1V8",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "8"
+                    },
+                    {
+                        "class": "",
+                        "name": "x9",
+                        "nodes": [
+                            "net3",
+                            "VREF",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_RPPO16",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "9"
+                    },
+                    {
+                        "class": "",
+                        "name": "x10",
+                        "nodes": [
+                            "net4",
+                            "net3",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_RPPO16",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "10"
+                    },
+                    {
+                        "class": "",
+                        "name": "x11",
+                        "nodes": [
+                            "net5",
+                            "net4",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_RPPO16",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "11"
+                    },
+                    {
+                        "class": "",
+                        "name": "x1",
+                        "nodes": [
+                            "VDD_1V8",
+                            "VIN",
+                            "VIP",
+                            "VOUT",
+                            "VSS",
+                            "PWRUP_1V8",
+                            "PWRUP_N_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "diffamp_2",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "1"
+                    },
+                    {
+                        "class": "",
+                        "name": "x6",
+                        "nodes": [
+                            "net8",
+                            "net5",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_RPPO8",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "6"
+                    },
+                    {
+                        "class": "",
+                        "name": "x13",
+                        "nodes": [
+                            "IPTAT",
+                            "VOUT",
+                            "VDD_1V8",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "13"
+                    },
+                    {
+                        "class": "",
+                        "name": "x16",
+                        "nodes": [
+                            "VOUT",
+                            "PWRUP_1V8",
+                            "VDD_1V8",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "16"
+                    },
+                    {
+                        "class": "",
+                        "name": "x17",
+                        "nodes": [
+                            "START_G",
+                            "PWRUP_N_1V8",
+                            "net16",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "17"
+                    },
+                    {
+                        "class": "",
+                        "name": "x18",
+                        "nodes": [
+                            "START_G",
+                            "VOUT",
+                            "VSS",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_NCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "18"
+                    },
+                    {
+                        "class": "",
+                        "name": "x19",
+                        "nodes": [
+                            "net16",
+                            "PWRUP_N_1V8",
+                            "net15",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "19"
+                    },
+                    {
+                        "class": "",
+                        "name": "x20",
+                        "nodes": [
+                            "net15",
+                            "PWRUP_N_1V8",
+                            "net14",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "20"
+                    },
+                    {
+                        "class": "",
+                        "name": "x21",
+                        "nodes": [
+                            "net14",
+                            "PWRUP_N_1V8",
+                            "net13",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "21"
+                    },
+                    {
+                        "class": "",
+                        "name": "x22",
+                        "nodes": [
+                            "net13",
+                            "PWRUP_N_1V8",
+                            "net10",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "22"
+                    },
+                    {
+                        "class": "",
+                        "name": "x23",
+                        "nodes": [
+                            "net10",
+                            "PWRUP_N_1V8",
+                            "net11",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "23"
+                    },
+                    {
+                        "class": "",
+                        "name": "x24",
+                        "nodes": [
+                            "net11",
+                            "PWRUP_N_1V8",
+                            "net12",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "24"
+                    },
+                    {
+                        "class": "",
+                        "name": "x25",
+                        "nodes": [
+                            "net12",
+                            "PWRUP_N_1V8",
+                            "net6",
+                            "VDD_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "LELOATR_LVT_PCH_2C5F0",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "25"
+                    },
+                    {
+                        "class": "",
+                        "name": "x26",
+                        "nodes": [
+                            "net7",
+                            "net8",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_RPPO8",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "26"
+                    },
+                    {
+                        "class": "",
+                        "name": "x27",
+                        "nodes": [
+                            "net9",
+                            "net7",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_RPPO8",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "27"
+                    },
+                    {
+                        "class": "",
+                        "name": "x4",
+                        "nodes": [
+                            "net9",
+                            "net7",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_RPPO2",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "4"
+                    },
+                    {
+                        "class": "",
+                        "name": "x12",
+                        "nodes": [
+                            "net17",
+                            "net9",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_RPPO2",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "12"
+                    },
+                    {
+                        "class": "",
+                        "name": "x14",
+                        "nodes": [
+                            "net17",
+                            "net9",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_RPPO2",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "14"
+                    },
+                    {
+                        "class": "",
+                        "name": "x30",
+                        "nodes": [
+                            "net6",
+                            "net18",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_RPPO16",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "30"
+                    },
+                    {
+                        "class": "",
+                        "name": "x31",
+                        "nodes": [
+                            "net18",
+                            "VDD_1V8",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_RPPO16",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "31"
+                    },
+                    {
+                        "class": "",
+                        "name": "x29",
+                        "nodes": [
+                            "net9",
+                            "net7",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_RPPO2",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "29"
+                    },
+                    {
+                        "class": "",
+                        "name": "x15",
+                        "nodes": [
+                            "net19",
+                            "VIP",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "Diodes",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "15"
+                    },
+                    {
+                        "class": "",
+                        "name": "x28",
+                        "nodes": [
+                            "net17",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "pnp_fix",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "28"
+                    }
+                ]
+            },
+            "children": [
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": 0,
+                    "x2": 178000.0,
+                    "y2": 858400.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "diffamp_2",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": -26900.0,
+                            "y1": 682100.0,
+                            "x2": -17300.0,
+                            "y2": 686100.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -67000.0,
+                            "y1": 508800.0,
+                            "x2": -63800.0,
+                            "y2": 512800.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VIN",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 1500.0,
+                            "y1": 513900.0,
+                            "x2": 4700.0,
+                            "y2": 517900.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VIP",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 20700.0,
+                            "y1": 513900.0,
+                            "x2": 30300.0,
+                            "y2": 517900.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -44600.0,
+                            "y1": 513500.0,
+                            "x2": -35000.0,
+                            "y2": 517500.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -33000.0,
+                            "y1": 687600.0,
+                            "x2": -29800.0,
+                            "y2": 691600.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "PWRUP_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -336900.0,
+                            "y1": 675200.0,
+                            "x2": -333700.0,
+                            "y2": 679200.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "PWRUP_N_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x1",
+                    "angle": "",
+                    "cell": "diffamp_2",
+                    "libpath": "LELO_GR01_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": 858400.0,
+                    "x2": 223600.0,
+                    "y2": 1030400.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_RPPO16",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 18200.0,
+                            "y1": 1004400.0,
+                            "x2": 32600.0,
+                            "y2": 1016400.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net4",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 191000.0,
+                            "y1": 1004400.0,
+                            "x2": 205400.0,
+                            "y2": 1016400.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net3",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 800.0,
+                            "y1": 859200.0,
+                            "x2": 222800.0,
+                            "y2": 864800.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x10",
+                    "angle": "",
+                    "cell": "JNWTR_RPPO16",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": 1030400.0,
+                    "x2": 223600.0,
+                    "y2": 1202400.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_RPPO16",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 18200.0,
+                            "y1": 1176400.0,
+                            "x2": 32600.0,
+                            "y2": 1188400.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net5",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 191000.0,
+                            "y1": 1176400.0,
+                            "x2": 205400.0,
+                            "y2": 1188400.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net4",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 800.0,
+                            "y1": 1031200.0,
+                            "x2": 222800.0,
+                            "y2": 1036800.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x11",
+                    "angle": "",
+                    "cell": "JNWTR_RPPO16",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": 1202400.0,
+                    "x2": 72400.0,
+                    "y2": 1374400.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_RPPO2",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 18200.0,
+                            "y1": 1348400.0,
+                            "x2": 32600.0,
+                            "y2": 1360400.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net17",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 39800.0,
+                            "y1": 1348400.0,
+                            "x2": 54200.0,
+                            "y2": 1360400.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net9",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 800.0,
+                            "y1": 1203200.0,
+                            "x2": 71600.0,
+                            "y2": 1208800.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x12",
+                    "angle": "",
+                    "cell": "JNWTR_RPPO2",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": 1374400.0,
+                    "x2": 69600.0,
+                    "y2": 1427200.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": 1376400.0,
+                            "x2": 36800.0,
+                            "y2": 1380400.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "IPTAT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": 1392400.0,
+                            "x2": 11200.0,
+                            "y2": 1396400.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": 1404400.0,
+                            "x2": 24000.0,
+                            "y2": 1408400.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": 1392400.0,
+                            "x2": 4800.0,
+                            "y2": 1396400.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x13",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": 1427200.0,
+                    "x2": 72400.0,
+                    "y2": 1599200.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_RPPO2",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 18200.0,
+                            "y1": 1573200.0,
+                            "x2": 32600.0,
+                            "y2": 1585200.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net17",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 39800.0,
+                            "y1": 1573200.0,
+                            "x2": 54200.0,
+                            "y2": 1585200.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net9",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 800.0,
+                            "y1": 1428000.0,
+                            "x2": 71600.0,
+                            "y2": 1433600.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x14",
+                    "angle": "",
+                    "cell": "JNWTR_RPPO2",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": 1599200.0,
+                    "x2": -18446744073709551615,
+                    "y2": -1.8446744073707952e+19,
+                    "layer": "",
+                    "net": "",
+                    "name": "Diodes",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [],
+                    "instanceName": "x15",
+                    "angle": "",
+                    "cell": "Diodes",
+                    "libpath": "LELO_GR01_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -1.8446744073707952e+19,
+                    "x2": 69600.0,
+                    "y2": -1.8446744073707899e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -1.844674407370795e+19,
+                            "x2": 36800.0,
+                            "y2": -1.8446744073707946e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -1.8446744073707934e+19,
+                            "x2": 11200.0,
+                            "y2": -1.844674407370793e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "PWRUP_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -1.8446744073707921e+19,
+                            "x2": 24000.0,
+                            "y2": -1.8446744073707917e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -1.8446744073707934e+19,
+                            "x2": 4800.0,
+                            "y2": -1.844674407370793e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x16",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -1.8446744073707899e+19,
+                    "x2": 69600.0,
+                    "y2": -1.8446744073707846e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -1.8446744073707897e+19,
+                            "x2": 36800.0,
+                            "y2": -1.8446744073707893e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "START_G",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -1.844674407370788e+19,
+                            "x2": 11200.0,
+                            "y2": -1.8446744073707876e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "PWRUP_N_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -1.8446744073707868e+19,
+                            "x2": 24000.0,
+                            "y2": -1.8446744073707864e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net16",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -1.844674407370788e+19,
+                            "x2": 4800.0,
+                            "y2": -1.8446744073707876e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x17",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -1.8446744073707846e+19,
+                    "x2": 69600.0,
+                    "y2": -1.8446744073707792e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_NCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -1.8446744073707844e+19,
+                            "x2": 36800.0,
+                            "y2": -1.844674407370784e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "START_G",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -1.8446744073707827e+19,
+                            "x2": 11200.0,
+                            "y2": -1.8446744073707823e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -1.8446744073707815e+19,
+                            "x2": 24000.0,
+                            "y2": -1.844674407370781e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -1.8446744073707827e+19,
+                            "x2": 4800.0,
+                            "y2": -1.8446744073707823e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x18",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_NCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -1.8446744073707792e+19,
+                    "x2": 69600.0,
+                    "y2": -1.844674407370774e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -1.844674407370779e+19,
+                            "x2": 36800.0,
+                            "y2": -1.8446744073707786e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net16",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -1.8446744073707774e+19,
+                            "x2": 11200.0,
+                            "y2": -1.844674407370777e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "PWRUP_N_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -1.8446744073707762e+19,
+                            "x2": 24000.0,
+                            "y2": -1.8446744073707758e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net15",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -1.8446744073707774e+19,
+                            "x2": 4800.0,
+                            "y2": -1.844674407370777e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x19",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -1.844674407370774e+19,
+                    "x2": 137200.0,
+                    "y2": -1.8446744073707567e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_RPPO8",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 18200.0,
+                            "y1": -1.8446744073707594e+19,
+                            "x2": 32600.0,
+                            "y2": -1.8446744073707581e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 104600.0,
+                            "y1": -1.8446744073707594e+19,
+                            "x2": 119000.0,
+                            "y2": -1.8446744073707581e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VIN",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 800.0,
+                            "y1": -1.844674407370774e+19,
+                            "x2": 136400.0,
+                            "y2": -1.8446744073707733e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x2",
+                    "angle": "",
+                    "cell": "JNWTR_RPPO8",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -1.8446744073707567e+19,
+                    "x2": 69600.0,
+                    "y2": -1.8446744073707514e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -1.8446744073707565e+19,
+                            "x2": 36800.0,
+                            "y2": -1.844674407370756e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net15",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -1.8446744073707549e+19,
+                            "x2": 11200.0,
+                            "y2": -1.8446744073707545e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "PWRUP_N_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -1.8446744073707536e+19,
+                            "x2": 24000.0,
+                            "y2": -1.8446744073707532e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net14",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -1.8446744073707549e+19,
+                            "x2": 4800.0,
+                            "y2": -1.8446744073707545e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x20",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -1.8446744073707514e+19,
+                    "x2": 69600.0,
+                    "y2": -1.844674407370746e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -1.8446744073707512e+19,
+                            "x2": 36800.0,
+                            "y2": -1.8446744073707508e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net14",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -1.8446744073707495e+19,
+                            "x2": 11200.0,
+                            "y2": -1.8446744073707491e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "PWRUP_N_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -1.8446744073707483e+19,
+                            "x2": 24000.0,
+                            "y2": -1.844674407370748e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net13",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -1.8446744073707495e+19,
+                            "x2": 4800.0,
+                            "y2": -1.8446744073707491e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x21",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -1.844674407370746e+19,
+                    "x2": 69600.0,
+                    "y2": -1.8446744073707407e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -1.8446744073707459e+19,
+                            "x2": 36800.0,
+                            "y2": -1.8446744073707454e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net13",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -1.8446744073707442e+19,
+                            "x2": 11200.0,
+                            "y2": -1.8446744073707438e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "PWRUP_N_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -1.844674407370743e+19,
+                            "x2": 24000.0,
+                            "y2": -1.8446744073707426e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net10",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -1.8446744073707442e+19,
+                            "x2": 4800.0,
+                            "y2": -1.8446744073707438e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x22",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -1.8446744073707407e+19,
+                    "x2": 69600.0,
+                    "y2": -1.8446744073707354e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -1.8446744073707405e+19,
+                            "x2": 36800.0,
+                            "y2": -1.8446744073707401e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net10",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -1.8446744073707389e+19,
+                            "x2": 11200.0,
+                            "y2": -1.8446744073707385e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "PWRUP_N_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -1.8446744073707377e+19,
+                            "x2": 24000.0,
+                            "y2": -1.8446744073707373e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net11",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -1.8446744073707389e+19,
+                            "x2": 4800.0,
+                            "y2": -1.8446744073707385e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x23",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -1.8446744073707354e+19,
+                    "x2": 69600.0,
+                    "y2": -1.84467440737073e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -1.8446744073707352e+19,
+                            "x2": 36800.0,
+                            "y2": -1.8446744073707348e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net11",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -1.8446744073707336e+19,
+                            "x2": 11200.0,
+                            "y2": -1.8446744073707332e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "PWRUP_N_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -1.8446744073707323e+19,
+                            "x2": 24000.0,
+                            "y2": -1.844674407370732e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net12",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -1.8446744073707336e+19,
+                            "x2": 4800.0,
+                            "y2": -1.8446744073707332e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x24",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -1.84467440737073e+19,
+                    "x2": 69600.0,
+                    "y2": -1.8446744073707248e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -1.8446744073707299e+19,
+                            "x2": 36800.0,
+                            "y2": -1.8446744073707295e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net12",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -1.8446744073707282e+19,
+                            "x2": 11200.0,
+                            "y2": -1.8446744073707278e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "PWRUP_N_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -1.844674407370727e+19,
+                            "x2": 24000.0,
+                            "y2": -1.8446744073707266e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net6",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -1.8446744073707282e+19,
+                            "x2": 4800.0,
+                            "y2": -1.8446744073707278e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x25",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -1.8446744073707248e+19,
+                    "x2": 137200.0,
+                    "y2": -1.8446744073707076e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_RPPO8",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 18200.0,
+                            "y1": -1.8446744073707102e+19,
+                            "x2": 32600.0,
+                            "y2": -1.844674407370709e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net7",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 104600.0,
+                            "y1": -1.8446744073707102e+19,
+                            "x2": 119000.0,
+                            "y2": -1.844674407370709e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 800.0,
+                            "y1": -1.8446744073707248e+19,
+                            "x2": 136400.0,
+                            "y2": -1.8446744073707241e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x26",
+                    "angle": "",
+                    "cell": "JNWTR_RPPO8",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -1.8446744073707076e+19,
+                    "x2": 137200.0,
+                    "y2": -1.8446744073706904e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_RPPO8",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 18200.0,
+                            "y1": -1.844674407370693e+19,
+                            "x2": 32600.0,
+                            "y2": -1.8446744073706918e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net9",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 104600.0,
+                            "y1": -1.844674407370693e+19,
+                            "x2": 119000.0,
+                            "y2": -1.8446744073706918e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net7",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 800.0,
+                            "y1": -1.8446744073707076e+19,
+                            "x2": 136400.0,
+                            "y2": -1.844674407370707e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x27",
+                    "angle": "",
+                    "cell": "JNWTR_RPPO8",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -1.8446744073706904e+19,
+                    "x2": -18446744073709551615,
+                    "y2": -3.6893488147416457e+19,
+                    "layer": "",
+                    "net": "",
+                    "name": "pnp_fix",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [],
+                    "instanceName": "x28",
+                    "angle": "",
+                    "cell": "pnp_fix",
+                    "libpath": "LELO_GR01_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147416457e+19,
+                    "x2": 72400.0,
+                    "y2": -3.6893488147416285e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_RPPO2",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 18200.0,
+                            "y1": -3.689348814741631e+19,
+                            "x2": 32600.0,
+                            "y2": -3.6893488147416297e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net9",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 39800.0,
+                            "y1": -3.689348814741631e+19,
+                            "x2": 54200.0,
+                            "y2": -3.6893488147416297e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net7",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 800.0,
+                            "y1": -3.6893488147416457e+19,
+                            "x2": 71600.0,
+                            "y2": -3.689348814741645e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x29",
+                    "angle": "",
+                    "cell": "JNWTR_RPPO2",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147416285e+19,
+                    "x2": 94000.0,
+                    "y2": -3.6893488147416113e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_RPPO4",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 18200.0,
+                            "y1": -3.6893488147416138e+19,
+                            "x2": 32600.0,
+                            "y2": -3.6893488147416125e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net19",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 61400.0,
+                            "y1": -3.6893488147416138e+19,
+                            "x2": 75800.0,
+                            "y2": -3.6893488147416125e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 800.0,
+                            "y1": -3.6893488147416285e+19,
+                            "x2": 93200.0,
+                            "y2": -3.6893488147416277e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x3",
+                    "angle": "",
+                    "cell": "JNWTR_RPPO4",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147416113e+19,
+                    "x2": 223600.0,
+                    "y2": -3.689348814741594e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_RPPO16",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 18200.0,
+                            "y1": -3.6893488147415966e+19,
+                            "x2": 32600.0,
+                            "y2": -3.6893488147415953e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net6",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 191000.0,
+                            "y1": -3.6893488147415966e+19,
+                            "x2": 205400.0,
+                            "y2": -3.6893488147415953e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net18",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 800.0,
+                            "y1": -3.6893488147416113e+19,
+                            "x2": 222800.0,
+                            "y2": -3.6893488147416105e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x30",
+                    "angle": "",
+                    "cell": "JNWTR_RPPO16",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.689348814741594e+19,
+                    "x2": 223600.0,
+                    "y2": -3.689348814741577e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_RPPO16",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 18200.0,
+                            "y1": -3.6893488147415794e+19,
+                            "x2": 32600.0,
+                            "y2": -3.689348814741578e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net18",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 191000.0,
+                            "y1": -3.6893488147415794e+19,
+                            "x2": 205400.0,
+                            "y2": -3.689348814741578e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 800.0,
+                            "y1": -3.689348814741594e+19,
+                            "x2": 222800.0,
+                            "y2": -3.6893488147415933e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x31",
+                    "angle": "",
+                    "cell": "JNWTR_RPPO16",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.689348814741577e+19,
+                    "x2": 69600.0,
+                    "y2": -3.6893488147415716e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.689348814741577e+19,
+                            "x2": 36800.0,
+                            "y2": -3.6893488147415765e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VIP",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.6893488147415753e+19,
+                            "x2": 11200.0,
+                            "y2": -3.689348814741575e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.689348814741574e+19,
+                            "x2": 24000.0,
+                            "y2": -3.6893488147415736e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.6893488147415753e+19,
+                            "x2": 4800.0,
+                            "y2": -3.689348814741575e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x3<0>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147415716e+19,
+                    "x2": 69600.0,
+                    "y2": -3.6893488147415663e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.6893488147415716e+19,
+                            "x2": 36800.0,
+                            "y2": -3.689348814741571e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VIP",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.68934881474157e+19,
+                            "x2": 11200.0,
+                            "y2": -3.6893488147415695e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.6893488147415687e+19,
+                            "x2": 24000.0,
+                            "y2": -3.6893488147415683e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.68934881474157e+19,
+                            "x2": 4800.0,
+                            "y2": -3.6893488147415695e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x3<1>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147415663e+19,
+                    "x2": 69600.0,
+                    "y2": -3.689348814741561e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.6893488147415663e+19,
+                            "x2": 36800.0,
+                            "y2": -3.689348814741566e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VIP",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.6893488147415646e+19,
+                            "x2": 11200.0,
+                            "y2": -3.6893488147415642e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.6893488147415634e+19,
+                            "x2": 24000.0,
+                            "y2": -3.689348814741563e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.6893488147415646e+19,
+                            "x2": 4800.0,
+                            "y2": -3.6893488147415642e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x3<2>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.689348814741561e+19,
+                    "x2": 69600.0,
+                    "y2": -3.6893488147415556e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.689348814741561e+19,
+                            "x2": 36800.0,
+                            "y2": -3.6893488147415605e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VIP",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.6893488147415593e+19,
+                            "x2": 11200.0,
+                            "y2": -3.689348814741559e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.689348814741558e+19,
+                            "x2": 24000.0,
+                            "y2": -3.6893488147415577e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.6893488147415593e+19,
+                            "x2": 4800.0,
+                            "y2": -3.689348814741559e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x3<3>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147415556e+19,
+                    "x2": 69600.0,
+                    "y2": -3.6893488147415503e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.6893488147415556e+19,
+                            "x2": 36800.0,
+                            "y2": -3.689348814741555e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VIP",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.689348814741554e+19,
+                            "x2": 11200.0,
+                            "y2": -3.6893488147415536e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.6893488147415527e+19,
+                            "x2": 24000.0,
+                            "y2": -3.6893488147415523e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.689348814741554e+19,
+                            "x2": 4800.0,
+                            "y2": -3.6893488147415536e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x3<4>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147415503e+19,
+                    "x2": 69600.0,
+                    "y2": -3.689348814741545e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.6893488147415503e+19,
+                            "x2": 36800.0,
+                            "y2": -3.68934881474155e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VIP",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.6893488147415486e+19,
+                            "x2": 11200.0,
+                            "y2": -3.6893488147415482e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.6893488147415474e+19,
+                            "x2": 24000.0,
+                            "y2": -3.689348814741547e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.6893488147415486e+19,
+                            "x2": 4800.0,
+                            "y2": -3.6893488147415482e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x3<5>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.689348814741545e+19,
+                    "x2": 69600.0,
+                    "y2": -3.6893488147415396e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.689348814741545e+19,
+                            "x2": 36800.0,
+                            "y2": -3.6893488147415446e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VIP",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.6893488147415433e+19,
+                            "x2": 11200.0,
+                            "y2": -3.689348814741543e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.689348814741542e+19,
+                            "x2": 24000.0,
+                            "y2": -3.6893488147415417e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.6893488147415433e+19,
+                            "x2": 4800.0,
+                            "y2": -3.689348814741543e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x3<6>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147415396e+19,
+                    "x2": 69600.0,
+                    "y2": -3.6893488147415343e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.6893488147415396e+19,
+                            "x2": 36800.0,
+                            "y2": -3.6893488147415392e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VIP",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.689348814741538e+19,
+                            "x2": 11200.0,
+                            "y2": -3.6893488147415376e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.6893488147415368e+19,
+                            "x2": 24000.0,
+                            "y2": -3.6893488147415364e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.689348814741538e+19,
+                            "x2": 4800.0,
+                            "y2": -3.6893488147415376e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x3<7>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147415343e+19,
+                    "x2": 72400.0,
+                    "y2": -3.689348814741517e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_RPPO2",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 18200.0,
+                            "y1": -3.6893488147415196e+19,
+                            "x2": 32600.0,
+                            "y2": -3.6893488147415183e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net9",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 39800.0,
+                            "y1": -3.6893488147415196e+19,
+                            "x2": 54200.0,
+                            "y2": -3.6893488147415183e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net7",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 800.0,
+                            "y1": -3.6893488147415343e+19,
+                            "x2": 71600.0,
+                            "y2": -3.6893488147415335e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x4",
+                    "angle": "",
+                    "cell": "JNWTR_RPPO2",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.689348814741517e+19,
+                    "x2": 69600.0,
+                    "y2": -3.6893488147415118e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_NCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.689348814741517e+19,
+                            "x2": 36800.0,
+                            "y2": -3.6893488147415167e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.6893488147415155e+19,
+                            "x2": 11200.0,
+                            "y2": -3.689348814741515e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "START_G",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.6893488147415142e+19,
+                            "x2": 24000.0,
+                            "y2": -3.689348814741514e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VS1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.6893488147415155e+19,
+                            "x2": 4800.0,
+                            "y2": -3.689348814741515e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x4<0>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_NCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147415118e+19,
+                    "x2": 69600.0,
+                    "y2": -3.6893488147415065e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_NCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.6893488147415118e+19,
+                            "x2": 36800.0,
+                            "y2": -3.6893488147415114e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.68934881474151e+19,
+                            "x2": 11200.0,
+                            "y2": -3.6893488147415097e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "START_G",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.689348814741509e+19,
+                            "x2": 24000.0,
+                            "y2": -3.6893488147415085e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VS1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.68934881474151e+19,
+                            "x2": 4800.0,
+                            "y2": -3.6893488147415097e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x4<1>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_NCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147415065e+19,
+                    "x2": 69600.0,
+                    "y2": -3.689348814741501e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_NCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.6893488147415065e+19,
+                            "x2": 36800.0,
+                            "y2": -3.689348814741506e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.689348814741505e+19,
+                            "x2": 11200.0,
+                            "y2": -3.6893488147415044e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "START_G",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.6893488147415036e+19,
+                            "x2": 24000.0,
+                            "y2": -3.689348814741503e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VS1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.689348814741505e+19,
+                            "x2": 4800.0,
+                            "y2": -3.6893488147415044e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x4<2>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_NCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.689348814741501e+19,
+                    "x2": 69600.0,
+                    "y2": -3.689348814741496e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_NCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.689348814741501e+19,
+                            "x2": 36800.0,
+                            "y2": -3.6893488147415007e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.6893488147414995e+19,
+                            "x2": 11200.0,
+                            "y2": -3.689348814741499e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "START_G",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.6893488147414983e+19,
+                            "x2": 24000.0,
+                            "y2": -3.689348814741498e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VS1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.6893488147414995e+19,
+                            "x2": 4800.0,
+                            "y2": -3.689348814741499e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x4<3>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_NCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.689348814741496e+19,
+                    "x2": 69600.0,
+                    "y2": -3.6893488147414905e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.689348814741496e+19,
+                            "x2": 36800.0,
+                            "y2": -3.6893488147414954e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VIN",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.689348814741494e+19,
+                            "x2": 11200.0,
+                            "y2": -3.6893488147414938e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.689348814741493e+19,
+                            "x2": 24000.0,
+                            "y2": -3.6893488147414925e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.689348814741494e+19,
+                            "x2": 4800.0,
+                            "y2": -3.6893488147414938e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x5",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147414905e+19,
+                    "x2": 137200.0,
+                    "y2": -3.6893488147414733e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_RPPO8",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 18200.0,
+                            "y1": -3.6893488147414757e+19,
+                            "x2": 32600.0,
+                            "y2": -3.6893488147414745e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 104600.0,
+                            "y1": -3.6893488147414757e+19,
+                            "x2": 119000.0,
+                            "y2": -3.6893488147414745e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net5",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 800.0,
+                            "y1": -3.6893488147414905e+19,
+                            "x2": 136400.0,
+                            "y2": -3.6893488147414897e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x6",
+                    "angle": "",
+                    "cell": "JNWTR_RPPO8",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147414733e+19,
+                    "x2": 69600.0,
+                    "y2": -3.689348814741468e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_NCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.6893488147414733e+19,
+                            "x2": 36800.0,
+                            "y2": -3.689348814741473e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VS1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.6893488147414716e+19,
+                            "x2": 11200.0,
+                            "y2": -3.6893488147414712e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VS1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.6893488147414704e+19,
+                            "x2": 24000.0,
+                            "y2": -3.68934881474147e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net2",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.6893488147414716e+19,
+                            "x2": 4800.0,
+                            "y2": -3.6893488147414712e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x6<0>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_NCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.689348814741468e+19,
+                    "x2": 69600.0,
+                    "y2": -3.6893488147414626e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_NCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.689348814741468e+19,
+                            "x2": 36800.0,
+                            "y2": -3.6893488147414675e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VS1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.6893488147414663e+19,
+                            "x2": 11200.0,
+                            "y2": -3.689348814741466e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VS1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.689348814741465e+19,
+                            "x2": 24000.0,
+                            "y2": -3.6893488147414647e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net2",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.6893488147414663e+19,
+                            "x2": 4800.0,
+                            "y2": -3.689348814741466e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x6<1>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_NCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147414626e+19,
+                    "x2": 69600.0,
+                    "y2": -3.6893488147414573e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_NCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.6893488147414626e+19,
+                            "x2": 36800.0,
+                            "y2": -3.6893488147414622e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VS1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.689348814741461e+19,
+                            "x2": 11200.0,
+                            "y2": -3.6893488147414606e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VS1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.6893488147414598e+19,
+                            "x2": 24000.0,
+                            "y2": -3.6893488147414594e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net2",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.689348814741461e+19,
+                            "x2": 4800.0,
+                            "y2": -3.6893488147414606e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x6<2>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_NCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147414573e+19,
+                    "x2": 69600.0,
+                    "y2": -3.689348814741452e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_NCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.6893488147414573e+19,
+                            "x2": 36800.0,
+                            "y2": -3.689348814741457e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VS1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.6893488147414557e+19,
+                            "x2": 11200.0,
+                            "y2": -3.6893488147414553e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VS1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.6893488147414544e+19,
+                            "x2": 24000.0,
+                            "y2": -3.689348814741454e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net2",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.6893488147414557e+19,
+                            "x2": 4800.0,
+                            "y2": -3.6893488147414553e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x6<3>",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_NCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.689348814741452e+19,
+                    "x2": 69600.0,
+                    "y2": -3.6893488147414467e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.689348814741452e+19,
+                            "x2": 36800.0,
+                            "y2": -3.6893488147414516e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.6893488147414503e+19,
+                            "x2": 11200.0,
+                            "y2": -3.68934881474145e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VIN",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.689348814741449e+19,
+                            "x2": 24000.0,
+                            "y2": -3.6893488147414487e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net2",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.6893488147414503e+19,
+                            "x2": 4800.0,
+                            "y2": -3.68934881474145e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x7",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147414467e+19,
+                    "x2": 69600.0,
+                    "y2": -3.6893488147414413e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "LELOATR_LVT_PCH_2C5F0",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": -3.6893488147414467e+19,
+                            "x2": 36800.0,
+                            "y2": -3.6893488147414462e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VREF",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 8000.0,
+                            "y1": -3.689348814741445e+19,
+                            "x2": 11200.0,
+                            "y2": -3.6893488147414446e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 14400.0,
+                            "y1": -3.6893488147414438e+19,
+                            "x2": 24000.0,
+                            "y2": -3.6893488147414434e+19,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -4800.0,
+                            "y1": -3.689348814741445e+19,
+                            "x2": 4800.0,
+                            "y2": -3.6893488147414446e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x8",
+                    "angle": "",
+                    "cell": "LELOATR_LVT_PCH_2C5F0",
+                    "libpath": "LELO_ATR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": -3.6893488147414413e+19,
+                    "x2": 223600.0,
+                    "y2": -3.689348814741424e+19,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_RPPO16",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 18200.0,
+                            "y1": -3.6893488147414266e+19,
+                            "x2": 32600.0,
+                            "y2": -3.6893488147414254e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "net3",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 191000.0,
+                            "y1": -3.6893488147414266e+19,
+                            "x2": 205400.0,
+                            "y2": -3.6893488147414254e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VREF",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 800.0,
+                            "y1": -3.6893488147414413e+19,
+                            "x2": 222800.0,
+                            "y2": -3.6893488147414405e+19,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x9",
+                    "angle": "",
+                    "cell": "JNWTR_RPPO16",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 223600.0,
+                    "y1": 0,
+                    "x2": 277600.0,
+                    "y2": 54000.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_CAPX1",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 223600.0,
+                            "y1": 0.0,
+                            "x2": 277600.0,
+                            "y2": 5000.0,
+                            "layer": "M4",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 223600.0,
+                            "y1": 0.0,
+                            "x2": 277600.0,
+                            "y2": 5000.0,
+                            "layer": "M5",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "xd1<0>",
+                    "angle": "",
+                    "cell": "JNWTR_CAPX1",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 223600.0,
+                    "y1": 54000.0,
+                    "x2": 277600.0,
+                    "y2": 108000.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_CAPX1",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 223600.0,
+                            "y1": 54000.0,
+                            "x2": 277600.0,
+                            "y2": 59000.0,
+                            "layer": "M4",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 223600.0,
+                            "y1": 54000.0,
+                            "x2": 277600.0,
+                            "y2": 59000.0,
+                            "layer": "M5",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "xd1<1>",
+                    "angle": "",
+                    "cell": "JNWTR_CAPX1",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 223600.0,
+                    "y1": 108000.0,
+                    "x2": 277600.0,
+                    "y2": 162000.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_CAPX1",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 223600.0,
+                            "y1": 108000.0,
+                            "x2": 277600.0,
+                            "y2": 113000.0,
+                            "layer": "M4",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 223600.0,
+                            "y1": 108000.0,
+                            "x2": 277600.0,
+                            "y2": 113000.0,
+                            "layer": "M5",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "xd1<2>",
+                    "angle": "",
+                    "cell": "JNWTR_CAPX1",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 223600.0,
+                    "y1": 162000.0,
+                    "x2": 277600.0,
+                    "y2": 216000.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_CAPX1",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 223600.0,
+                            "y1": 162000.0,
+                            "x2": 277600.0,
+                            "y2": 167000.0,
+                            "layer": "M4",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 223600.0,
+                            "y1": 162000.0,
+                            "x2": 277600.0,
+                            "y2": 167000.0,
+                            "layer": "M5",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "xd1<3>",
+                    "angle": "",
+                    "cell": "JNWTR_CAPX1",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 223600.0,
+                    "y1": 216000.0,
+                    "x2": 277600.0,
+                    "y2": 270000.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_CAPX1",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 223600.0,
+                            "y1": 216000.0,
+                            "x2": 277600.0,
+                            "y2": 221000.0,
+                            "layer": "M4",
+                            "net": "",
+                            "name": "VOUT",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 223600.0,
+                            "y1": 216000.0,
+                            "x2": 277600.0,
+                            "y2": 221000.0,
+                            "layer": "M5",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "xd1<4>",
+                    "angle": "",
+                    "cell": "JNWTR_CAPX1",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Port",
+                    "x1": 27200.0,
+                    "y1": 1376400.0,
+                    "x2": 36800.0,
+                    "y2": 1380400.0,
+                    "layer": "M2",
+                    "net": "",
+                    "name": "IPTAT",
+                    "spicePort": true
+                },
+                {
+                    "class": "Port",
+                    "x1": 27200.0,
+                    "y1": -3.6893488147414467e+19,
+                    "x2": 36800.0,
+                    "y2": -3.6893488147414462e+19,
+                    "layer": "M2",
+                    "net": "",
+                    "name": "VREF",
+                    "spicePort": true
+                },
+                {
+                    "class": "Port",
+                    "x1": -33000.0,
+                    "y1": 687600.0,
+                    "x2": -29800.0,
+                    "y2": 691600.0,
+                    "layer": "M2",
+                    "net": "",
+                    "name": "PWRUP_1V8",
+                    "spicePort": true
+                },
+                {
+                    "class": "Port",
+                    "x1": -26900.0,
+                    "y1": 682100.0,
+                    "x2": -17300.0,
+                    "y2": 686100.0,
+                    "layer": "M2",
+                    "net": "",
+                    "name": "VDD_1V8",
+                    "spicePort": true
+                },
+                {
+                    "class": "Port",
+                    "x1": -44600.0,
+                    "y1": 513500.0,
+                    "x2": -35000.0,
+                    "y2": 517500.0,
+                    "layer": "M1",
+                    "net": "",
+                    "name": "VSS",
+                    "spicePort": true
+                },
+                {
+                    "class": "Port",
+                    "x1": -336900.0,
+                    "y1": 675200.0,
+                    "x2": -333700.0,
+                    "y2": 679200.0,
+                    "layer": "M2",
+                    "net": "",
+                    "name": "PWRUP_N_1V8",
+                    "spicePort": true
+                }
+            ],
+            "useHalfHeight": false,
+            "alternateGroup": false,
+            "noPowerRoute": false
+        }
+    ]
+}

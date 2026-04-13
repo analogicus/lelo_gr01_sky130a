@@ -1,0 +1,364 @@
+{
+    "cells": [
+        {
+            "class": "LayoutCell",
+            "x1": 0,
+            "y1": 0,
+            "x2": 614500.0,
+            "y2": 2908800.0,
+            "layer": "",
+            "net": "",
+            "name": "LELO_GR01",
+            "has_pr": false,
+            "ckt": {
+                "class": "",
+                "name": "LELO_GR01",
+                "nodes": [
+                    "VDD_1V8",
+                    "OSC_TEMP_1V8",
+                    "PWRUP_1V8",
+                    "VSS"
+                ],
+                "properties": {},
+                "devices": [],
+                "instances": [
+                    {
+                        "class": "",
+                        "name": "x7",
+                        "nodes": [
+                            "net2",
+                            "net1",
+                            "PWRUP_1V8",
+                            "VDD_1V8",
+                            "VSS",
+                            "PWRUP_N_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "bandgap",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "7"
+                    },
+                    {
+                        "class": "",
+                        "name": "x8",
+                        "nodes": [
+                            "OSC_TEMP_1V8",
+                            "VDD_1V8",
+                            "VSS",
+                            "net2",
+                            "net1",
+                            "PWRUP_1V8",
+                            "PWRUP_N_1V8"
+                        ],
+                        "properties": {},
+                        "subcktName": "oscillator",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "8"
+                    },
+                    {
+                        "class": "",
+                        "name": "x3",
+                        "nodes": [
+                            "PWRUP_1V8",
+                            "PWRUP_N_1V8",
+                            "VDD_1V8",
+                            "VSS"
+                        ],
+                        "properties": {},
+                        "subcktName": "JNWTR_IVX1_CV",
+                        "groupName": "x",
+                        "deviceName": "subckt",
+                        "groupTag": "3"
+                    }
+                ]
+            },
+            "children": [
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": 0,
+                    "x2": 99000.0,
+                    "y2": 16000.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "JNWTR_IVX1_CV",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 13500.0,
+                            "y1": 6500.0,
+                            "x2": 22500.0,
+                            "y2": 9500.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "PWRUP_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 31500.0,
+                            "y1": 10500.0,
+                            "x2": 40500.0,
+                            "y2": 13500.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "PWRUP_N_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 58500.0,
+                            "y1": 0.0,
+                            "x2": 67300.0,
+                            "y2": 16000.0,
+                            "layer": "M4",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 31500.0,
+                            "y1": 0.0,
+                            "x2": 40300.0,
+                            "y2": 16000.0,
+                            "layer": "M4",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x3",
+                    "angle": "",
+                    "cell": "JNWTR_IVX1_CV",
+                    "libpath": "JNW_TR_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": 16000.0,
+                    "x2": 614500.0,
+                    "y2": 1615200.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "bandgap",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": 1392400.0,
+                            "x2": 36800.0,
+                            "y2": 1396400.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net2",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 27200.0,
+                            "y1": 16000.0,
+                            "x2": 36800.0,
+                            "y2": 16000.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -12000.0,
+                            "y1": 764100.0,
+                            "x2": -8800.0,
+                            "y2": 768100.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "PWRUP_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -5900.0,
+                            "y1": 758600.0,
+                            "x2": 3700.0,
+                            "y2": 762600.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -295400.0,
+                            "y1": 751700.0,
+                            "x2": -292200.0,
+                            "y2": 755700.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "PWRUP_N_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x7",
+                    "angle": "",
+                    "cell": "bandgap",
+                    "libpath": "LELO_GR01_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Instance",
+                    "x1": 0,
+                    "y1": 1615200.0,
+                    "x2": 568900.0,
+                    "y2": 2908800.0,
+                    "layer": "PR",
+                    "net": "",
+                    "name": "oscillator",
+                    "has_pr": false,
+                    "ckt": {},
+                    "children": [
+                        {
+                            "class": "Port",
+                            "x1": 80800.0,
+                            "y1": 2372900.0,
+                            "x2": 89800.0,
+                            "y2": 2375900.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "OSC_TEMP_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -26900.0,
+                            "y1": 2297300.0,
+                            "x2": -17300.0,
+                            "y2": 2301300.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "VDD_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -44600.0,
+                            "y1": 2128700.0,
+                            "x2": -35000.0,
+                            "y2": 2132700.0,
+                            "layer": "M1",
+                            "net": "",
+                            "name": "VSS",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -67000.0,
+                            "y1": 2124000.0,
+                            "x2": -63800.0,
+                            "y2": 2128000.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net2",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": 1500.0,
+                            "y1": 2129100.0,
+                            "x2": 4700.0,
+                            "y2": 2133100.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "net1",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -33000.0,
+                            "y1": 2302800.0,
+                            "x2": -29800.0,
+                            "y2": 2306800.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "PWRUP_1V8",
+                            "spicePort": true
+                        },
+                        {
+                            "class": "Port",
+                            "x1": -336900.0,
+                            "y1": 2290400.0,
+                            "x2": -333700.0,
+                            "y2": 2294400.0,
+                            "layer": "M2",
+                            "net": "",
+                            "name": "PWRUP_N_1V8",
+                            "spicePort": true
+                        }
+                    ],
+                    "instanceName": "x8",
+                    "angle": "",
+                    "cell": "oscillator",
+                    "libpath": "LELO_GR01_SKY130A",
+                    "xcell": 0,
+                    "ycell": 0
+                },
+                {
+                    "class": "Port",
+                    "x1": 58500.0,
+                    "y1": 0.0,
+                    "x2": 67300.0,
+                    "y2": 16000.0,
+                    "layer": "M4",
+                    "net": "",
+                    "name": "VDD_1V8",
+                    "spicePort": true
+                },
+                {
+                    "class": "Port",
+                    "x1": 80800.0,
+                    "y1": 2372900.0,
+                    "x2": 89800.0,
+                    "y2": 2375900.0,
+                    "layer": "M1",
+                    "net": "",
+                    "name": "OSC_TEMP_1V8",
+                    "spicePort": true
+                },
+                {
+                    "class": "Port",
+                    "x1": 13500.0,
+                    "y1": 6500.0,
+                    "x2": 22500.0,
+                    "y2": 9500.0,
+                    "layer": "M1",
+                    "net": "",
+                    "name": "PWRUP_1V8",
+                    "spicePort": true
+                },
+                {
+                    "class": "Port",
+                    "x1": 31500.0,
+                    "y1": 0.0,
+                    "x2": 40300.0,
+                    "y2": 16000.0,
+                    "layer": "M4",
+                    "net": "",
+                    "name": "VSS",
+                    "spicePort": true
+                }
+            ],
+            "useHalfHeight": false,
+            "alternateGroup": false,
+            "noPowerRoute": false
+        }
+    ]
+}

@@ -3,7 +3,7 @@ G {}
 K {type=subcircuit
 format="@name @pinlist @symname"
 template="name=x1"
-}
+value=Diodes}
 V {}
 S {}
 E {}

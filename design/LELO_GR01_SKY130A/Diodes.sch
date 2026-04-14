@@ -14,12 +14,15 @@ C {sky130_fd_pr/pnp_05v5.sym} 110 -10 0 0 {name=Q1[7:0]
 model=pnp_05v5_W3p40L3p40
 m=1
 spiceprefix=X
-}
+format="@name @c @b @e VSS @model @attr"
+format="@name @c @b @e VSS @model @attr"}
 C {sky130_fd_pr/pnp_05v5.sym} -100 -10 0 1 {name=Q2
 model=pnp_05v5_W3p40L3p40
 m=1
 spiceprefix=X
-}
+format="@name @c @b @e VSS @model @attr"
+type=primitive
+format="@name @c @b @e VSS @model @attr"}
 C {devices/opin.sym} 0 60 0 0 {name=p3 lab=VSS}
 C {devices/ipin.sym} -120 -80 0 0 {name=p1 lab=I2}
 C {devices/ipin.sym} 130 -80 0 0 {name=p2 lab=I1}

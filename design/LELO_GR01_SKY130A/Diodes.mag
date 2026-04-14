@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1776002277
+timestamp 1776165673
 << locali >>
 rect 282 1245 588 1268
 rect 282 1228 298 1245
@@ -3048,8 +3048,6 @@ rlabel metal1 750 -580 800 1460 1 VSS
 port 6 n ground bidirectional
 rlabel metal1 1010 303 1073 570 1 I2
 port 4 n default input
-rlabel metal3 640 -390 905 1595 1 I1
-port 7 n default input
-rlabel metal2 280 -390 298 -80 1 I1
-port 7 n default input
+rlabel metal1 495 -388 545 -82 0 I1
+port 7 nsew default input
 << end >>

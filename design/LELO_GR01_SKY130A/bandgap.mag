@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1776114245
+timestamp 1776162731
 << locali >>
 rect -12032 22320 -11840 22336
 rect -24560 22180 -24340 22190
@@ -120,7 +120,6 @@ rect -21450 10800 -21210 11000
 rect -20380 10800 -20140 11000
 rect -16920 10800 -16680 11000
 << metal1 >>
-rect 544 27528 736 27608
 rect -24216 22454 -14530 22646
 rect -24216 22440 -22640 22454
 rect -24560 22180 -24340 22190
@@ -152,6 +151,7 @@ rect -21030 21900 -21000 22150
 rect -20840 22020 -20800 22150
 rect -14722 22004 -14530 22454
 rect -12930 22442 -10062 22634
+rect -9742 22460 -9388 22642
 rect -21030 21830 -20840 21900
 rect -23230 19960 -23140 19970
 rect -23230 19720 -23220 19960
@@ -214,9 +214,7 @@ rect -9998 22320 -9806 22326
 rect -9998 22160 -9980 22320
 rect -9820 22160 -9806 22320
 rect -9998 21654 -9806 22160
-rect -9740 21940 -9550 22640
-rect -8560 21630 -8440 21770
-rect -8560 21570 -8360 21630
+rect -9740 21940 -9550 22460
 rect -14722 21254 -12738 21446
 rect -11392 21436 -11200 21456
 rect -16372 19940 -15734 19952
@@ -227,6 +225,7 @@ rect -16150 19740 -15733 19857
 rect -16372 19723 -15733 19740
 rect -14722 18764 -14530 21254
 rect -11396 21244 -10914 21436
+rect -8558 21304 -8364 21556
 rect -23214 18476 -22896 18480
 rect -23476 18470 -23284 18476
 rect -23476 18272 -23284 18278
@@ -265,7 +264,7 @@ rect -11790 20540 -11760 20740
 rect -11530 20540 -11500 20740
 rect -11790 20335 -11500 20540
 rect -11106 20716 -10914 21244
-rect -8556 20716 -8364 21570
+rect -8556 20716 -8364 21304
 rect -7805 20900 -3495 21185
 rect -3280 20920 1020 21180
 rect -7805 20895 -7110 20900
@@ -461,9 +460,6 @@ rect 1566 17020 1860 17040
 rect 1566 17016 1854 17020
 rect -8775 16720 -5470 16910
 rect -11800 12310 -11510 16720
-rect -240 14962 -176 15042
-rect -118 14852 74 14932
-rect -5908 14714 -5844 14794
 rect -11104 13232 -10912 13238
 rect -10912 13040 -10570 13232
 rect -11104 13034 -10912 13040
@@ -833,7 +829,7 @@ timestamp 1776004228
 transform 1 0 -12160 0 1 14100
 box 0 0 1448 3440
 use Diodes  x15 ../LELO_GR01_SKY130A
-timestamp 1776002277
+timestamp 1776121601
 transform 1 0 -16390 0 1 9000
 box 180 -1160 4260 3190
 use LELOATR_LVT_PCH_2C5F0  x16
@@ -885,9 +881,9 @@ timestamp 1776005353
 transform 1 0 -6120 0 1 14100
 box 0 0 2744 3440
 use pnp_fix  x28 ../LELO_GR01_SKY130A
-timestamp 1776004880
+timestamp 1776121539
 transform 1 0 -12072 0 1 10560
-box -28 0 1358 1570
+box 0 0 1340 1570
 use JNWTR_RPPO2  x29
 timestamp 1776004228
 transform 1 0 -7630 0 1 14100
@@ -921,32 +917,18 @@ timestamp 1737500400
 transform 1 0 -16120 0 1 12510
 box 0 0 1080 1080
 << labels >>
-flabel metal1 s 544 27528 736 27608 0 FreeSans 400 0 0 0 IPTAT
-port 1 nsew signal bidirectional
-flabel metal1 s 544 0 736 0 0 FreeSans 400 0 0 0 VREF
-port 2 nsew signal bidirectional
-rlabel metal3 -23330 12500 -22810 12710 0 START_G
-rlabel metal2 -25335 22060 -25225 22485 0 PWRUP_N_1V8
-port 6 nsew default input
-rlabel metal2 -16480 19710 -16140 19950 0 PWRUP_1V8
-port 3 nsew default input
-rlabel metal1 -23214 14998 -23150 15688 0 VS1
-rlabel metal1 -15674 20394 -15478 20586 0 VDD_1V8
-port 4 nsew power input
-rlabel metal3 -11430 20800 -11170 21000 0 IPTAT
-port 1 nsew default output
-rlabel metal1 -9740 22420 -9550 22640 0 IPTAT
-port 1 nsew default output
-flabel metal1 s -5908 14714 -5844 14794 0 FreeSans 400 0 0 0 PWRUP_N_1V8
-port 6 nsew signal bidirectional
-flabel metal1 s -240 14962 -176 15042 0 FreeSans 400 0 0 0 PWRUP_1V8
-port 3 nsew signal bidirectional
-flabel metal1 s -118 14852 74 14932 0 FreeSans 400 0 0 0 VDD_1V8
-port 4 nsew power bidirectional
-rlabel metal1 -8560 21570 -8440 21770 0 VREF
-port 2 nsew default output
 rlabel metal1 -10912 13040 -10570 13232 0 VSS
 port 5 nsew ground bidirectional
+rlabel metal2 -16480 19710 -16140 19950 0 PWRUP_1V8
+port 3 nsew default input
+rlabel metal1 -9742 22460 -9388 22642 0 IPTAT
+port 6 nsew default output
+rlabel metal1 -8558 21304 -8364 21556 0 VREF
+port 7 nsew default output
+rlabel metal1 -15676 20394 -14786 20586 0 VDD_1V8
+port 8 nsew power input
+rlabel metal1 -25316 11828 -25252 20972 0 PWRUP_N_1V8
+port 9 nsew default input
 << properties >>
 string FIXED_BBOX -6738 0 5552 31984
 << end >>

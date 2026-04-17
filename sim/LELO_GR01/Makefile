@@ -5,13 +5,35 @@ all: typical etc mc summary
 
 
 TB=tran
-VIEW=Sch
-#VIEW=Lay
+#VIEW=Sch
+VIEW=Lay
 CELL=LELO_GR01
 LIB =LELO_EX_SKY130A
 OPT=
 
-include ../../tech/make/sim.make
+#include ../../tech/make/sim.make
+
+cell:
+	cicsim simcell  ${LIB} ${CELL} ../tech/cicsim/cell_spice/template.yaml
+
+cellsv:
+	cicsim simcell  ${LIB} ${CELL} ../tech/cicsim/cell_sv/template.yaml
+
+netlist_cell:
+	test -d ../../work/xsch || mkdir ../../work/xsch
+	cd ../../work/ && make xsch LIB=${LIB} CELL=${CELL}
+ifeq ($(VIEW),Lay)
+#	cd ../../work && make cdl lpe LIB=${LIB} CELL=${CELL}
+endif
+
+ver:
+	test -d ../../work/xsch && cd ../../work/ && make ver LIB=${LIB} CELL=${CELL}
+
+netlist: netlist_cell
+#- I've seen port ordering change between xschem version, so I also
+# generate a xdut.spi file that always has the right port ordering.
+#- TODO: Should I add the view here? Either xsch or lpe??
+	perl ../../tech/script/genxdut ../../work/xsch/${CELL}.spice ${CELL}
 
 test:
 	${MAKE} typical OPT="Debug"

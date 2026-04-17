@@ -23,7 +23,7 @@ N 250 -220 310 -220 {lab=uo_out[0]}
 N -330 -210 -300 -210 {lab=ui_in[0]}
 N 190 -220 250 -220 {lab=uo_out[0]}
 N -300 -210 -240 -210 {lab=ui_in[0]}
-C {devices/opin.sym} 370 -720 0 0 {name=p4 lab=uo_out[7:0]}
+C {devices/opin.sym} 360 -710 0 0 {name=p4 lab=uo_out[7:1]}
 C {devices/opin.sym} 360 -590 0 0 {name=p6 lab=uio_out[7:0]}
 C {JNW_TR_SKY130A/JNWTR_TAPCELLB_CV.sym} -40 -470 0 0 {name=x8 }
 C {JNW_TR_SKY130A/JNWTR_TIEL_CV.sym} 70 -430 0 0 {name=x9 }
@@ -42,10 +42,12 @@ C {devices/ipin.sym} -490 -540 0 0 {name=p3 lab=ui_in[7:0]}
 C {devices/ipin.sym} -490 -470 0 0 {name=p5 lab=uio_in[7:0]}
 C {devices/ipin.sym} -490 -350 0 0 {name=p8 lab=ena}
 C {devices/ipin.sym} -490 -250 0 0 {name=p10 lab=rst_n}
-C {devices/lab_wire.sym} 380 -220 0 0 {name=p12 sig_type=std_logic lab=uo_out[0]}
 C {devices/lab_wire.sym} -330 -210 0 0 {name=p25 sig_type=std_logic lab=ui_in[0]}
 C {devices/lab_wire.sym} -170 -170 0 0 {name=p9 sig_type=std_logic lab=VGND}
 C {devices/lab_wire.sym} -170 -250 0 0 {name=p11 sig_type=std_logic lab=VDPWR}
 C {LELO_GR01_SKY130A/LELO_GR01.sym} -20 -190 0 0 {name=x1}
 C {devices/ipin.sym} -490 -170 0 0 {name=p13 lab=clk
 }
+C {devices/noconn.sym} 360 -590 0 0 {name=l1}
+C {devices/noconn.sym} 360 -710 0 0 {name=l2}
+C {devices/opin.sym} 380 -220 0 0 {name=p14 lab=uo_out[0]}

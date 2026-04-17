@@ -23,9 +23,9 @@ if len(sys.argv) > 1:
     csv_path = sys.argv[1]
 else:
     #Schematic version
-    #csv_path = "output_tran/tran_SchGtKttTtVt_oscillator.csv"
-    #Layout version
     csv_path = "output_tran/tran_LayGtKttTtVt_oscillator.csv"
+    #Layout version
+    #csv_path = "output_tran/tran_LayGtKttTtVt_oscillator.csv"
 
 temps, freqs = read_csv(csv_path)
 freqs_mhz = freqs / 1e6

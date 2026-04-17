@@ -8,10 +8,10 @@ module LELO_TEMP(
     input oscillator_clk, 
     output pwr, 
     output done, 
-    output logic[11:0] out);
+    output logic[7:0] out);
 
 
-    reg [11:0] counter;
+    reg [7:0] counter;
     logic reset_counter;
 
 
@@ -41,15 +41,17 @@ module LELO_TEMP(
 
             STORE:           next_state = PULSE;
             PULSE:           next_state = IDLE;
+
+            default:         next_state = IDLE;
         endcase
     end;
 
 
 
     //Counting the pulses from the oscillator
-    always_ff @(posedge oscillator_clk or posedge reset_counter or posedge rst)
+    always_ff @(posedge oscillator_clk or posedge reset_counter)
     begin
-        if (reset_counter || rst)          counter <= 0;
+        if (reset_counter)          counter <= 0;
         else if (current_state==MEASURE)   counter <= counter + 1;
     end
 
@@ -67,7 +69,7 @@ module LELO_TEMP(
     //Updating the intern and extern signals
     assign           pwr = (current_state == MEASURE);
     assign          done = (current_state == PULSE);
-    assign reset_counter = (current_state == IDLE);
+    assign reset_counter = (current_state == IDLE || rst);
 
 
 

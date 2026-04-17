@@ -11,9 +11,6 @@ N 20 30 20 70 {lab=VSS}
 C {sky130_fd_pr/pnp_05v5.sym} 0 0 0 0 {name=Q3
 model=pnp_05v5_W3p40L3p40
 m=1
-spiceprefix=X
-format="@name @c @b @e VSS @model @attr"
-type=primitive
-format="@name @c @b @e VSS @model @attr"}
+spiceprefix=X}
 C {devices/opin.sym} 20 70 0 0 {name=p2 lab=VSS}
 C {devices/ipin.sym} 20 -60 0 0 {name=p1 lab=e}

@@ -8,6 +8,12 @@
 ## Who
 Nicolas, Nikolai and Walter, aka. Group 1
 
+# DISCLAIMER
+
+The LVS is not passing due to a NetGen bug. When LVS is bypassed in simulation, it simulates fine with LPE included. Regular "make cdl lvs" also works, it is just when doing "make lpe" that it crashes at the LVS stage.
+
+![](sim/LELO_GR01/linearity_error_layout_17_04_26.png)
+
 ## Why
 
 ### Bandgap module

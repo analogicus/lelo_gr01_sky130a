@@ -13,6 +13,12 @@ Nicolas, Nikolai and Walter, aka. Group 1
 The LVS is not passing due to a NetGen bug. When LVS is bypassed in simulation, it simulates fine with LPE included. Regular "make cdl lvs" also works, it is just when doing "make lpe" that it crashes at the LVS stage.
 
 ![](sim/LELO_GR01/linearity_error_layout_17_04_26.png)
+<sub> Figure 0.1: The linearity error with parasitics (Typical). </sub>
+
+
+![](sim/LELO_GR01/layout_full.png)
+<sub> Figure 0.2: Picture of full analog layout with fanout to Tiny Tapeout 1x1. </sub>
+
 
 ## Why
 

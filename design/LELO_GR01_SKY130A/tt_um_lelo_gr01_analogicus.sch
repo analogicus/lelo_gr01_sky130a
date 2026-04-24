@@ -28,7 +28,7 @@ N 260 -670 260 -590 {lab=uio_out[7:0]}
 N 260 -590 360 -590 {lab=uio_out[7:0]}
 N -590 -650 -560 -650 {lab=rst_n}
 N -480 -650 -260 -650 {lab=#net2}
-N -460 -200 -420 -200 {lab=ui_in[0]}
+N -460 -200 -420 -200 {lab=ui_in[1]}
 N -460 -220 -420 -220 {lab=pwrup_digital}
 C {devices/opin.sym} 360 -710 0 0 {name=p4 lab=uo_out[7:2]}
 C {devices/opin.sym} 360 -590 0 0 {name=p6 lab=uio_out[7:0]}
@@ -49,13 +49,12 @@ C {devices/ipin.sym} -490 -540 0 0 {name=p3 lab=ui_in[7:0]}
 C {devices/ipin.sym} -490 -470 0 0 {name=p5 lab=uio_in[7:0]}
 C {devices/ipin.sym} -490 -350 0 0 {name=p8 lab=ena}
 C {devices/ipin.sym} -590 -650 0 0 {name=p10 lab=rst_n}
-C {devices/lab_wire.sym} -460 -200 0 0 {name=p25 sig_type=std_logic lab=ui_in[0]}
+C {devices/lab_wire.sym} -460 -200 0 0 {name=p25 sig_type=std_logic lab=ui_in[1]}
 C {devices/lab_wire.sym} -170 -170 0 0 {name=p9 sig_type=std_logic lab=VGND}
 C {devices/lab_wire.sym} -170 -250 0 0 {name=p11 sig_type=std_logic lab=VDPWR}
 C {LELO_GR01_SKY130A/LELO_GR01.sym} -20 -190 0 0 {name=x1}
 C {devices/ipin.sym} -490 -320 0 0 {name=p13 lab=clk
 }
-C {devices/noconn.sym} 360 -710 0 0 {name=l2}
 C {LELO_GR01_SKY130A/digital.sym} -110 -660 0 0 {name=x2}
 C {devices/opin.sym} -260 -610 0 1 {name=p14 lab=uo_out[0]}
 C {devices/lab_wire.sym} 380 -220 0 1 {name=p12 sig_type=std_logic lab=uo_out[0]}
@@ -71,4 +70,5 @@ C {devices/lab_wire.sym} -380 -250 0 0 {name=p21 sig_type=std_logic lab=VDPWR}
 C {devices/lab_wire.sym} -380 -170 0 0 {name=p22 sig_type=std_logic lab=VGND}
 C {devices/lab_wire.sym} 40 -710 0 1 {name=p23 sig_type=std_logic lab=pwrup_digital}
 C {devices/lab_wire.sym} -460 -220 0 0 {name=p24 sig_type=std_logic lab=pwrup_digital}
-C {devices/lab_wire.sym} -260 -630 0 0 {name=p26 sig_type=std_logic lab=ui_in[1]}
+C {devices/lab_wire.sym} -260 -630 0 0 {name=p26 sig_type=std_logic lab=ui_in[0]}
+C {devices/lab_wire.sym} 360 -710 0 0 {name=p27 sig_type=std_logic lab=VGND}

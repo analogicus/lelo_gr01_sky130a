@@ -14,6 +14,7 @@ doc:
   # Make docs
   libraries:
      LELO_GR01_SKY130A:
+         - tt_um_lelo_gr01_analogicus
          - LELO_GR01
          - oscillator
          - bandgap

@@ -1,0 +1,80 @@
+# Simple action to do LVS for entire TT block
+# Steps from https://github.com/analogicus/jnw-actions
+# Other resources:
+#   https://docs.github.com/en/actions/tutorials/create-an-example-workflow
+#   https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
+name: LVS_TT
+description: 'Simple action to do LVS for entire TT block'
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - 'design/**.mag'
+      - 'design/**.sch'
+      - 'design/**.sym'
+      - 'info.yaml'
+      - 'config.yaml'
+  workflow_dispatch:
+
+concurrency:
+  group: "lvs-tt"
+  cancel-in-progress: true
+
+jobs:
+  lvs-tt:
+    runs-on: ubuntu-latest
+    container:
+      image: wulffern/aicex:26.04_0.1.7
+      options: --user root
+    steps:
+      - name: Install PDK
+        shell: bash
+        run: |
+          export PDK_ROOT=/opt/pdk/share/pdk
+          cd $HOME
+          git clone https://github.com/RTimothyEdwards/open_pdks.git
+          cd open_pdks
+          ./configure --prefix=/opt/pdk --enable-sky130-pdk --with-sky130-variants=A \
+            --enable-primitive-sky130 --enable-sc-hd-sky130 \
+            --disable-io-sky130 --disable-sc-hs-sky130 --disable-sc-ms-sky130 --disable-sc-ls-sky130 \
+            --disable-sc-lp-sky130 --disable-sc-hdll-sky130 --disable-sc-hvl-sky130 --disable-alpha-sky130 \
+            --disable-xschem-sky130 \
+            --disable-gf180mcu-pdk --disable-primitive-gf180mcu \
+            --disable-verification-gf180mcu --disable-klayout-gf180mcu --disable-io-gf180mcu \
+            --disable-sc-7t5v0-gf180mcu --disable-sc-9t5v0-gf180mcu --disable-sram-gf180mcu \
+            --disable-alpha-gf180mcu --disable-osu-sc-gf180mcu --disable-avalon-sc-gf180mcu \
+            --disable-ocd-io-gf180mcu --disable-ocd-sram-gf180mcu
+
+          # These are needed for a step in make
+          #  --disable-klayout-sky130 --disable-precheck-sky130
+
+          make
+          sudo make install
+          cd $HOME
+
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Checkout dependencies
+        shell: bash
+        run: |
+          python3 -m pip install cicconf
+          cicconf --rundir ../ --config config.yaml clone --https
+      - name: Run LVS
+        shell: bash
+        run: |
+          export PDK_ROOT=/opt/pdk/share/pdk
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+          echo "/opt/eda/bin" >> $GITHUB_PATH
+          cd work
+          make lvs_tt
+          echo -e "\n\n# LVS (TinyTapeout block)\n\n" >> $GITHUB_STEP_SUMMARY
+          echo -e "\`\`\`bash\n" >> $GITHUB_STEP_SUMMARY
+          cat lvs/tt_um_lelo_gr01_analogicus_lvs.log >> $GITHUB_STEP_SUMMARY
+          echo -e "\`\`\`\n" >> $GITHUB_STEP_SUMMARY
+      - name: Archive LVS
+        uses: actions/upload-artifact@v4
+        with:
+          name: lvs_tt
+          path: |
+            work/lvs/tt_um_lelo_gr01_analogicus_spi.log
+            work/lvs/tt_um_lelo_gr01_analogicus_lvs.log

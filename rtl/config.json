@@ -1,0 +1,7 @@
+{
+  "DESIGN_NAME": "LELO_TEMP",
+  "VERILOG_FILES": ["dir::LELO_TEMP.sv"],
+  "CLOCK_PERIOD": 30517,
+  "FP_ASPECT_RATIO": 0.4,
+  "CLOCK_PORT": "clk"
+}

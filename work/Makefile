@@ -70,3 +70,19 @@ lvs_tt:
 # Run netgen
 	echo "$$TCL_FOR_NETGEN" > netgen.tcl
 	netgen -batch source netgen.tcl
+
+lpe_tt:
+	test -d lpe || mkdir lpe
+# Create schematic netlist (needed for comparison or simulation prep)
+	make xsch CELL=${TT_CELL}
+# Create layout extracted netlist with Parasitics (LPE)
+	echo "load ${TT_CELL}.mag; \
+	      extract all; \
+	      ext2sim labels on; \
+	      ext2sim; \
+	      ext2spice lvs; \
+	      ext2spice cthresh 0; \
+	      ext2spice rthresh 0; \
+	      ext2spice -o lpe/${TT_CELL}_lpe.spi; \
+	      exit" > lpe/${TT_CELL}_lpe.tcl
+	magic -noconsole -dnull lpe/${TT_CELL}_lpe.tcl > lpe/${TT_CELL}_lpe.log 2>&1

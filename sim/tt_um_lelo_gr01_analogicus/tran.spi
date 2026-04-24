@@ -8,6 +8,8 @@
 .include ../../../work/xsch/tt_um_lelo_gr01_analogicus.spice
 #endif
 
+.lib "/opt/pdk/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------

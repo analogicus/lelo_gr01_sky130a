@@ -1,9 +1,0 @@
-* Measure tt_um_lelo_gr01_analogicus
-.control
-
-load tran_SchGtKttTtVt.raw
-
-echo "MEAS_START"
-
-echo "MEAS_END"
-.endc

@@ -1,8 +1,0 @@
-**************** uncommented deck **************
-
-     1       1  * measure tt_um_lelo_gr01_analogicus
-
-****************** complete deck ***************
-
-     1       1  * measure tt_um_lelo_gr01_analogicus
-     0       2  *global gnd

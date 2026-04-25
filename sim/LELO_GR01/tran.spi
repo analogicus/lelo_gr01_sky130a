@@ -11,7 +11,7 @@
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-.option TNOM=25 GMIN=1e-15 reltol=1e-3
+.option TNOM=25 GMIN=1e-15 reltol=1e-3 maxdatasizetotal=22GB
 
 *-----------------------------------------------------------------
 * PARAMETERS
@@ -76,14 +76,16 @@ set temp_val = -40
 while $temp_val le $temp_stop
   set temp = $temp_val
 
-	tran 0.1n 3.1u
+	tran 0.1n 4u
 	*write {cicname}_temp_{$temp_val}.raw
 
   meas tran Tperiod  TRIG v(osc_temp_1v8) VAL=0.9 RISE=2  TARG v(osc_temp_1v8) VAL=0.9 RISE=3
+  meas tran Iavg AVG i(VDD_1V8) from=0.1u to=4u 
 
 	let Freq = 1/Tperiod
 	echo Temp = $temp_val C  freq = $&freq Hz
-	echo '$temp_val ; $&freq' >> {cicname}_oscillator.csv
+  let current_val = mag(Iavg)
+  echo '$temp_val ; $&freq ; $&current_val' >> {cicname}_oscillator.csv
 *	* Average frequency over all complete periods (skip first for startup)
 *	meas tran t_first WHEN v(vout_osc)=0.9 RISE=2
 *	let t_last = t_first

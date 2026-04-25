@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 # --- Configuration ---
 RESULTS_DIR = "output_tran"
 # Specify the filename (including extension) you want to ignore
-file_to_omit = "tran_SchGtKssThVl_oscillator.csv" 
+file_to_omit = "None" 
 
 def read_csv(path):
     """Read a semicolon-delimited CSV and return (temps, freqs_MHz)."""
@@ -33,7 +33,7 @@ def is_outlier(temps, freqs):
     return np.max(residuals) > 0.3 * freq_range
 
 # ---- 1. Gather ALL files (MC and Corners) ----
-all_csv_files = sorted(glob.glob(os.path.join(RESULTS_DIR, "**", "*_oscillator.csv"), recursive=True))
+all_csv_files = sorted(glob.glob(os.path.join(RESULTS_DIR, "**", "tran_Lay*_oscillator.csv"), recursive=True))
 
 # --- NEW: Filter out the specific file ---
 if file_to_omit:

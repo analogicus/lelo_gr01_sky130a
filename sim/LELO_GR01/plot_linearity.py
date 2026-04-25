@@ -20,7 +20,7 @@ def read_csv(path):
 if len(sys.argv) > 1:
     csv_path = sys.argv[1]
 else:
-    csv_path = "output_tran/tran_LayGtKttTtVt_oscillator.csv"
+    csv_path = "final_results/lay/csv/tran_LayGtKttmmTtVt_oscillator.csv"
 
 temps, freqs = read_csv(csv_path)
 freqs_mhz = freqs / 1e6
@@ -39,12 +39,10 @@ for order in range(1, 7):
 print("=" * 70)
 
 # Linear fit calculations
-coeffs = np.polyfit(temps, freqs_mhz, 1)
-linear_fit = np.polyval(coeffs, temps)
+temp_per_mhz = np.polyfit(temps, freqs_mhz, 1)
+linear_fit = np.polyval(temp_per_mhz, temps)
 error = freqs_mhz - linear_fit
-error_pct = error / (linear_fit.max() - linear_fit.min()) * 100
-temp_span = temps.max() - temps.min()
-error_temp = error_pct / temp_span * 100 
+error_temp = error / temp_per_mhz[0]  
 
 # --- PLOTTING START ---
 # We must define 'fig' and 'axes' here so they are available below
@@ -53,7 +51,7 @@ fig, axes = plt.subplots(2, 1, figsize=(8, 7), sharex=True)
 # Top Plot
 ax0 = axes[0]
 ax0.plot(temps, freqs_mhz, "o-", color="C0", markersize=4, label="Measured")
-ax0.plot(temps, linear_fit, "--", color="C3", label=f"Linear fit ({coeffs[0]:.4f} MHz/°C)")
+ax0.plot(temps, linear_fit, "--", color="C3", label=f"Linear fit ({temp_per_mhz[0]:.4f} MHz/°C)")
 ax0.set_ylabel("Frequency [MHz]")
 ax0.set_title("Oscillator Frequency vs Temperature")
 ax0.legend()

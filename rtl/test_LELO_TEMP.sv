@@ -4,7 +4,7 @@
 module testbench;
 
 parameter real CLK_FREQ = 32768.0;
-parameter real OSC_FREQ = 2000000.0;
+parameter real OSC_FREQ = 2202000.0;
 
 real clk_half_period;
 real osc_half_period;

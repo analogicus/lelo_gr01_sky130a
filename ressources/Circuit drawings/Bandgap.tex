@@ -1,0 +1,89 @@
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\fontsize{11.9pt}{15.5pt}\selectfont]
+\draw (7.25,11.75) to[european resistor] (7.25,10);
+\draw (7.25,8) to[Tpnp, transistors/scale=1.19] (7.25,10);
+\draw (2.875,8) to[Tpnp, transistors/scale=1.19] (2.875,10);
+\draw (11.625,8) to[Tpnp, transistors/scale=1.19] (11.625,10);
+\draw (2.875,8) to[short] (11.625,8);
+\draw [short] (3.875,12.625) -- (5,14.5);
+\draw [short] (5,14.5) -- (6.125,12.625);
+\draw [short] (6.125,12.625) -- (3.875,12.625);
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (4.375,12.875) {+};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.000cm] at (5.625,12.875) {-};
+\draw (5.5,12.625) to[short] (5.5,11.75);
+\draw (5.5,11.75) to[short] (7.25,11.75);
+\draw (4.625,12.625) to[short] (4.625,11.75);
+\draw (4.625,11.75) to[short] (2.875,11.75);
+\draw (2.875,10) to[short] (2.875,11.75);
+\draw (2.875,11.75) to[short] (2.875,15);
+\draw (7.25,11.75) to[short] (7.25,15);
+\draw (7.25,15.75) to[Tpmos, transistors/scale=1.02] (7.25,17.75);
+\draw (2.875,17.75) to[Tpmos, transistors/scale=1.02] (2.875,15.75);
+\draw (3.875,16.75) to[short] (6.25,16.75);
+\draw (7.25,15.75) to[short] (7.25,15);
+\draw (2.875,15.75) to[short] (2.875,15);
+\draw (5,14.5) to[short] (5,16.75);
+\draw [short] (2.625,15.125) .. controls (2.875,15.25) and (2.875,15.25) .. (3.125,15.125);
+\draw [short] (3.125,15.125) -- (5,15.125);
+\draw [short] (2.875,17.75) -- (7.25,17.75);
+\draw (11.625,15.75) to[Tpmos, transistors/scale=1.02] (11.625,17.75);
+\draw (11.625,15.75) to[european resistor] (11.625,10);
+\draw (7.25,17.75) to[short] (11.625,17.75);
+\draw (6.375,16.75) to[short] (6.375,17.5);
+\draw [short] (7,17.5) .. controls (7.125,17.625) and (7.375,17.625) .. (7.5,17.5);
+\draw (6.375,17.5) to[short] (7,17.5);
+\draw (10.625,17.5) to[short] (10.625,16.75);
+\draw (7.5,17.5) to[short] (10.625,17.5);
+\draw (5.375,16.75) to[C] (5.375,17.75);
+\draw (1.875,9) to[short] (1.875,8);
+\draw (1.875,8) to[short] (2.875,8);
+\draw (6.25,9) to[short] (6.25,8);
+\draw (10.625,9) to[short] (10.625,8);
+\draw (13.5,15.75) to[Tpmos, transistors/scale=1.02] (13.5,17.75);
+\draw (11.625,17.75) to[short] (13.5,17.75);
+\draw (13.5,15.75) to[short, -o] (13.5,15.5) ;
+\draw (11.625,15.75) to[short, -o] (11.375,15.75) ;
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (10.625,15.75) {$V_{ref}$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (13.5,15) {$I_{ptat}$};
+\draw  (-0.375,18.125) rectangle (2,14.625);
+\draw (2.625,15.125) to[short] (2,15.125);
+\draw (2.875,17.75) to[short] (2,17.75);
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (0.75,16.625) {Startup};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (0.75,16) {Circuit};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.75,10.75) {$R_1$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (12.25,12.875) {$R_{ref}$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (4.75,17.25) {$C_1$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (3.125,9) {PNP1};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.625,9) {PNP2};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (11.875,9) {PNP3};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (5.75,14.5) {OTA};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.25,16.75) {Qp2};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (2.875,16.75) {Qp1};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (11.625,16.75) {Qp3};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (13.625,16.75) {Qp4};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (6.375,9.5) {$x8$};
+\draw (4.5,17.75) to[short, -o] (4.5,18.125) ;
+\draw (5.125,8) to[short, -o] (5.125,7.375) ;
+\draw (5.625,13.5) to[short, -o] (6,13.5) ;
+\draw (4.375,13.5) to[short, -o] (4,13.5) ;
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (3.5,13.75) {$Vdd$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (6.5,13.75) {$Vss$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (4.625,18.625) {$Vdd$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (5.125,6.875) {$Vss$};
+\draw (4.125,12.625) to[short, -o] (4.125,12.375) ;
+\node [font=\fontsize{9.1pt}{11.8pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (3.75,12) {$PWRUP$};
+\draw (5.875,12.625) to[short, -o] (5.875,12.375) ;
+\node [font=\fontsize{9.1pt}{11.8pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (6.375,12) {$PWRUP_N$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (2.25,9.75) {$V_{d1}$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.875,11.75) {$V_{R1}$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.875,9.75) {$V_{d2}$};
+\draw (0.875,14.625) to[short, -o] (0.875,14.25) ;
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (0.875,13.75) {$Vss$};
+\end{circuitikz}
+}%
+\caption{The figure shows our Bandgap design.}
+\label{fig:Bandgap}
+\end{figure}

@@ -1,0 +1,63 @@
+\begin{figure}[!ht]
+\centering
+\resizebox{0.4\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\fontsize{18.2pt}{23.7pt}\selectfont]
+\draw (5.125,14.25) to[Tpmos, transistors/scale=1.02] (5.125,16.75);
+\draw (6.75,13.25) to[european resistor] (6.75,11.375);
+\draw (6.75,8.875) to[Tpmos, transistors/scale=1.02] (6.75,11.375);
+\draw (2.5,11.5) to[Tpmos, transistors/scale=1.02] (2.5,8.75);
+\draw (4.5,6.875) to[Tnmos, transistors/scale=1.02] (4.5,9.125);
+\draw (2.5,7.5) to[Tnmos, transistors/scale=1.02] (2.5,4.5);
+\draw (6.75,4.5) to[Tnmos, transistors/scale=1.02] (6.75,7.5);
+\draw (4.625,2.875) to[Tnmos, transistors/scale=1.02] (4.625,5.375);
+\draw (10.125,4.5) to[Tnmos, transistors/scale=1.02] (10.125,7.75);
+\draw (6.75,13.25) to[short] (2.5,13.25);
+\draw (2.5,11.5) to[short] (2.5,13.25);
+\draw (6.75,7.5) to[short] (6.75,8.875);
+\draw (2.5,8.75) to[short] (2.5,7.5);
+\draw (3.5,10.125) to[short] (5.75,10.125);
+\draw (5.75,6) to[short] (3.5,6);
+\draw (2.5,4.625) to[short] (2.5,2.875);
+\draw (2.5,2.875) to[short] (4.625,2.875);
+\draw (4.625,2.875) to[short] (6.75,2.875);
+\draw (6.75,4.5) to[short] (6.75,2.875);
+\draw (6.75,2.875) to[short] (10.125,2.875);
+\draw (10.125,4.5) to[short] (10.125,2.875);
+\draw (9.125,6.125) to[short] (8.625,6.125);
+\draw (8.625,6.125) to[short] (8.625,7.125);
+\draw (8.625,7.125) to[short] (6.75,7.125);
+\draw (6.75,7.125) to[short] (5.5,7.125);
+\draw (5.5,7.125) to[short] (5.5,6);
+\draw (4.5,9.125) to[short] (4.5,10.125);
+\draw (3.5,8) to[short] (3.5,8.875);
+\draw (2.5,8.875) to[short] (4.5,8.875);
+\draw (4.5,6.875) to[short] (4.5,6);
+\draw (4.625,5.25) to[short] (4.625,6);
+\draw (5.125,14.25) to[short] (5.125,13.25);
+\draw (5.125,16.75) to[short, -o] (5.125,16.875) ;
+\draw (4.125,15.5) to[short, -o] (3.75,15.5) ;
+\draw (10.125,7.625) to[short, -o] (10.125,8) ;
+\draw (5.75,2.875) to[short, -o] (5.75,2.375) ;
+\draw (4,8) to[short, -o] (4.75,8) ;
+\node [font=\fontsize{18.2pt}{23.7pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (4.75,17.375) {$Vdd$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (2.375,15.375) {$PWRUP\_N$};
+\node [font=\fontsize{18.2pt}{23.7pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (10.125,8.375) {$IBN$};
+\node [font=\fontsize{18.2pt}{23.7pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (5.375,8) {$Vss$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (2.625,4.5) {$PWRUP\_N$};
+\draw (3.625,4.125) to[short, -o] (3.25,4.125) ;
+\node [font=\fontsize{18.2pt}{23.7pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (5.75,1.875) {$Vss$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (5.25,15.5) {Qp1};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (6.9,10.125) {Qp3};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.375,12.25) {R};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (2.3,10.125) {Qp2};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (3.75,7.25) {Qn4};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (2.375,6.0) {Qn1};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (6.875,6) {Qn2};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (10.25,6.1) {Qn3};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (4.75,4.125) {Qn5};
+\end{circuitikz}
+}%
+\caption{The figure shows our Gm cell design.}
+\label{fig:GM_cell}
+\end{figure}

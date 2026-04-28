@@ -1,0 +1,56 @@
+\begin{figure}[!ht]
+\centering
+\resizebox{0.4\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\fontsize{11.9pt}{15.5pt}\selectfont]
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (4,15) {$PWRUP$};
+\draw (7.25,12.375) to[Tpmos, transistors/scale=1.02] (7.25,14.625);
+\draw (3,14.625) to[Tpmos, transistors/scale=1.02] (3,12.375);
+\draw (5.125,14.375) to[Tpmos, transistors/scale=1.02] (5.125,16.625);
+\draw (7.25,11.25) to[Tnmos, transistors/scale=1.02] (7.25,9);
+\draw (3,9) to[Tnmos, transistors/scale=1.02] (3,11.25);
+\draw  (6.375,7.5) rectangle (8.125,4.375);
+\draw  (7.25,5.875) circle (0.625cm);
+\draw [-{Stealth[scale=1.5]}, ] (7.25,6.375) .. controls (7.25,5.75) and (7.25,5.875) .. (7.25,5.375) ;
+\draw (7.25,4.375) to[short, -o] (7.25,3.875) ;
+\draw (2.5,10.125) to[short, -o] (3.25,10.125) ;
+\draw (7.75,10.125) to[short, -o] (7,10.125) ;
+\draw (3,9) to[short] (7.25,9);
+\draw (7.25,9) to[short] (7.25,7.5);
+\draw (7.25,11.25) to[short] (7.25,12.375);
+\draw (4,13.5) to[short] (6.25,13.5);
+\draw (3,12.375) to[short] (3,11.25);
+\draw (3,12) to[short] (4.375,12);
+\draw (4.375,12) to[short] (4.375,13.5);
+\draw (3,14.625) to[short] (3,16.625);
+\draw (7.25,14.625) to[short] (7.25,16.625);
+\draw (7.25,16.625) to[short] (3,16.625);
+\draw (5.125,16.625) to[short, -o] (5.125,17) ;
+\draw (6.375,6.125) to[short, -o] (6,6.125) ;
+\draw (6.375,5.625) to[short, -o] (6,5.625) ;
+\draw (8.25,10.125) to[short, -o] (8.5,10.125) ;
+\draw (2,10.125) to[short, -o] (1.75,10.125) ;
+\draw (7.25,12) to[short, -o] (8.625,12) ;
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (5.75,17.125) {$Vdd$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (8.625,11.625) {$Vout$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (8.5,9.75) {$Vin+$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (1.625,9.75) {$Vin-$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.25,3.5) {$Vss$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (5.25,6.125) {$Vdd$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.25,7.2) {$IBN$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (5.5,7.3) {GM cell};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (4.6,5.625) {$PWRUP\_N$};
+\draw (4.125,15.5) to[short, -o] (3.875,15.5) ;
+\draw (5.125,14.375) to[short] (5.125,13.5);
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (3.875,10.125) {$Vss$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (6.5,10.125) {$Vss$};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.5,13.5) {Qp2};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (2.875,13.5) {Qp1};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (7.75,10.75) {Qn2};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (2.375,10.75) {Qn1};
+\node [font=\fontsize{11.9pt}{15.5pt}\selectfont, fill={rgb,255:red,255; green,255; blue,255}, fill opacity=1, text opacity=1, inner xsep=0.080cm, inner ysep=0.085cm, rounded corners=0.020cm] at (5.25,15.5) {Qp3};
+\end{circuitikz}
+}%
+\caption{The figure shows our OTA design.}
+\label{fig:OTA}
+\end{figure}

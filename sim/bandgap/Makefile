@@ -27,6 +27,15 @@ ifeq ($(VIEW),Lay)
 #	cd ../../work && make cdl lpe LIB=${LIB} CELL=${CELL}
 endif
 
+ver:
+	test -d ../../work/xsch && cd ../../work/ && make ver LIB=${LIB} CELL=${CELL}
+
+netlist: netlist_cell
+#- I've seen port ordering change between xschem version, so I also
+# generate a xdut.spi file that always has the right port ordering.
+#- TODO: Should I add the view here? Either xsch or lpe??
+	perl ../../tech/script/genxdut ../../work/xsch/${CELL}.spice ${CELL}
+
 test:
 	${MAKE} typical OPT="Debug"
 
@@ -43,7 +52,9 @@ tfs: netlist
 	cicsim run --replace replace.yaml --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt,Th,Tl" "Vt,Vl,Vh"
 
 etc: netlist
-	cicsim run --replace replace.yaml --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh"
+	cicsim run --replace replace.yaml --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th" "Vl,Vh"
+	#cicsim run --replace replace.yaml --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kfs" "Th" "Vh,Vl"
+
 
 mc: netlist
 	cicsim run --replace replace.yaml --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"

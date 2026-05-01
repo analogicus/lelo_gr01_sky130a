@@ -16,14 +16,13 @@
 * PARAMETERS
 *-----------------------------------------------------------------
 .param TRF = 10p
-.param vdda = 1.8
 .param AVDD = {vdda}
 
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD_1V8  VDD_1V8  VSS  dc 1.8
+VDD_1V8  VDD_1V8  VSS  dc {vdda}
 
 VPWR     PWRUP_1V8   VSS  dc 1.8
 VPWRN    PWRUP_N_1V8 VSS  dc 0
@@ -68,7 +67,7 @@ set itl2=1000
 optran 0 0 0 1n 1u 0
 run
 
-dc temp -42 125 1
+dc temp -50 125 1
 
 write {cicname}_temp.raw
 

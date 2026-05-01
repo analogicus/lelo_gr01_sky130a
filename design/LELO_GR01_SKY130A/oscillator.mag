@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1777028898
+timestamp 1777590931
 << locali >>
 rect 1616 15210 1910 15214
 rect 1616 15154 1912 15210
@@ -366,7 +366,7 @@ rect -2242 8414 -2050 8734
 rect -864 8422 -672 8740
 rect 454 8422 646 8740
 use diffamp_2  x1 ../LELO_GR01_SKY130A
-timestamp 1776112186
+timestamp 1777590786
 transform 1 0 0 0 1 0
 box -6782 8802 1078 15582
 use JNWTR_IVX1_CV  x2 JNW_TR_SKY130A

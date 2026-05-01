@@ -5,9 +5,11 @@ import os
 import pandas as pd
 
 # --- Configuration ---
-data_dir = "final_results/lay/csv"
+#data_dir = "final_results/lay/csv"
+data_dir = "output_tran/"
 
-file_pattern = "tran_Lay*_oscillator.csv"
+
+file_pattern = "tran_Sch*_oscillator.csv"
 
 
 def parse_csv_data(filename):

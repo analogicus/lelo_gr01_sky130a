@@ -9,10 +9,10 @@ N 120 -220 150 -220 {lab=PWRUP_1V8}
 N 120 -250 150 -250 {lab=VDD_1V8}
 N 580 -240 620 -240 {lab=VSS}
 N 580 -260 620 -260 {lab=VDD_1V8}
-N 450 -180 620 -180 {lab=#net1}
-N 450 -240 490 -240 {lab=#net2}
-N 490 -240 490 -200 {lab=#net2}
-N 490 -200 620 -200 {lab=#net2}
+N 450 -180 620 -180 {lab=VREF}
+N 450 -240 490 -240 {lab=#net1}
+N 490 -240 490 -200 {lab=#net1}
+N 490 -200 620 -200 {lab=#net1}
 N 920 -260 930 -260 {lab=OSC_TEMP_1V8}
 N 120 -200 150 -200 {lab=PWRUP_N_1V8}
 N 790 -350 790 -300 {lab=PWRUP_N_1V8}
@@ -41,3 +41,4 @@ C {devices/lab_wire.sym} -200 -180 0 1 {name=p10 sig_type=std_logic lab=VDD_1V8}
 C {devices/lab_wire.sym} -200 -60 2 0 {name=p11 sig_type=std_logic lab=VSS}
 C {JNW_TR_SKY130A/JNWTR_IVX1_CV.sym} -240 -120 0 0 {name=x3 }
 C {devices/lab_wire.sym} 20 -200 2 1 {name=p6 sig_type=std_logic lab=PWRUP_N_1V8}
+C {devices/lab_wire.sym} 530 -180 3 0 {name=p12 sig_type=std_logic lab=VREF}

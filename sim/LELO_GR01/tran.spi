@@ -11,13 +11,12 @@
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-.option TNOM=25 GMIN=1e-15 reltol=1e-3 maxdatasizetotal=22GB
+.option TNOM=25 GMIN=1e-15 reltol=1e-2 maxdatasizetotal=28GB
 
 *-----------------------------------------------------------------
 * PARAMETERS
 *-----------------------------------------------------------------
 .param TRF = 10p
-.param vdda = 1.8
 .param AVDD = {vdda}
 
 
@@ -28,7 +27,7 @@
 * FORCE
 *-----------------------------------------------------------------
 VSS  VSS  0     dc 0
-VDD_1V8  VDD_1V8  VSS  dc 1.8
+VDD_1V8  VDD_1V8  VSS  dc {vdda}
 
 *-----------------------------------------------------------------
 * STARTUP/SHUTDOWN
@@ -64,10 +63,10 @@ unset askquit
 
 *op
 optran 0 0 0 1n 1u 0
-tran 0.5n 9u 1p
+tran 0.5n 2u 1p
 write
 
-echo 'Temp ; Freq' > {cicname}_oscillator.csv
+echo 'Temp ; Freq ; Vref ; Iavg' > {cicname}_oscillator.csv
 
 set temp_stop = 125
 set temp_step = 15
@@ -78,16 +77,20 @@ set temp_val = -40
 while $temp_val le $temp_stop
   set temp = $temp_val
 
-	tran 0.1n 4u
+	tran 0.1n 8u
 	*write {cicname}_temp_{$temp_val}.raw
 
   meas tran Tperiod  TRIG v(osc_temp_1v8) VAL=0.9 RISE=2  TARG v(osc_temp_1v8) VAL=0.9 RISE=3
-  meas tran Iavg AVG i(VDD_1V8) from=0.1u to=4u 
+  meas tran Iavg AVG i(VDD_1V8) from=2u to=8u
+*schematic only
+  meas tran Vref_avg AVG v(xdut.VREF) from=2u to=8u
 
 	let Freq = 1/Tperiod
 	echo Temp = $temp_val C  freq = $&freq Hz
   let current_val = mag(Iavg)
-  echo '$temp_val ; $&freq ; $&current_val' >> {cicname}_oscillator.csv
+  let v_val = Vref_avg
+*  echo '$temp_val ; $&freq ; $&current_val' >> {cicname}_oscillator.csv
+  echo '$temp_val ; $&freq ; $&v_val ; $&current_val' >> {cicname}_oscillator.csv
 
 	let temp_next = $temp_val + $temp_step
 	set temp_val = "$&temp_next"

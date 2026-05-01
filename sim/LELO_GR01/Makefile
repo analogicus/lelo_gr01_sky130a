@@ -5,8 +5,8 @@ all: typical etc mc summary
 
 
 TB=tran
-#VIEW=Sch
-VIEW=Lay
+VIEW=Sch
+#VIEW=Lay
 CELL=LELO_GR01
 LIB =LELO_EX_SKY130A
 OPT=
@@ -52,9 +52,11 @@ tfs: netlist
 
 etc: netlist
 	#full
-	cicsim run --replace replace.yaml --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh"
+	#cicsim run --replace replace.yaml --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh"
 	#Only the troublesome corner
-	#cicsim run --replace replace.yaml --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kfs" "Tl" "Vl,Vh"
+	cicsim run --replace replace.yaml --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kff" "Th" "Vl"
+	#cicsim run --replace replace.yaml --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss" "Th" "Vh"
+
 
 mc: netlist
 	cicsim run --replace replace.yaml --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"

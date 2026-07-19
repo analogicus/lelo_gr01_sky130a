@@ -30,6 +30,10 @@ N -590 -650 -560 -650 {lab=rst_n}
 N -480 -650 -260 -650 {lab=#net2}
 N -460 -200 -420 -200 {lab=ui_in[1]}
 N -460 -220 -420 -220 {lab=pwrup_digital}
+N -370 -360 -370 -330 {lab=VGND}
+N -370 -330 -320 -330 {lab=VGND}
+N -370 -460 -370 -420 {lab=ui_in[0],ui_in[1],rst_n}
+N -370 -460 -290 -460 {lab=ui_in[0],ui_in[1],rst_n}
 C {devices/opin.sym} 360 -710 0 0 {name=p4 lab=uo_out[7:2]}
 C {devices/opin.sym} 360 -590 0 0 {name=p6 lab=uio_out[7:0]}
 C {JNW_TR_SKY130A/JNWTR_TAPCELLB_CV.sym} -40 -470 0 0 {name=x8 }
@@ -72,3 +76,11 @@ C {devices/lab_wire.sym} 40 -710 0 1 {name=p23 sig_type=std_logic lab=pwrup_digi
 C {devices/lab_wire.sym} -460 -220 0 0 {name=p24 sig_type=std_logic lab=pwrup_digital}
 C {devices/lab_wire.sym} -260 -630 0 0 {name=p26 sig_type=std_logic lab=ui_in[0]}
 C {devices/lab_wire.sym} 360 -710 0 0 {name=p27 sig_type=std_logic lab=VGND}
+C {sky130_fd_pr/diode.sym} -370 -390 0 0 {name=D1[2:0]
+model=diode_pw2nd_05v5
+area=2.025e11
+perim=1.8e6
+spiceprefix=X
+}
+C {devices/lab_wire.sym} -320 -330 0 0 {name=p28 sig_type=std_logic lab=VGND}
+C {devices/lab_wire.sym} -340 -460 0 1 {name=p29 sig_type=std_logic lab=ui_in[0],ui_in[1],rst_n}

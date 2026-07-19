@@ -19,9 +19,6 @@ The LVS is not passing due to a NetGen bug. When LVS is bypassed in simulation, 
 <sub> Figure 0.1: The linearity error with parasitics (Typical). </sub>
 
 
-![](sim/LELO_GR01/layout_full.png)
-<sub> Figure 0.2: Picture of full analog layout with fanout to Tiny Tapeout 1x1. </sub>
-
 
 ## Why
 
@@ -93,42 +90,6 @@ For testing the digital module, we made an oscillator simulator, which reads fro
 
 ## Simulation Graphs
 
-### Bandgap
-
-![](sim/bandgap/I_PTAT.png)
-
-<sub> Figure 1: IPTAT simulated with a sweeping temperature between -40 and 125 degrees C. A 1k resistor has been placed between IPTAT node and ground to measure this. </sub>
-
-![](sim/bandgap/VREF.png)
-
-<sub> Figure 2: VREF simulated with a sweeping temperature between -40 and 125 degrees C. It is quite constant, with a tiny delta between the startpoint and endpoint, and nearly centered peak.</sub>
-
-### Oscillator: typical
-
-![](sim/LELO_GR01/images/osc_out_40C.png)
-
-<sub> Figure 3: tran simulation of the oscillator for a temperature of 40°C. 
-
-
-![](sim/LELO_GR01/images/freq_meas_typical.png)
-
-<sub> Figure 4: Plot of the oscillator frequency for various temperature between -20°C and 120°C. 
-
-
-![](sim/LELO_GR01/images/temp_error_typical.png)
-
-<sub> Figure 5: Plot of the linearity error of the oscillator translated in temperature measurement error.
-
-
-### Oscillator: Montecarlo simulations
-
-![](sim/oscillator_tb/results_mc_pwrup_08.04.26/MC_freq_08_04_26.png)
-
-<sub> Figure 6: Results of Montecarlo simulations of the bandgap and osciallator setup at different temperatures. </sub>
-
-![](sim/oscillator_tb/results_mc_pwrup_08.04.26/plot_error_mc_08_04_26.png)
-
-<sub> Figure 7: Estimated error in the temperature measurements with two points calibration for extreme test conditions Montecarlo simulations. The results are well within spec, as the plot shows around +-3 C error peak within the 0-70 C range. Though it must be noted that these measurements are BEFORE being fed through the digital part, so quantization is not visible here. </sub>
 
 ### Full system: Typical runs
 
@@ -221,3 +182,18 @@ For testing the digital module, we made an oscillator simulator, which reads fro
 | pwr             | Output    | VDD_1V8 | Powers up the analog circuits             |
 | done            | Output    | VDD_1V8 | Pulses when measurement is complete       |
 | out             | Output    | VDD_1V8 | 8-bit pulse count result                  |
+
+
+## How to test
+
+There are two options
+
+1. Set ui_in[1] high, uo_out[0] will be a temperature dependent frequency 
+1. Set ui_in[0] (request) high, wait for uo_out[1] (done). Read uio_out[7:0]
+
+
+## External hardware
+
+No need for external hardware. Maybe a logic analyzer if you want to detect the
+oscillation frequency. You could use your finger to change the chip temp (make
+sure you ground yourself first to dissapate any charge difference)

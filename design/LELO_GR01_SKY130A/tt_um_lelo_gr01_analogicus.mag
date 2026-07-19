@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1784483141
+timestamp 1784485126
 << pwell >>
 rect 27997 18727 28876 20092
 << locali >>
@@ -1021,9 +1021,9 @@ rect 28214 19974 28274 20034
 rect 28766 19976 28826 20036
 rect 29318 19972 29378 20032
 use digital  digital_0
-timestamp 1784483141
+timestamp 1784485126
 transform 1 0 1986 0 1 -2899
-box 740 2037 14658 7255
+box 740 2037 14658 22721
 use JNWTR_IVX1_CV  JNWTR_IVX1_CV_0 ../JNW_TR_SKY130A
 timestamp 1784483141
 transform 1 0 16958 0 1 252

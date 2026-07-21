@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1784483141
+timestamp 1784631714
 << locali >>
 rect 282 1245 588 1268
 rect 282 1228 298 1245
@@ -3008,39 +3008,39 @@ rect 1845 -365 1895 -335
 rect 1925 -365 1940 -335
 rect 280 -390 1940 -365
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  Q1[0] $PDKPATH/libs.ref/sky130_fd_pr/mag
-timestamp 1779375505
+timestamp 1784631714
 transform 1 0 100 0 1 -570
 box 0 0 670 670
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  Q1[1]
-timestamp 1779375505
+timestamp 1784631714
 transform 1 0 100 0 1 105
 box 0 0 670 670
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  Q1[2]
-timestamp 1779375505
+timestamp 1784631714
 transform 1 0 100 0 1 780
 box 0 0 670 670
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  Q1[3]
-timestamp 1779375505
+timestamp 1784631714
 transform 1 0 775 0 1 780
 box 0 0 670 670
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  Q1[4]
-timestamp 1779375505
+timestamp 1784631714
 transform 1 0 1450 0 1 779
 box 0 0 670 670
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  Q1[5]
-timestamp 1779375505
+timestamp 1784631714
 transform 1 0 1450 0 1 105
 box 0 0 670 670
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  Q1[6]
-timestamp 1779375505
+timestamp 1784631714
 transform 1 0 1450 0 1 -570
 box 0 0 670 670
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  Q1[7]
-timestamp 1779375505
+timestamp 1784631714
 transform 1 0 775 0 1 -570
 box 0 0 670 670
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  Q2
-timestamp 1779375505
+timestamp 1784631714
 transform 1 0 775 0 1 105
 box 0 0 670 670
 << labels >>

@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1784483141
+timestamp 1784631714
 << locali >>
 rect 62 575 608 608
 rect 62 95 95 575
@@ -200,7 +200,7 @@ rect 390 200 440 230
 rect 470 200 490 230
 rect 180 180 490 200
 use sky130_fd_pr__rf_pnp_05v5_W3p40L3p40  Q3 $PDKPATH/libs.ref/sky130_fd_pr/mag
-timestamp 1779375505
+timestamp 1784631714
 transform 1 0 0 0 1 0
 box 0 0 670 670
 << labels >>

@@ -297,8 +297,6 @@ flabel metal1 s 6300 4900 6492 4980 0 FreeSans 400 0 0 0 VSS
 port 3 nsew ground bidirectional
 flabel metal1 s 7600 7700 7792 7780 0 FreeSans 400 0 0 0 IBN
 port 2 nsew signal bidirectional
-flabel metal1 s 4280 11370 4472 11450 0 FreeSans 400 0 0 0 VDD_1V8
+flabel metal1 s 4280 11370 4470 11450 0 FreeSans 400 0 0 0 VDD_1V8
 port 1 nsew power bidirectional
-<< properties >>
-string FIXED_BBOX 0 0 1880 11888
 << end >>

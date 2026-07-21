@@ -35,6 +35,4 @@ flabel metal1 s 80 180 112 220 0 FreeSans 200 0 0 0 VIN
 port 3 nsew signal bidirectional
 flabel metal1 s 272 20 368 60 0 FreeSans 200 0 0 0 VOUT
 port 4 nsew signal bidirectional
-<< properties >>
-string FIXED_BBOX 0 0 696 1056
 << end >>

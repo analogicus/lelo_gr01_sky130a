@@ -943,6 +943,4 @@ rlabel metal1 -15676 20394 -14786 20586 0 VDD_1V8
 port 8 nsew power input
 rlabel metal1 -25316 11828 -25252 20972 0 PWRUP_N_1V8
 port 9 nsew default input
-<< properties >>
-string FIXED_BBOX -6738 0 5552 31984
 << end >>

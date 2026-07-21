@@ -342,6 +342,4 @@ flabel locali s -3202 24968 -3022 25028 0 FreeSans 400 0 0 0 PWRUP_1V8
 port 3 nsew signal bidirectional
 flabel locali s 3734 16106 3914 16166 0 FreeSans 400 0 0 0 OSC_TEMP_1V8
 port 2 nsew signal bidirectional
-<< properties >>
-string FIXED_BBOX 0 0 12290 58176
 << end >>

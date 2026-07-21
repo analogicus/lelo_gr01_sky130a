@@ -158,6 +158,4 @@ flabel metal1 s -660 13752 -596 13832 0 FreeSans 400 0 0 0 PWRUP_1V8
 port 6 nsew signal bidirectional
 flabel metal1 s -6738 13504 -6674 13584 0 FreeSans 400 0 0 0 PWRUP_N_1V8
 port 7 nsew signal bidirectional
-<< properties >>
-string FIXED_BBOX -96 0 3464 17168
 << end >>

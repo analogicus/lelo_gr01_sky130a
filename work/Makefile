@@ -13,6 +13,7 @@ PREFIX=
 LIB=LELO_GR01_SKY130A
 #CELL=LELO_GR01
 CELL=tt_um_lelo_gr01_analogicus
+TT_CELL=tt_um_lelo_gr01_analogicus
 VERILOG_FILE=../rtl/runs/RUN_2026-04-17_15-08-10/final/pnl/LELO_TEMP.pnl.v
 
 

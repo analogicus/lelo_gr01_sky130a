@@ -37,7 +37,7 @@ N -370 -460 -290 -460 {lab=ui_in[0],ui_in[1],rst_n}
 C {devices/opin.sym} 360 -710 0 0 {name=p4 lab=uo_out[7:2]}
 C {devices/opin.sym} 360 -590 0 0 {name=p6 lab=uio_out[7:0]}
 C {JNW_TR_SKY130A/JNWTR_TAPCELLB_CV.sym} -40 -470 0 0 {name=x8 }
-C {JNW_TR_SKY130A/JNWTR_TIEL_CV.sym} 70 -430 0 0 {name=x9 }
+C {JNW_TR_SKY130A/JNWTR_TIEH_CV.sym} 70 -430 0 0 {name=x9 }
 C {devices/lab_wire.sym} 70 -550 0 0 {name=p30 sig_type=std_logic lab=VDPWR}
 C {devices/lab_wire.sym} 70 -400 0 0 {name=p31 sig_type=std_logic lab=VGND}
 C {sky130_fd_pr/res_generic_m4.sym} 220 -470 1 0 {name=R1[7:0]
@@ -46,7 +46,7 @@ L=0.3
 model=res_generic_m4
 mult=1}
 C {devices/opin.sym} 370 -470 0 0 {name=p32 lab=uio_oe[7:0]}
-C {devices/lab_wire.sym} 170 -470 0 0 {name=p7 sig_type=std_logic lab=TIE_L}
+C {devices/lab_wire.sym} 170 -470 0 0 {name=p7 sig_type=std_logic lab=TIE_H}
 C {devices/ipin.sym} -490 -580 0 0 {name=p1 lab=VDPWR}
 C {devices/ipin.sym} -490 -410 0 0 {name=p2 lab=VGND}
 C {devices/ipin.sym} -490 -540 0 0 {name=p3 lab=ui_in[7:0]}

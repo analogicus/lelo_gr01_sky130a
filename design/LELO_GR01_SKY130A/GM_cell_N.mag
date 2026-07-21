@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1784642429
+timestamp 1784653329
 << locali >>
 rect 3890 11410 4080 11440
 rect 3890 11250 3920 11410
@@ -267,7 +267,7 @@ timestamp 1767481200
 transform 1 0 5684 0 1 6628
 box -184 -128 1208 928
 use JNWTR_RPPO4  x6 ../JNW_TR_SKY130A
-timestamp 1784642429
+timestamp 1784647331
 transform 0 -1 8740 1 0 9800
 box 0 0 1880 3440
 use LELOATR_LVT_NCH_2C5F0  x7

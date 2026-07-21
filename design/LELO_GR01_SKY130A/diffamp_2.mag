@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1784642429
+timestamp 1784653329
 << locali >>
 rect -746 13242 -510 13322
 rect -1412 12186 -1196 12266
@@ -136,7 +136,7 @@ timestamp 1767481200
 transform 1 0 -130 0 1 11508
 box -184 -128 1208 928
 use GM_cell_N  x5 ../LELO_GR01_SKY130A
-timestamp 1784642429
+timestamp 1784653329
 transform 1 0 -10166 0 1 3902
 box 3384 4900 8752 11680
 use LELOATR_LVT_PCH_2C5F0  x7

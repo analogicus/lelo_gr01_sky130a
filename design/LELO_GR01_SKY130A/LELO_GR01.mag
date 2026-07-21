@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1784639396
+timestamp 1784642429
 << locali >>
 rect -3202 24968 -2224 25028
 rect -2284 24190 -2224 24968
@@ -322,17 +322,17 @@ rect -163 9666 -158 9848
 rect 34 9666 39 9848
 rect -163 9661 39 9666
 use JNWTR_IVX1_CV  x3 ../JNW_TR_SKY130A
-timestamp 1784639396
+timestamp 1784642429
 transform 1 0 -2608 0 1 24146
 box -150 -120 2130 440
 use bandgap  x7 ../LELO_GR01_SKY130A
-timestamp 1784639396
+timestamp 1784642429
 transform 1 0 5044 0 1 2516
 box -25660 7584 2224 22913
 use oscillator  x8 ../LELO_GR01_SKY130A
-timestamp 1784639396
+timestamp 1784642429
 transform 1 0 1728 0 1 953
-box -6985 6827 3472 15582
+box -6972 6827 3472 15582
 << labels >>
 flabel metal3 s -5138 9516 -4962 9836 0 FreeSans 400 0 0 0 VSS
 port 4 nsew ground bidirectional

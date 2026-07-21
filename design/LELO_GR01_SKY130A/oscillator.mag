@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1784631714
+timestamp 1784642429
 << locali >>
 rect 1616 15210 1910 15214
 rect 1616 15154 1912 15210
@@ -366,55 +366,55 @@ rect -2242 8414 -2050 8734
 rect -864 8422 -672 8740
 rect 454 8422 646 8740
 use diffamp_2  x1 ../LELO_GR01_SKY130A
-timestamp 1784631714
+timestamp 1784642429
 transform 1 0 0 0 1 0
-box -6985 8802 1078 15582
+box -6782 8802 1078 15582
 use JNWTR_IVX1_CV  x2 JNW_TR_SKY130A
-timestamp 1784631714
+timestamp 1784642429
 transform 1 0 1338 0 1 9346
 box -150 -120 2130 440
 use JNWTR_IVX1_CV  x3
-timestamp 1784631714
+timestamp 1784642429
 transform 1 0 1340 0 1 10166
 box -150 -120 2130 440
 use LELOATR_LVT_NCH_2C5F0  x4 ../LELO_ATR_SKY130A
-timestamp 1784631714
+timestamp 1767481200
 transform 1 0 1508 0 1 7472
 box -184 -128 1208 928
 use JNWTR_DFRNQNX1_CV  x5 ../JNW_TR_SKY130A
-timestamp 1784631714
+timestamp 1784642429
 transform 1 0 1342 0 1 11028
 box -150 -120 2130 3960
 use LELOATR_LVT_NCH_2C5F0  x6
-timestamp 1784631714
+timestamp 1767481200
 transform 1 0 -6788 0 1 7486
 box -184 -128 1208 928
 use LELOATR_LVT_NCH_2C5F0  x7
-timestamp 1784631714
+timestamp 1767481200
 transform 1 0 -128 0 1 9256
 box -184 -128 1208 928
 use LELOATR_LVT_PCH_2C5F0  x8 ../LELO_ATR_SKY130A
-timestamp 1784631714
+timestamp 1767481200
 transform 1 0 -814 0 1 14004
 box -184 -128 1208 928
 use JNWTR_CAPX1  xd1<0> ../JNW_TR_SKY130A
-timestamp 1784631714
+timestamp 1737500400
 transform 1 0 -1342 0 1 7356
 box 0 0 1080 1080
 use JNWTR_CAPX1  xd1<1>
-timestamp 1784631714
+timestamp 1737500400
 transform 1 0 -2700 0 1 7356
 box 0 0 1080 1080
 use JNWTR_CAPX1  xd1<2>
-timestamp 1784631714
+timestamp 1737500400
 transform 1 0 -6 0 1 7350
 box 0 0 1080 1080
 use JNWTR_CAPX1  xd1<3>
-timestamp 1784631714
+timestamp 1737500400
 transform 1 0 -4044 0 1 7354
 box 0 0 1080 1080
 use JNWTR_CAPX1  xd1<4>
-timestamp 1784631714
+timestamp 1737500400
 transform 1 0 -5376 0 1 7356
 box 0 0 1080 1080
 << labels >>

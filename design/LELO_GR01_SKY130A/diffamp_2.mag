@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1784631714
+timestamp 1784642429
 << locali >>
 rect -746 13242 -510 13322
 rect -1412 12186 -1196 12266
@@ -120,27 +120,27 @@ rect -1218 10588 -1212 10592
 rect -1020 10588 156 10780
 rect 348 10588 354 10780
 use LELOATR_LVT_NCH_2C5F0  x1 LELO_ATR_SKY130A
-timestamp 1784631714
+timestamp 1767481200
 transform 1 0 -1500 0 1 10448
 box -184 -128 1208 928
 use LELOATR_LVT_PCH_2C5F0  x2 LELO_ATR_SKY130A
-timestamp 1784631714
+timestamp 1767481200
 transform 1 0 -1500 0 1 11506
 box -184 -128 1208 928
 use LELOATR_LVT_NCH_2C5F0  x3
-timestamp 1784631714
+timestamp 1767481200
 transform 1 0 -130 0 1 10448
 box -184 -128 1208 928
 use LELOATR_LVT_PCH_2C5F0  x4
-timestamp 1784631714
+timestamp 1767481200
 transform 1 0 -130 0 1 11508
 box -184 -128 1208 928
 use GM_cell_N  x5 ../LELO_GR01_SKY130A
-timestamp 1784631714
+timestamp 1784642429
 transform 1 0 -10166 0 1 3902
 box 3384 4900 8752 11680
 use LELOATR_LVT_PCH_2C5F0  x7
-timestamp 1784631714
+timestamp 1767481200
 transform 1 0 -822 0 1 12562
 box -184 -128 1208 928
 << labels >>

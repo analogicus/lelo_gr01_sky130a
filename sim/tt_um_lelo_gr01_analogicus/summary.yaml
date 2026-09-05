@@ -1,16 +1,22 @@
-description: TB_NCM
+description: tt_um_lelo_gr01_analogicus tapeout top level
 simulations:
    tran:
-    name: Transient analysis
+    name: Oscillator transient
     description: |
-      Check transient operation
+      Ramp the supply from zero, power the analog block through
+      ui_in<1> with the digital block held in reset, and check that the
+      temperature oscillator runs.
     data:
-      - name: Sch_typ
-        src: results/tran_Sch_typical
+      - name: Lay_typ
+        src: results/tran_Lay_typical
         method: typical
-      - name: Sch_etc
-        src: results/tran_Sch_etc
-        method: minmax
-      - name: Sch_3std
-        src: results/tran_Sch_mc
-        method: 3std
+   dig:
+    name: Digital handshake transient
+    description: |
+      Full FSM sequence at 32768 Hz with PWRUP_ANA held low, so the
+      digital block has to power the oscillator, count it and latch the
+      result on its own.
+    data:
+      - name: Lay_typ
+        src: results/dig_Lay_typical
+        method: typical

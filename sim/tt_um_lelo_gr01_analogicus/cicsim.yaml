@@ -4,6 +4,16 @@ options:
 corner:
   Lay: ''
   Sch: ''
+
+#- The Ktt corner in ../cicsim.yaml was generated with
+#- --exclude "...|_(h)vt", so it has no hvt devices. The digital
+#- osc_measure block in this wrapper is built from sky130_fd_sc_hd
+#- standard cells, which use pfet_01v8_hvt. Add the missing models.
+#- Run as: Gt Ktt Khvt Tt Vt
+  Khvt: |
+    .include "$PDK_ROOT/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_hvt__tt.pm3.spice"
+    .include "$PDK_ROOT/sky130A/libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice"
+
 ngspice:
   library: LELO_GR01_SKY130A
   cell: tt_um_lelo_gr01_analogicus

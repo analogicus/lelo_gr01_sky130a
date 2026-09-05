@@ -1,4 +1,7 @@
-*TB_SUN_TR_SKY130NM/TB_NCM
+*TT top level oscillator transient for tt_um_lelo_gr01_analogicus
+*- Oscillator only. The digital block is held in reset and the clock
+*- is parked, so this is a short run. The digital handshake is
+*- covered by dig.spi.
 *----------------------------------------------------------------
 * Include
 *----------------------------------------------------------------
@@ -8,53 +11,139 @@
 .include ../../../work/xsch/tt_um_lelo_gr01_analogicus.spice
 #endif
 
-.lib "/opt/pdk/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
-
 *-----------------------------------------------------------------
 * OPTIONS
 *-----------------------------------------------------------------
-.option TNOM=27 GMIN=1e-15 reltol=1e-3
+.option TNOM=27 GMIN=1e-15 reltol=1e-3 method=gear
+*- The digital block is held in reset in this testbench, so the
+*- tight tolerance converges. dig.spi needs a looser one.
+.options sparse
 
 *-----------------------------------------------------------------
 * PARAMETERS
 *-----------------------------------------------------------------
-.param TRF = 10p
-
 .param AVDD = {vdda}
 
 *-----------------------------------------------------------------
 * FORCE
 *-----------------------------------------------------------------
-VSS  VSS  0     dc 0
-VDD  VDD_1V8  VSS  pwl 0 0 10n {AVDD}
+VGND VGND  0    dc 0
+*- Slow supply ramp from zero to nominal over t_vdd. A slow ramp is
+*- the hard case for start up: bandgap start up circuits that rely on
+*- a fast edge will sit in their degenerate zero current state.
+VDD  VDPWR VGND pwl 0 0 {t_vdd} {AVDD}
+
+*- TT design enable, always on
+VENA ena   VGND dc {AVDD}
+
+*- The wrapper is mixed signal:
+*-   x1 = LELO_GR01 analog, powered from net1
+*-   x2 = digital, the counter/FSM. Counts uo_out<0> into uio_out<7:0>,
+*-        takes REQUEST on ui_in<0> and drives DONE on uo_out<1>.
+*-   x3 = inverter, digital reset = NOT rst_n
+*-   x4 = OR gate, net1 = pwrup_digital | ui_in<1> (PWRUP_ANA)
+*- Here we hold the digital block in reset and power the analog through
+*- ui_in<1> (PWRUP_ANA) alone, so the oscillator is measured without
+*- the FSM in the loop.
+
+*- Reset held asserted, the digital block stays quiet
+VRSTN rst_n VGND dc 0
+
+*- Clock parked
+VCLK clk VGND dc 0
+
+*- ui_in<1> = PWRUP_ANA, the only thing powering the analog here.
+VPWRUPA ui_in<1> VGND pwl 0 0 {t_start} 0 {{t_start}+{t_rise}} {AVDD}
+
+*- ui_in<0> = REQUEST, not exercised here
+VSTART ui_in<0> VGND dc 0
+
+*- Tie off every unused input
+VUI2 ui_in<2> VGND dc 0
+VUI3 ui_in<3> VGND dc 0
+VUI4 ui_in<4> VGND dc 0
+VUI5 ui_in<5> VGND dc 0
+VUI6 ui_in<6> VGND dc 0
+VUI7 ui_in<7> VGND dc 0
+VIO0 uio_in<0> VGND dc 0
+VIO1 uio_in<1> VGND dc 0
+VIO2 uio_in<2> VGND dc 0
+VIO3 uio_in<3> VGND dc 0
+VIO4 uio_in<4> VGND dc 0
+VIO5 uio_in<5> VGND dc 0
+VIO6 uio_in<6> VGND dc 0
+VIO7 uio_in<7> VGND dc 0
 
 *-----------------------------------------------------------------
 * DUT
 *-----------------------------------------------------------------
 .include ../xdut.spi
 
+*-----------------------------------------------------------------
+* LOADS
+*- Unused outputs may not be driven inside the wrapper. 1G to ground
+*- gives every output a DC path so ngspice cannot hit a singular
+*- matrix on a floating node. Too large to perturb anything.
+*-----------------------------------------------------------------
+RO0 uo_out<0> VGND 1G
+RO1 uo_out<1> VGND 1G
+RO2 uo_out<2> VGND 1G
+RO3 uo_out<3> VGND 1G
+RO4 uo_out<4> VGND 1G
+RO5 uo_out<5> VGND 1G
+RO6 uo_out<6> VGND 1G
+RO7 uo_out<7> VGND 1G
+RIO0 uio_out<0> VGND 1G
+RIO1 uio_out<1> VGND 1G
+RIO2 uio_out<2> VGND 1G
+RIO3 uio_out<3> VGND 1G
+RIO4 uio_out<4> VGND 1G
+RIO5 uio_out<5> VGND 1G
+RIO6 uio_out<6> VGND 1G
+RIO7 uio_out<7> VGND 1G
+ROE0 uio_oe<0> VGND 1G
+ROE1 uio_oe<1> VGND 1G
+ROE2 uio_oe<2> VGND 1G
+ROE3 uio_oe<3> VGND 1G
+ROE4 uio_oe<4> VGND 1G
+ROE5 uio_oe<5> VGND 1G
+ROE6 uio_oe<6> VGND 1G
+ROE7 uio_oe<7> VGND 1G
+
+*-----------------------------------------------------------------
+* ALIASES
+*- ngspice parses "<" as an operator inside .control, so a vector named
+*- v(uo_out<0>) cannot be used in a meas expression. Mirror the signals
+*- we measure onto plain node names with unit gain VCVSs (no loading).
+*-----------------------------------------------------------------
+*- OSC   = uo_out<0>,  the temperature oscillator
+*- PWOSC = uo_out<1>,  DONE driven by the FSM
+*- DIG   = uio_out<0>, lowest counter bit the digital block drives
+EOSC   OSC   VGND uo_out<0>  VGND 1
+EPWOSC PWOSC VGND uo_out<1>  VGND 1
+EDIG   DIG   VGND uio_out<0> VGND 1
+
 *----------------------------------------------------------------
 * PROBE
 *----------------------------------------------------------------
-.save all
+.save v(vdpwr) v(osc) v(pwosc) v(dig) v(clk) v(rst_n) i(vdd)
+.save v(ui_in<0>) v(ui_in<1>) v(uo_out<0>) v(uo_out<1>) v(uio_out<0>)
 
+#ifdef Debug
+.option savecurrents
+.save all
+#endif
 
 *----------------------------------------------------------------
 * NGSPICE control
 *----------------------------------------------------------------
 .control
-set num_threads=8
-set color0=white
-set color1=black
 unset askquit
 
 optran 0 0 0 1n 1u 0
-
-
-tran 1n 10n 1p
-write
+tran {t_step} {t_osc_stop}
+write {cicname}.raw
 quit
-
 
 .endc
 

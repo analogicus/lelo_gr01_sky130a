@@ -1,10 +1,49 @@
-#<name>:
-#  src:
-#    - <paramters>
-#  typ: <typical spec value>
-#  name: <long name>
-#  min: <minimum spec value>
-#  max: <maximum spec value>
-#  scale: <scale, multiply result by scale>
-#  digits: <significant digits>
-#  unit: Unit
+#- Go/no-go bounds for the tapeout top level, not calibrated specs.
+#- They exist to make a dead, stuck or shorted top fail loudly.
+#- Block level reference (sim/LELO_GR01 data.csv): ~1.9 MHz at 25 C.
+#- Active current not characterised at block level, window left wide.
+
+freq:
+  name: Oscillation frequency
+  desc: Temperature oscillator on uo_out<0>
+  src:
+    - freq
+  typ: 1.9
+  min: 0.3
+  max: 20
+  scale: 1e-6
+  digits: 3
+  unit: MHz
+vswing:
+  name: Oscillator output swing
+  desc: Full rail swing on uo_out<0>, low value means a stuck node
+  src:
+    - vswing
+  typ: 1.8
+  min: 1.5
+  max: 2.1
+  digits: 3
+  unit: V
+i_act:
+  name: Active supply current
+  desc: Average I(VDPWR) while the sensor runs
+  src:
+    - i_act
+  typ: 40
+  min: 5
+  max: 500
+  scale: -1e6
+  digits: 3
+  unit: uA
+i_leak:
+  name: Leakage supply current
+  desc: Average I(VDPWR) with the supply up, the digital block in reset
+    and PWRUP_ANA still low
+  src:
+    - i_leak
+  typ: 20
+  min: 0
+  max: 1000
+  scale: -1e9
+  digits: 3
+  unit: nA

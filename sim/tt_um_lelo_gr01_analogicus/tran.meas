@@ -1,9 +1,21 @@
-* Measure tt_um_lelo_gr01_analogicus
+* Measure the oscillator on tt_um_lelo_gr01_analogicus
 .control
 
 load {cicname}.raw
 
 echo "MEAS_START"
+
+*- v(osc) is the VCVS alias of uo_out<0>. Do not measure the bracketed
+*- node directly, ngspice reads "<" as an operator here.
+
+meas tran vosc_max max v(osc) from={t_meas_start} to={t_meas_stop}
+meas tran vosc_min min v(osc) from={t_meas_start} to={t_meas_stop}
+
+meas tran t1 when v(osc)=("vosc_max"+"vosc_min")/2 from={t_meas_start} rise=2
+meas tran t2 when v(osc)=("vosc_max"+"vosc_min")/2 from={t_meas_start} rise=12
+
+meas tran i_act  avg i(vdd) from={t_meas_start} to={t_meas_stop}
+meas tran i_leak avg i(vdd) from={t_leak_start} to={t_leak_stop}
 
 echo "MEAS_END"
 .endc

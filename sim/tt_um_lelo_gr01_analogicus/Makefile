@@ -1,77 +1,45 @@
-
-
-all: typical etc mc summary
-
-
+#- Functional transient on the tapeout top level.
+#-
+#- Note: we deliberately do NOT include ../../tech/make/sim.make. Its
+#- netlist_cell target runs "cd ../../work && make cdl lpe" whenever
+#- VIEW=Lay, which would re-extract the layout. We reuse the existing
+#- work/lpe/${CELL}_lpe.spi and only regenerate xdut.spi, which is cheap
+#- and guarantees the port order matches the netlist.
 
 TB=tran
-#VIEW=Sch
 VIEW=Lay
 CELL=tt_um_lelo_gr01_analogicus
-LIB =LELO_GR01_SKY130A
+LIB=LELO_GR01_SKY130A
 OPT=
+THREADS=4
 
-#include ../../tech/make/sim.make
+all: typical digital summary
 
-cell:
-	cicsim simcell  ${LIB} ${CELL} ../tech/cicsim/cell_spice/template.yaml
-
-cellsv:
-	cicsim simcell  ${LIB} ${CELL} ../tech/cicsim/cell_sv/template.yaml
-
-netlist_cell:
-	test -d ../../work/xsch || mkdir ../../work/xsch
-	cd ../../work/ && make xsch LIB=${LIB} CELL=${CELL}
-ifeq ($(VIEW),Lay)
-#	cd ../../work && make cdl lpe LIB=${LIB} CELL=${CELL}
-endif
-
-ver:
-	test -d ../../work/xsch && cd ../../work/ && make ver LIB=${LIB} CELL=${CELL}
-
-netlist: netlist_cell
-#- I've seen port ordering change between xschem version, so I also
-# generate a xdut.spi file that always has the right port ordering.
-#- TODO: Should I add the view here? Either xsch or lpe??
+netlist:
 	perl ../../tech/script/genxdut ../../work/xsch/${CELL}.spice ${CELL}
+
+#- Re-extract the layout. Only needed if the layout changed.
+lpe:
+	cd ../../work && ${MAKE} cdl lpe LIB=${LIB} CELL=${CELL}
 
 test:
 	${MAKE} typical OPT="Debug"
 
 typical: netlist
-	cicsim run --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Tt Vt
+	cicsim run --threads ${THREADS} --replace replace.yaml --name ${VIEW}_typical ${TB} ${OPT} ${VIEW} Gt Ktt Khvt Tt Vt
 
-slow: netlist
-	cicsim run --name ${VIEW}_slow ${TB} ${OPT} ${VIEW} Gt Kss "Th,Tl" Vl
-
-fast: netlist
-	cicsim run --name ${VIEW}_fast ${TB} ${OPT} ${VIEW} Gt Kff "Th,Tl" Vh
-
-tfs: netlist
-	cicsim run --name ${VIEW}_tfs ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt,Th,Tl" "Vt,Vl,Vh"
-
-etc: netlist
-	cicsim run --name ${VIEW}_etc ${TB} ${OPT} ${VIEW} Gt "Kss,Kff,Ksf,Kfs" "Th,Tl" "Vl,Vh"
-
-mc: netlist
-	cicsim run --name ${VIEW}_mc --count 30 ${TB} ${OPT} ${VIEW} Gt "Kttmm" "Tt" "Vt"
-
-ntc: netlist
-	cicsim run --name ${VIEW}_ntc ${TB} ${OPT} ${VIEW} Gt "Ktt,Kss,Kff" "Tt" Vt
-
-temp: netlist
-	cicsim run --name ${VIEW}_temp ${TB} ${OPT} ${VIEW} Gt "Ktt" "Tt,Th,Tl" Vt
+#- The digital handshake testbench. Much longer, it has to cover four
+#- periods of the 32768 Hz clock.
+digital: netlist
+	cicsim run --threads ${THREADS} --replace replace.yaml --name ${VIEW}_typical dig ${OPT} ${VIEW} Gt Ktt Khvt Tt Vt
 
 summary:
 	cicsim summary --output "README.md"
 
-slide:
-	pandoc -s  -t slidy README.md -o README.html
-
+wave:
+	cicsim wave output_${TB}/${TB}_${VIEW}GtKttKhvtTtVt.raw
 
 clean:
 	-rm -rf output_*
 	-rm -rf __pycache__
-	-rm *.run
-	-rm *.pdf
-	-rm *.csv
+	-rm -f *.run
